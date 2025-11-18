@@ -1,116 +1,102 @@
-"use client";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import client from "@/app/sanity/client";
+import Footer from "@/app/components/footer";
+import WorkNav from "@/app/components/navs/work-nav";
+import WorkMedia from "@/app/components/pages/works/slug/work-media";
+import RelatedWorks from "@/app/components/pages/works/slug/related-works";
 
-const modalAnim = {
-  initial: {
-    width: "0%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
-  },
-  animate: {
-    width: "100%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
-  },
-  exit: {
-    width: "0%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
-  },
-};
+export const revalidate = 60;
 
-const opacityAnim = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.5 } },
-  exit: { opacity: 0, transition: { duration: 0.5 } },
-};
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
 
-export default function ContactModal({ setContactModal }) {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState(null);
+  const work = await client.fetch(
+    `*[_type == "works" && slug.current == $slug][0]{
+      title,
+      description,
+      "image": mainImage.asset->url
+    }`,
+    { slug }
+  );
 
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.id]: e.target.value });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          message: form.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      );
-
-      setStatus("success");
-      setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error(error);
-      setStatus("error");
-    }
+  return {
+    title: work?.title || "Work",
+    description: work?.description,
+    openGraph: {
+      images: work?.image ? [work.image] : [],
+    },
   };
+}
+
+export default async function WorkPage({ params }) {
+  const { slug } = await params;
+
+  const work = await client.fetch(
+    `*[_type == "works" && slug.current == $slug][0]{
+      title,
+      description,
+      year,
+      website,
+      client,
+      services,
+      "slug": slug.current,
+      media[] {
+        alt,
+        asset->{
+          _id,
+          url,
+          mimeType
+        }
+      }
+    }`,
+    { slug }
+  );
+
+  if (!work) {
+    return (
+      <main className="p-10 text-center text-p">
+        <p>Work not found.</p>
+      </main>
+    );
+  }
+
+  const relatedWorks = await client.fetch(
+    `*[_type == "works" && slug.current != $slug]
+      | order(year desc)[0...3]{
+        title,
+        "slug": slug.current,
+        media[] {
+          alt,
+          asset->{
+            _id,
+            url,
+            mimeType
+          }
+        }
+      }`,
+    { slug }
+  );
 
   return (
-    <motion.div
-      className="w-full right-0 bottom-0 flex items-end justify-end"
-      variants={modalAnim}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-    >
-      <motion.div
-        className="relative p-4 max-w-[700px] w-full bg-[#F0EEE6] z-50"
-        {...opacityAnim}
-      >
-        <div className="mb-12 flex justify-between">
-          <p className="text-p text-[.9em] font-medium">Let's talk</p>
-          <button
-            onClick={() => setContactModal(false)}
-            className="text-p text-[.9em] font-medium"
-          >
-            Close
-          </button>
-        </div>
+    <>
+      <WorkNav work={work} />
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            id="name"
-            placeholder="Name"
-            value={form.name}
-            onChange={handleChange}
-            className="border-b border-p/25 bg-transparent outline-none"
-          />
-          <input
-            id="email"
-            placeholder="E-mail"
-            value={form.email}
-            onChange={handleChange}
-            className="border-b border-p/25 bg-transparent outline-none"
-          />
-          <textarea
-            id="message"
-            placeholder="Message"
-            value={form.message}
-            onChange={handleChange}
-            className="border-b border-p/25 bg-transparent outline-none h-12"
-          />
-
-          <button type="submit" className="text-start text-p font-medium">
-            Send
-          </button>
-
-          {status === "sending" && <p>Sending...</p>}
-          {status === "success" && <p>Message sent!</p>}
-          {status === "error" && (
-            <p className="text-red-500">Error sending message.</p>
+      <main>
+        <section className="relative pt-30 p-4 min-h-dvh bg-s">
+          {work.media?.length > 0 ? (
+            <WorkMedia media={work.media} title={work.title} />
+          ) : (
+            <p className="text-center text-p text-[.9em] font-semibold">
+              No Work available
+            </p>
           )}
-        </form>
-      </motion.div>
-    </motion.div>
+        </section>
+
+        {relatedWorks?.length > 0 && (
+          <RelatedWorks relatedWorks={relatedWorks} />
+        )}
+      </main>
+
+      <Footer />
+    </>
   );
 }
