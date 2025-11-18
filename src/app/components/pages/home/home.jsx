@@ -99,7 +99,7 @@ export default function HomePage({ media }) {
 
         {!loadingDone && (
           <motion.div
-            className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-50"
+            className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-1000"
             initial={{ y: 0 }}
             animate={{ y: "-100%" }}
             transition={{ delay: 1.5, duration: 0.5, ease: "easeInOut" }}
