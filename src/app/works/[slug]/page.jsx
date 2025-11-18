@@ -1,8 +1,8 @@
 import client from "@/app/sanity/client";
 import Footer from "@/app/components/footer";
 import WorkNav from "@/app/components/navs/work-nav";
-import WorkMedia from "@/app/components/pages/works/slug/work-media";
-import RelatedWorks from "@/app/components/pages/works/slug/related-works";
+import WorkMedia from "@/app/works/[slug]/work-media";
+import RelatedWorks from "@/app/works/[slug]/related-works";
 
 export const revalidate = 60;
 
