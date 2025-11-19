@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
   );
 
   return {
-    title: "Tomás — " + work?.title || "Work",
+    title: work?.title ? `Tomás — ${work.title}` : "Tomás — Work",
     description: work?.description,
     openGraph: {
       images: work?.image ? [work.image] : [],

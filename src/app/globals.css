@@ -27,7 +27,6 @@ body {
 
   overflow-x: hidden;
   font-family: "DM Sans", sans-serif;
-  scroll-behavior: smooth;
   padding-top: var(--safe-top);
   padding-bottom: var(--safe-bottom);
 }
