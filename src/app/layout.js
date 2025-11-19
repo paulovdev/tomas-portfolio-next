@@ -1,5 +1,6 @@
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import VHFix from "./providers/VHFixer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm",
@@ -79,7 +80,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} antialiased`}>{children}</body>
+      <body className={`${dmSans.variable} antialiased`}>
+        {" "}
+        <VHFix />
+        {children}
+      </body>
     </html>
   );
 }
