@@ -30,7 +30,7 @@ export default function RelatedWorks({ relatedWorks }) {
               {isVideo ? (
                 <video
                   src={asset.url}
-                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all"
+                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[315px] max-lg:h-[250px] max-md:h-[175px]"
                   muted
                   loop
                   autoPlay
@@ -42,7 +42,7 @@ export default function RelatedWorks({ relatedWorks }) {
                   width={800}
                   height={600}
                   alt={work.media?.[0]?.alt || work.title}
-                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all"
+                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[315px] max-lg:h-[250px] max-md:h-[175px]"
                 />
               )}
 

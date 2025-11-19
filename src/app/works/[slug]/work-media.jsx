@@ -27,7 +27,7 @@ const WorkMedia = ({ media, title }) => {
               autoPlay
               loop
               playsInline
-              className="w-full h-[75vh] object-cover max-lg:h-[350px] max-md:h-[250px]"
+              className="w-full h-[75vh] object-cover max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
             />
           ) : (
             <Image
@@ -36,7 +36,7 @@ const WorkMedia = ({ media, title }) => {
               width={1600}
               height={1200}
               alt={item.alt || title}
-              className="w-full h-[75vh] object-cover max-lg:h-[350px] max-md:h-[250px]"
+              className="w-full h-[75vh] object-cover max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
             />
           );
         }
@@ -52,7 +52,7 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[75vh] object-cover"
+                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
                 />
               ) : (
                 <Image
@@ -60,7 +60,7 @@ const WorkMedia = ({ media, title }) => {
                   width={1600}
                   height={1200}
                   alt={item.alt || title}
-                  className="w-full h-[75vh] object-cover"
+                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
                 />
               )}
 
@@ -71,7 +71,7 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[75vh] object-cover"
+                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
                 />
               ) : (
                 <Image
@@ -79,7 +79,7 @@ const WorkMedia = ({ media, title }) => {
                   width={1600}
                   height={1200}
                   alt={next.alt || title}
-                  className="w-full h-[75vh] object-cover"
+                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
                 />
               )}
             </div>
