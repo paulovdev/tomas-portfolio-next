@@ -112,9 +112,13 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
                         <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
                           Website:
                         </p>
-                        <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]">
+                        <a
+                          href={work.website}
+                          target="_blank"
+                          className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em] hover:underline"
+                        >
                           {work.website}
-                        </p>
+                        </a>
                       </li>
                     ) : null}
                     <li className="flex items-center gap-2">
