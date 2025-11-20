@@ -71,23 +71,20 @@ const WorkNav = ({ work }) => {
 
         <div className="flex justify-center">
           {work ? (
-            <div className="w-full flex items-center gap-1">
+            <div
+              className="w-full flex items-center gap-1 cursor-pointer"
+              onClick={() => setWorkModal(true)}
+            >
               <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]   text-s font-medium tracking-[-0.03em]">
                 {work.title}
               </span>
               <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]   text-s font-medium tracking-[-0.15em]">
                 —
               </span>
-              <button
-                onClick={() => setWorkModal(true)}
-                className="hidden max-md:block text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  text-s font-medium tracking-[-0.03em] cursor-pointer"
-              >
+              <button className="hidden max-md:block text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  text-s font-medium tracking-[-0.03em] cursor-pointer">
                 Info
               </button>
-              <button
-                onClick={() => setWorkModal(true)}
-                className="block max-md:hidden text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  text-s font-medium tracking-[-0.03em] cursor-pointer"
-              >
+              <button className="block max-md:hidden text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  text-s font-medium tracking-[-0.03em] cursor-pointer">
                 Information
               </button>
             </div>
