@@ -73,14 +73,14 @@ export default function HomePage({ media }) {
             <motion.video
               key={current.asset._id}
               src={current.asset.url}
-              className="absolute inset-0 w-full h-screen object-cover will-change-clip"
+              className="absolute inset-0 w-full h-screen object-cover will-change-clip bg-p"
               autoPlay
               muted
               loop
               playsInline
-              initial={{ clipPath: "inset(0% 100% 0% 0% )" }}
+              initial={{ clipPath: "inset(0% 101% 0% -1%)" }}
               animate={{
-                clipPath: "inset(0% 0% 0% 0% )",
+                clipPath: "inset(0% -1% 0% -1%)",
                 transition: {
                   duration: 1,
                   type: "tween",
@@ -88,7 +88,7 @@ export default function HomePage({ media }) {
                 },
               }}
               exit={{
-                clipPath: "inset(0% 0% 0% 100% )",
+                clipPath: "inset(0% -1% 0% 101%)",
                 transition: {
                   duration: 1,
                   type: "tween",
@@ -101,18 +101,18 @@ export default function HomePage({ media }) {
               key={current.asset._id}
               src={imageUrl}
               alt={current.alt || ""}
-              className="absolute inset-0 w-full h-full object-cover will-change-clip"
-              initial={{ clipPath: "inset(0% 100% 0% 0% )" }}
+              className="absolute inset-0 w-full h-full object-cover will-change-clip bg-p"
+              initial={{ clipPath: "inset(0% 101% 0% -1%)" }}
               animate={{
-                clipPath: "inset(0% 0% 0% 0% )",
+                clipPath: "inset(0% -1% 0% -1%)",
                 transition: {
                   duration: 1,
                   type: "tween",
-                  ease: [0.87, 0, 0.13, 1],
+                  ease: [0.87, 0, 0, 0.13, 1],
                 },
               }}
               exit={{
-                clipPath: "inset(0% 0% 0% 100% )",
+                clipPath: "inset(0% -1% 0% 101%)",
                 transition: {
                   duration: 1,
                   type: "tween",
