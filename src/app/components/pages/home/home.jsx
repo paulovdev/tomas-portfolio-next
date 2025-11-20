@@ -6,18 +6,21 @@ import HomeNav from "../../navs/home-nav";
 import { urlFor } from "@/app/lib/sanityImage";
 
 const textSlideAnim = {
-  initial: { y: "20px" },
+  initial: { y: "19px" },
   animate: (i = 0) => ({
     y: 0,
     transition: {
       duration: 0.5,
       ease: [0.33, 1, 0.68, 1],
-      delay: 0.15 + 0.015 * i,
+      delay: 0.1 + 0.025 * i,
     },
   }),
   exit: {
     y: "-100%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    transition: {
+      duration: 0.5,
+      ease: [0.33, 1, 0.68, 1],
+    },
   },
 };
 
@@ -55,10 +58,9 @@ export default function HomePage({ media }) {
 
   const current = media[index];
   const isVideo = current.asset.mimeType?.startsWith("video/");
-  const isLCP = index === 0;
 
   const imageUrl = !isVideo
-    ? urlFor(current.asset).width(2000).quality(80).auto("format").url()
+    ? urlFor(current.asset).width(1800).quality(90).auto("format").url()
     : null;
 
   return (
@@ -76,16 +78,22 @@ export default function HomePage({ media }) {
               muted
               loop
               playsInline
-              preload={isLCP ? "auto" : "metadata"}
-              fetchPriority={isLCP ? "high" : undefined}
               initial={{ clipPath: "inset(0% 100% 0% 0% )" }}
               animate={{
                 clipPath: "inset(0% 0% 0% 0% )",
-                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+                transition: {
+                  duration: 1,
+                  type: "tween",
+                  ease: [0.87, 0, 0.13, 1],
+                },
               }}
               exit={{
                 clipPath: "inset(0% 0% 0% 100% )",
-                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+                transition: {
+                  duration: 1,
+                  type: "tween",
+                  ease: [0.87, 0, 0.13, 1],
+                },
               }}
             />
           ) : (
@@ -94,16 +102,22 @@ export default function HomePage({ media }) {
               src={imageUrl}
               alt={current.alt || ""}
               className="absolute inset-0 w-full h-full object-cover"
-              loading={isLCP ? "eager" : "lazy"}
-              fetchPriority={isLCP ? "high" : undefined}
               initial={{ clipPath: "inset(0% 100% 0% 0% )" }}
               animate={{
                 clipPath: "inset(0% 0% 0% 0% )",
-                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+                transition: {
+                  duration: 1,
+                  type: "tween",
+                  ease: [0.87, 0, 0.13, 1],
+                },
               }}
               exit={{
                 clipPath: "inset(0% 0% 0% 100% )",
-                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+                transition: {
+                  duration: 1,
+                  type: "tween",
+                  ease: [0.87, 0, 0.13, 1],
+                },
               }}
             />
           )}
@@ -114,7 +128,12 @@ export default function HomePage({ media }) {
             className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-1000"
             initial={{ y: 0 }}
             animate={{ y: "-100%" }}
-            transition={{ delay: 1.5, duration: 0.5, ease: "easeInOut" }}
+            transition={{
+              delay: 2,
+              duration: 1,
+              type: "tween",
+              ease: [0.87, 0, 0.13, 1],
+            }}
             onAnimationComplete={() => setLoadingDone(true)}
           >
             <h1 className="text-[1em] font-medium text-p tracking-[-0.05em] select-none flex flex-wrap">
