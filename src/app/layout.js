@@ -71,7 +71,16 @@ export const metadata = {
   manifest: "/site.webmanifest",
 
   alternates: {
-    canonical: "/",
+    canonical: "https://tomasml.com",
+  },
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Tomás — Branding & Visual Identity Designer",
+      alternateName: "Tomás",
+      url: "https://tomasml.com",
+    }),
   },
 };
 

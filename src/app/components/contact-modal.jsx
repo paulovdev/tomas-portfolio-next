@@ -30,16 +30,43 @@ const opacityAnim = {
   },
 };
 
+// REGEX
+const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]{2,}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const messageRegex = /^.{5,}$/;
+
 const ContactModal = ({ setContactModal }) => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState(null);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.id]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // VALIDATIONS — sem alert, só mensagem animada
+    if (!nameRegex.test(form.name)) {
+      setStatus("error");
+      setStatusMessage("Please enter a valid name.");
+      return;
+    }
+
+    if (!emailRegex.test(form.email)) {
+      setStatus("error");
+      setStatusMessage("Please enter a valid email.");
+      return;
+    }
+
+    if (!messageRegex.test(form.message)) {
+      setStatus("error");
+      setStatusMessage("Message must be at least 5 characters.");
+      return;
+    }
+
     setStatus("sending");
+    setStatusMessage("Sending...");
 
     try {
       await emailjs.send(
@@ -52,11 +79,14 @@ const ContactModal = ({ setContactModal }) => {
         },
         "S_6_wsbrL9uhX5TIV"
       );
+
       setStatus("success");
+      setStatusMessage("Message sent!");
       setForm({ name: "", email: "", message: "" });
     } catch (err) {
       console.error("EmailJS Error:", err);
       setStatus("error");
+      setStatusMessage("Error sending message.");
     }
   };
 
@@ -73,12 +103,12 @@ const ContactModal = ({ setContactModal }) => {
         {...opacityAnim}
       >
         <div className="mb-12 w-full flex items-center justify-between">
-          <p className="text-p  text-[.9em]  max-lg:text-[.93em]     font-medium tracking-[-0.03em]">
+          <p className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em]">
             Let's talk
           </p>
           <button
             onClick={() => setContactModal(false)}
-            className="text-p  text-[.9em]  max-lg:text-[.93em]     font-medium tracking-[-0.03em]"
+            className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em]"
           >
             Close
           </button>
@@ -95,7 +125,7 @@ const ContactModal = ({ setContactModal }) => {
               placeholder="Name"
               value={form.name}
               onChange={handleChange}
-              className="mb-4 w-full border-b border-p/25 text-p  text-[.9em]  max-lg:text-[.93em]     font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
+              className="mb-4 w-full border-b border-p/25 text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
             />
 
             <input
@@ -104,53 +134,38 @@ const ContactModal = ({ setContactModal }) => {
               placeholder="E-mail"
               value={form.email}
               onChange={handleChange}
-              className="mb-4 w-full border-b border-p/25 text-p  text-[.9em]  max-lg:text-[.93em]     font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
+              className="mb-4 w-full border-b border-p/25 text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
             />
 
             <textarea
-              name="message"
               id="message"
               placeholder="Message"
               value={form.message}
               onChange={handleChange}
-              className="w-full h-[50px] border-b border-p/25 text-p  text-[.9em]  max-lg:text-[.93em]     font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
+              className="w-full h-[50px] border-b border-p/25 text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
             />
           </div>
+
           <div className="mb-8 relative flex flex-col items-end justify-end">
             <button
               type="submit"
-              className="mb-2 w-full text-p  text-[.9em]  max-lg:text-[.93em]     font-medium tracking-[-0.03em] bg-transparent outline-none text-start"
+              className="mb-2 w-full text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] bg-transparent outline-none text-start"
             >
               Send
             </button>
-            {status === "sending" && (
+
+            {/* MENSAGEM ÚNICA */}
+            {status && (
               <motion.p
-                className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]"
+                key={statusMessage} // garante animação sempre que muda
+                className={`text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ${
+                  status === "error" ? "text-red-500" : "text-p"
+                }`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                Sending...
-              </motion.p>
-            )}
-            {status === "success" && (
-              <motion.p
-                className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                Message sent!
-              </motion.p>
-            )}
-            {status === "error" && (
-              <motion.p
-                className="text-red-500 text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                Error sending message.
+                {statusMessage}
               </motion.p>
             )}
           </div>
