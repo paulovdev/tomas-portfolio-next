@@ -15,15 +15,15 @@ const Clock = () => {
     const updateClock = () => {
       const date = new Date();
 
-      const formatted = date
-        .toLocaleTimeString(userLocale, {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: true,
-          timeZone: userTimeZone,
-        })
-        .replace(" ", " ");
+      let formatted = date.toLocaleTimeString(userLocale, {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+        timeZone: userTimeZone,
+      });
+
+      formatted = formatted.replace(/\.?/g, "").replace(" ", " ");
 
       setTime(formatted);
     };

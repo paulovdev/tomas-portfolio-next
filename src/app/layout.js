@@ -81,6 +81,13 @@ export const metadata = {
       alternateName: "Tomás",
       url: "https://tomasml.com",
     }),
+    "organization-logo": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Tomás",
+      url: "https://tomasml.com",
+      logo: "https://tomasml.com/logo.jpg",
+    }),
   },
 };
 
