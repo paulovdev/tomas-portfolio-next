@@ -67,7 +67,7 @@ export default function HomePage({ media }) {
     <>
       <HomeNav />
 
-      <div className="relative h-svh bg-[#F0EEE6] max-md:h-[calc(var(--vh)*100)] w-full overflow-hidden">
+      <div className="relative h-svh bg-p max-md:h-[calc(var(--vh)*100)] w-full overflow-hidden">
         <AnimatePresence>
           {isVideo ? (
             <motion.video
