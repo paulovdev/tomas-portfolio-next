@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { urlFor } from "@/app/lib/sanityImage";
 
-const WorkMedia = ({ media, title }) => {
+const WorkMedia = ({ media, title, index }) => {
   const getUrl = (asset) =>
     urlFor(asset).width(1600).quality(80).auto("format").url();
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4">
       {media?.map((item, index) => {
         const asset = item.asset;
         if (!asset) return null;
@@ -17,7 +17,6 @@ const WorkMedia = ({ media, title }) => {
         const pos = index % 3;
         const next = media[index + 1];
 
-        // FULL WIDTH ITEM
         if (pos === 0) {
           return isVideo ? (
             <video
@@ -27,7 +26,7 @@ const WorkMedia = ({ media, title }) => {
               autoPlay
               loop
               playsInline
-              className="w-full h-[75vh] object-cover max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
+              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
             />
           ) : (
             <Image
@@ -36,7 +35,7 @@ const WorkMedia = ({ media, title }) => {
               width={1600}
               height={1200}
               alt={item.alt || title}
-              className="w-full h-[75vh] object-cover max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
+              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
             />
           );
         }
@@ -52,7 +51,7 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
                 />
               ) : (
                 <Image
@@ -60,7 +59,7 @@ const WorkMedia = ({ media, title }) => {
                   width={1600}
                   height={1200}
                   alt={item.alt || title}
-                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
                 />
               )}
 
@@ -71,7 +70,7 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
                 />
               ) : (
                 <Image
@@ -79,7 +78,7 @@ const WorkMedia = ({ media, title }) => {
                   width={1600}
                   height={1200}
                   alt={next.alt || title}
-                  className="w-full h-[75vh] object-cover  max-ds:h-[550px] max-lg:h-[350px] max-md:h-[250px]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
                 />
               )}
             </div>

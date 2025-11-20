@@ -78,9 +78,15 @@ export default function HomePage({ media }) {
               playsInline
               preload={isLCP ? "auto" : "metadata"}
               fetchPriority={isLCP ? "high" : undefined}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { duration: 0.5 } }}
-              exit={{ opacity: 0, transition: { duration: 0.5 } }}
+              initial={{ clipPath: "inset(0% 100% 0% 0% )" }}
+              animate={{
+                clipPath: "inset(0% 0% 0% 0% )",
+                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+              }}
+              exit={{
+                clipPath: "inset(0% 0% 0% 100% )",
+                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+              }}
             />
           ) : (
             <motion.img
@@ -90,9 +96,15 @@ export default function HomePage({ media }) {
               className="absolute inset-0 w-full h-full object-cover"
               loading={isLCP ? "eager" : "lazy"}
               fetchPriority={isLCP ? "high" : undefined}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { duration: 0.5 } }}
-              exit={{ opacity: 0, transition: { duration: 0.5 } }}
+              initial={{ clipPath: "inset(0% 100% 0% 0% )" }}
+              animate={{
+                clipPath: "inset(0% 0% 0% 0% )",
+                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+              }}
+              exit={{
+                clipPath: "inset(0% 0% 0% 100% )",
+                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+              }}
             />
           )}
         </AnimatePresence>

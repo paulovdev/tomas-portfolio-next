@@ -14,13 +14,13 @@ const NotFound = () => {
             404
           </p>
           <div className="flex flex-col items-start col-span-3">
-            <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]">
+            <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
               Page not found :&#40;
             </p>
-            <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]">
+            <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
               The page you are looking for does not exist.
             </p>
-            <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]">
+            <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
               Please check the URL or return to the{" "}
               <Link
                 href={"/"}

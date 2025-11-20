@@ -8,12 +8,12 @@ export default function RelatedWorks({ relatedWorks }) {
   const router = useRouter();
 
   return (
-    <section className="pt-10 pb-20 px-4 w-full grid grid-cols-3 gap-4 max-md:flex max-md:flex-col">
+    <section className="py-30 px-4 w-full grid grid-cols-4 gap-4 max-md:flex max-md:flex-col">
       <h2 className="text-p text-[.9em] font-semibold tracking-[-0.03em]">
         Related Works
       </h2>
 
-      <div className="grid grid-cols-3 gap-4 w-full col-span-2">
+      <div className="w-full grid grid-cols-3 gap-4 col-span-3 max-lg:grid-cols-2">
         {relatedWorks.map((work) => {
           const asset = work.media?.[0]?.asset;
           if (!asset) return null;
@@ -30,7 +30,7 @@ export default function RelatedWorks({ relatedWorks }) {
               {isVideo ? (
                 <video
                   src={asset.url}
-                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[315px] max-lg:h-[250px] max-md:h-[175px]"
+                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[300px] max-lg:h-[225px] max-md:h-[175px]"
                   muted
                   loop
                   autoPlay
@@ -42,11 +42,11 @@ export default function RelatedWorks({ relatedWorks }) {
                   width={800}
                   height={600}
                   alt={work.media?.[0]?.alt || work.title}
-                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[315px] max-lg:h-[250px] max-md:h-[175px]"
+                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[300px] max-lg:h-[225px] max-md:h-[175px]"
                 />
               )}
 
-              <h3 className="mt-2 text-p text-[.9em] font-normal tracking-[-0.03em]">
+              <h3 className="mt-2 text-p text-[.9em] font-medium tracking-[-0.03em]">
                 {work.title}
               </h3>
             </div>

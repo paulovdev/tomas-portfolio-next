@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { urlFor } from "../../../lib/sanityImage";
 import Footer from "../../footer";
@@ -48,11 +49,9 @@ const WorksCard = ({ work }) => {
           alt={first.alt || work.title}
           className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[250px] max-md:h-[275px]"
         />
-      ) : (
-        <div className="w-full h-[500px] bg-[#E5E3DC] max-ds:h-[350px] max-lg:h-[250px] max-md:h-[275px]" />
-      )}
+      ) : null}
 
-      <h2 className="mt-2 text-p text-[.9em] max-lg:text-[.93em] font-normal tracking-[-0.03em]">
+      <h2 className="mt-2 text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em]">
         {work.title}
       </h2>
     </div>
@@ -70,8 +69,26 @@ const WorksPage = ({ works }) => {
 
       <section className="relative pt-30 pb-30 px-4 min-h-dvh bg-s">
         <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-lg:grid-cols-3">
-          {works.map((work) => (
-            <WorksCard key={work._id} work={work} />
+          {works.map((work, i) => (
+            <motion.figure
+              className="overflow-hidden size-full mb-4"
+              key={work._id}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: [0.33, 1, 0.68, 1],
+                  delay: i * 0.075,
+                },
+              }}
+              exit={{
+                opacity: 0,
+                transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
+              }}
+            >
+              <WorksCard work={work} />
+            </motion.figure>
           ))}
         </div>
       </section>

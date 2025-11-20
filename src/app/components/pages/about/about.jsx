@@ -35,15 +35,15 @@ export default function AboutPage() {
       <Nav />
 
       <section className="relative h-full px-4 py-35 bg-s text-p max-md:py-24">
-        <h2 className="max-w-[90%] mb-25 text-[1.75em] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em] max-md:max-w-full">
+        <h2 className="max-w-[90%] mb-25 text-[1.75em] font-medium tracking-[-0.03em] leading-[1.1] max-md:mb-10 max-md:text-[1.5em] max-md:max-w-full">
           Visual creation grounded in strategy, focused on developing functional
-          and contemporary identities built with intent. The approach brings
-          together strategy, creative direction, and design to shape systems
-          that endure over time and adapt to the digital and physical
-          environments they inhabit.
+          and contemporary identities built with intent.
+          <br /> The approach brings together strategy, creative direction, and
+          design to shape systems that endure over time and <br /> adapt to the
+          digital and physical environments they inhabit.
         </h2>
 
-        <div className="grid grid-cols-4 mb-25 pt-8 max-md:grid-cols-1">
+        <div className="grid grid-cols-4 mb-25 pt-8 max-md:grid-cols-1 max-md:mb-10">
           <p className="mb-6 text-p  text-[.9em]  max-lg:text-[.93em]    font-bold tracking-[-0.03em]">
             Services
           </p>
@@ -54,11 +54,11 @@ export default function AboutPage() {
                 <p className="mb-6 border-b border-black/10 text-p  text-[.9em]  max-lg:text-[.93em]    font-bold tracking-[-0.03em]">
                   {category}
                 </p>
-                <ul className="mb-6 grid grid-cols-3">
+                <ul className="mb-6 grid grid-cols-2">
                   {items.map((item, i) => (
                     <li
                       key={i}
-                      className="mb-2 text-p  text-[.9em]  max-lg:text-[.93em]    font-medium tracking-[-0.03em]"
+                      className="mb-1 text-p  text-[.9em]  max-lg:text-[.93em]    font-medium tracking-[-0.03em]"
                     >
                       {item}
                     </li>
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 {items.map((item, i) => (
                   <li
                     key={i}
-                    className="text-p  text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]"
+                    className="text-p  text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]"
                   >
                     {item}
                   </li>
@@ -87,7 +87,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <div className="grid grid-cols-4 gap-8 mb-32 border-t border-black/10 pt-8 max-md:grid-cols-1">
+        <div className="grid grid-cols-4 gap-8 mb-32 border-t border-black/10 pt-8 max-md:mb-10 max-md:grid-cols-1">
           <p className="text-p  text-[.9em]  max-lg:text-[.93em]    font-bold tracking-[-0.03em]">
             About
           </p>

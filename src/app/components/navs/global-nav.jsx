@@ -22,7 +22,7 @@ const GlobalNav = () => {
     <>
       <nav
         className={`
-          fixed top-0 left-0 p-4 py-2 pt-4 w-full
+          fixed top-0 left-0 p-4 py-2 pt-4 gap-4  w-full
           grid grid-cols-4 items-center mix-blend-difference
           max-md:flex max-md:justify-between max-md:items-center
           z-100
@@ -32,7 +32,7 @@ const GlobalNav = () => {
         <div className="flex content-start justify-start max-md:hidden">
           <Link
             href="/"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    text-s! font-normal tracking-[-0.03em] ${isActive(
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    text-s! font-medium tracking-[-0.03em] ${isActive(
               "/"
             )}`}
           >
@@ -44,7 +44,7 @@ const GlobalNav = () => {
         <div className="flex justify-start gap-1 max-md:hidden">
           <Link
             href="/works"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-normal tracking-[-0.03em] ${isActive(
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-medium tracking-[-0.03em] ${isActive(
               "/works"
             )}`}
           >
@@ -53,7 +53,7 @@ const GlobalNav = () => {
 
           <Link
             href="/about"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-normal tracking-[-0.03em] ${isActive(
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-medium tracking-[-0.03em] ${isActive(
               "/about"
             )}`}
           >
@@ -62,7 +62,7 @@ const GlobalNav = () => {
 
           <Link
             href="/contact"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-normal tracking-[-0.03em] ${isActive(
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-medium tracking-[-0.03em] ${isActive(
               "/contact"
             )}`}
           >
@@ -74,7 +74,7 @@ const GlobalNav = () => {
         <div className="max-md:flex justify-center gap-1 hidden">
           <Link
             href="/"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]     text-s font-normal tracking-[-0.03em] truncate
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]     text-s font-medium tracking-[-0.03em] truncate
         
       `}
           >
@@ -83,7 +83,7 @@ const GlobalNav = () => {
 
           <Link
             href="/works"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]     font-normal tracking-[-0.03em] ${isActive(
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]     font-medium tracking-[-0.03em] ${isActive(
               "/works"
             )}`}
           >
@@ -92,7 +92,7 @@ const GlobalNav = () => {
 
           <Link
             href="/about"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-normal tracking-[-0.03em] ${isActive(
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    font-medium tracking-[-0.03em] ${isActive(
               "/about"
             )}`}
           >
@@ -101,7 +101,7 @@ const GlobalNav = () => {
 
           <Link
             href="/contact"
-            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]     font-normal tracking-[-0.03em] ${isActive(
+            className={`text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]     font-medium tracking-[-0.03em] ${isActive(
               "/contact"
             )}`}
           >
@@ -111,7 +111,7 @@ const GlobalNav = () => {
 
         {/* CLOCK */}
         <div className="w-full flex justify-end col-span-2 ">
-          <span className="text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    text-s font-normal tracking-[-0.03em] uppercase flex items-center gap-1">
+          <span className="text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    text-s font-medium tracking-[-0.03em] uppercase flex items-center gap-1">
             <Clock />
           </span>
         </div>

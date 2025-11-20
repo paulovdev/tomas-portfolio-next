@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const modalAnim = {
-  initial: { width: "0%" },
+  initial: { x: "100%" },
   animate: {
-    width: "100%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    x: "0%",
+    transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
   },
   exit: {
-    width: "0%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    x: "100%",
+    transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
   },
 };
 
@@ -18,11 +18,11 @@ const opacityAnim = {
   initial: { opacity: 0 },
   animate: {
     opacity: 1,
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
   },
 };
 
@@ -75,7 +75,7 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               exit="exit"
               className="size-full p-4 pt-4"
             >
-              <nav className="mb-20 flex items-center justify-between">
+              <nav className="mb-20 w-full flex items-end justify-end">
                 <p
                   className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em] cursor-pointer"
                   onClick={() => setWorkModal(false)}
@@ -85,10 +85,11 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               </nav>
 
               <div className="mb-20 flex flex-col items-start">
-                <p className="mb-4 text-p text-[1.5em] font-semibold tracking-[-0.03em]">
+                <p className="mb-6 text-p text-[1em] font-semibold tracking-[-0.03em]">
                   {work.title}
                 </p>
-                <p className="text-p/75 text-[1.75em] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
+
+                <p className="text-p/75 text-[1.5em] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
                   {work.description}
                 </p>
               </div>
@@ -99,41 +100,41 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
                     Information
                   </p>
                   <ul>
-                    <li className="flex items-center gap-2">
+                    <li className="flex items-center gap-1">
                       <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
                         Year:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
                         {work.year}
                       </p>
                     </li>
                     {work.website ? (
-                      <li className="flex items-center gap-2">
+                      <li className="flex items-center gap-1">
                         <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
                           Website:
                         </p>
                         <a
                           href={work.website}
                           target="_blank"
-                          className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em] hover:underline"
+                          className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em] hover:underline"
                         >
                           {work.website}
                         </a>
                       </li>
                     ) : null}
-                    <li className="flex items-center gap-2">
+                    <li className="flex items-center gap-1">
                       <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
                         Client:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
                         {work.client}
                       </p>
                     </li>
-                    <li className="flex items-center gap-2">
+                    <li className="flex items-center gap-1">
                       <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
                         Services:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-normal tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
                         {work.services}
                       </p>
                     </li>

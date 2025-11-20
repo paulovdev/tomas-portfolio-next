@@ -3,6 +3,7 @@ import Footer from "@/app/components/footer";
 import WorkNav from "@/app/components/navs/work-nav";
 import WorkMedia from "@/app/components/pages/works/slug/work-media";
 import RelatedWorks from "@/app/components/pages/works/slug/related-works";
+import { MotionFigure } from "@/app/components/motion";
 
 export const revalidate = 60;
 
@@ -83,7 +84,20 @@ export default async function WorkPage({ params }) {
       <main>
         <section className="relative pt-30 p-4 min-h-dvh bg-s">
           {work.media?.length > 0 ? (
-            <WorkMedia media={work.media} title={work.title} />
+            <MotionFigure
+              className="overflow-hidden size-full mb-4"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: [0.33, 1, 0.68, 1],
+                  delay: work.index * 0.075,
+                },
+              }}
+            >
+              <WorkMedia media={work.media} title={work.title} />
+            </MotionFigure>
           ) : (
             <p className="text-center text-p text-[.9em] font-semibold">
               No Work available

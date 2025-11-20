@@ -5,16 +5,11 @@ import emailjs from "@emailjs/browser";
 
 const modalAnim = {
   initial: {
-    width: "0%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    x: "100%",
   },
   animate: {
-    width: "100%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
-  },
-  exit: {
-    width: "0%",
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    x: "0%",
+    transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
   },
 };
 
@@ -22,15 +17,10 @@ const opacityAnim = {
   initial: { opacity: 0 },
   animate: {
     opacity: 1,
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 1, ease: [0.33, 1, 0.68, 1] },
   },
 };
 
-// REGEX
 const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]{2,}$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const messageRegex = /^.{5,}$/;
@@ -46,7 +36,6 @@ const ContactModal = ({ setContactModal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // VALIDATIONS — sem alert, só mensagem animada
     if (!nameRegex.test(form.name)) {
       setStatus("error");
       setStatusMessage("Please enter a valid name.");
@@ -93,10 +82,7 @@ const ContactModal = ({ setContactModal }) => {
   return (
     <motion.div
       className="w-full right-0 bottom-0 flex items-end justify-end"
-      variants={modalAnim}
-      initial="initial"
-      animate="animate"
-      exit="exit"
+      {...modalAnim}
     >
       <motion.div
         className="relative p-4 max-w-[700px] w-full bg-[#F0EEE6] z-50 max-md:max-w-full"
@@ -116,7 +102,7 @@ const ContactModal = ({ setContactModal }) => {
 
         <form
           onSubmit={handleSubmit}
-          className="relative h-[190px] flex flex-col items-start justify-between gap-2"
+          className="relative h-[160px] flex flex-col items-start justify-between gap-2"
         >
           <div className="flex flex-col w-full h-full">
             <input
@@ -154,10 +140,9 @@ const ContactModal = ({ setContactModal }) => {
               Send
             </button>
 
-            {/* MENSAGEM ÚNICA */}
             {status && (
               <motion.p
-                key={statusMessage} // garante animação sempre que muda
+                key={statusMessage}
                 className={`text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ${
                   status === "error" ? "text-red-500" : "text-p"
                 }`}
