@@ -60,78 +60,88 @@ export default function HomePage({ media }) {
   const isVideo = current.asset.mimeType?.startsWith("video/");
 
   const imageUrl = !isVideo
-    ? urlFor(current.asset).width(1800).quality(90).auto("format").url()
+    ? urlFor(current.asset).width(2000).quality(90).auto("format").url()
     : null;
 
   return (
     <>
       <HomeNav />
 
-      <div className="relative h-svh bg-p max-md:h-[calc(var(--vh)*100)] w-full overflow-hidden">
-        <AnimatePresence>
-          {isVideo ? (
-            <motion.video
-              key={current.asset._id}
-              src={current.asset.url}
-              className="absolute inset-0 w-full h-screen object-cover will-change-clip bg-p"
-              autoPlay
-              muted
-              loop
-              playsInline
-              initial={{ clipPath: "inset(0% 101% 0% -1%)" }}
-              animate={{
-                clipPath: "inset(0% -1% 0% -1%)",
-                transition: {
-                  duration: 1,
-                  type: "tween",
-                  ease: [0.87, 0, 0.13, 1],
-                },
-              }}
-              exit={{
-                clipPath: "inset(0% -1% 0% 101%)",
-                transition: {
-                  duration: 1,
-                  type: "tween",
-                  ease: [0.87, 0, 0.13, 1],
-                },
-              }}
-            />
-          ) : (
-            <motion.img
-              key={current.asset._id}
-              src={imageUrl}
-              alt={current.alt || ""}
-              className="absolute inset-0 w-full h-full object-cover will-change-clip bg-p"
-              initial={{ clipPath: "inset(0% 101% 0% -1%)" }}
-              animate={{
-                clipPath: "inset(0% -1% 0% -1%)",
-                transition: {
-                  duration: 1,
-                  type: "tween",
-                  ease: [0.87, 0, 0, 0.13, 1],
-                },
-              }}
-              exit={{
-                clipPath: "inset(0% -1% 0% 101%)",
-                transition: {
-                  duration: 1,
-                  type: "tween",
-                  ease: [0.87, 0, 0.13, 1],
-                },
-              }}
-            />
-          )}
-        </AnimatePresence>
+      {/* BACKGROUND FIXO — Sempre mostra a mídia imediatamente */}
+      <div className="fixed inset-0 w-full h-full -z-10">
+        {isVideo ? (
+          <video
+            src={current.asset.url}
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img
+            src={imageUrl}
+            className="absolute inset-0 w-full h-full object-cover"
+            alt=""
+          />
+        )}
+      </div>
 
+      {/* CONTAINER PRINCIPAL */}
+      <div className="relative h-svh max-md:h-[calc(var(--vh)*100)] w-full overflow-hidden">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <AnimatePresence mode="popLayout">
+            {/* SÓ CLIP-PATH — SEM OPACITY, SEM BLUR */}
+            <motion.div
+              key={current.asset._id + "-enter"}
+              className="absolute inset-0 w-full h-full z-[3]"
+              initial={{
+                clipPath: "inset(0% 101% 0% 0%)",
+              }}
+              animate={{
+                clipPath: "inset(0% 0% 0% 0%)",
+                transition: {
+                  duration: 1.1,
+                  ease: [0.87, 0, 0.13, 1],
+                },
+              }}
+              exit={{
+                clipPath: "inset(0% 0% 0% 101%)",
+                transition: {
+                  duration: 1.1,
+                  ease: [0.87, 0, 0.13, 1],
+                },
+              }}
+            >
+              {isVideo ? (
+                <video
+                  src={current.asset.url}
+                  className="absolute inset-0 w-full h-full object-cover will-change-clip"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={imageUrl}
+                  className="absolute inset-0 w-full h-full object-cover will-change-clip"
+                  alt=""
+                />
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* LOADING SCREEN */}
         {!loadingDone && (
           <motion.div
-            className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-1000"
+            className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-200"
             initial={{ y: 0 }}
             animate={{ y: "-100%" }}
             transition={{
               delay: 2,
               duration: 1,
-              type: "tween",
               ease: [0.87, 0, 0.13, 1],
             }}
             onAnimationComplete={() => setLoadingDone(true)}
