@@ -29,7 +29,7 @@ const WorksCard = ({ work }) => {
   return (
     <div
       key={work._id}
-      className="relative mb-10 group overflow-hidden cursor-pointer"
+      className="relative mb-10 group overflow-hidden cursor-pointer max-md:mb-0"
       onClick={() => handleOpen(work.slug)}
     >
       {isVideo ? (
@@ -67,7 +67,7 @@ const WorksPage = ({ works }) => {
     <>
       <GlobalNav />
 
-      <section className="relative pt-30 pb-30 px-4 min-h-dvh bg-s">
+      <section className="relative pt-30 pb-30 px-4 min-h-dvh bg-s max-md:pb-0">
         <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-lg:grid-cols-3">
           {works.map((work, i) => (
             <motion.figure
