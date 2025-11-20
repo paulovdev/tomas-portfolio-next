@@ -3,30 +3,28 @@ import { useEffect, useState } from "react";
 
 const Clock = () => {
   const [time, setTime] = useState("");
-  const [time2, setTime2] = useState("");
 
-  const userLocale = navigator.language || "en-US";
-  const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const userLocale =
+    typeof navigator !== "undefined" ? navigator.language : "en-US";
+  const userTimeZone =
+    typeof Intl !== "undefined"
+      ? Intl.DateTimeFormat().resolvedOptions().timeZone
+      : "UTC";
 
   useEffect(() => {
     const updateClock = () => {
       const date = new Date();
 
-      const formatted = date.toLocaleTimeString(userLocale, {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        timeZone: userTimeZone,
-        hour12: false,
-      });
+      const formatted = date
+        .toLocaleTimeString(userLocale, {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+          timeZone: userTimeZone,
+        })
+        .replace(" ", " ");
 
-      const hours = new Date().toLocaleString("en-US", {
-        hour: "2-digit",
-        hour12: false,
-        timeZone: userTimeZone,
-      });
-
-      setTime2(Number(hours) >= 12 ? "PM" : "AM");
       setTime(formatted);
     };
 
@@ -35,7 +33,7 @@ const Clock = () => {
     return () => clearInterval(interval);
   }, [userLocale, userTimeZone]);
 
-  return <div>{time + " " + time2}</div>;
+  return <div>{time}</div>;
 };
 
 export default Clock;
