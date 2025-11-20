@@ -34,6 +34,9 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+.will-change-clip {
+  will-change: clip-path;
+}
 
 :root {
   --real-vh: 100vh;
