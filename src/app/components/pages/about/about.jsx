@@ -48,25 +48,106 @@ export default function AboutPage() {
             Services
           </p>
           {/* MOBILE */}
-          <div className="max-md:flex max-md:flex-col hidden">
-            {Object.entries(services).map(([category, items]) => (
-              <div key={category}>
-                <p className="mb-6 border-b border-black/10 text-p  text-[.9em]  max-lg:text-[.93em]    font-bold tracking-[-0.03em]">
-                  {category}
+         
+            <div className="max-md:flex max-md:flex-col hidden">
+              {/* Branding */}
+              <div>
+                <p className="mb-6 border-b border-black/10 text-p text-[.9em] max-lg:text-[.93em] font-bold tracking-[-0.03em]">
+                  Branding
                 </p>
-                <ul className="mb-6 grid grid-cols-2">
-                  {items.map((item, i) => (
-                    <li
-                      key={i}
-                      className="mb-1 text-p  text-[.9em]  max-lg:text-[.93em]    font-medium tracking-[-0.03em]"
-                    >
-                      {item}
+                <ul className="mb-6 flex items-start justify-between gap-8">
+                  <div className="flex-[1.3] w-full flex-col items-start">
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Brand audit & consultancy
                     </li>
-                  ))}
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      Creative direction
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Brand identity
+                    </li>{" "}
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Visual identity
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      Verbal identity
+                    </li>
+                  </div>
+                  <div className="flex-1 w-full flex-col items-start">
+                    {" "}
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      Brand strategy
+                    </li>{" "}
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Art direction
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Logo design
+                    </li>{" "}
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      Naming
+                    </li>
+                  </div>
                 </ul>
               </div>
-            ))}
-          </div>
+
+              {/* Digital */}
+              <div>
+                <p className="mb-6 border-b border-black/10 text-p text-[.9em] max-lg:text-[.93em] font-bold tracking-[-0.03em]">
+                  Digital
+                </p>
+                <ul className="mb-6 flex items-start justify-between gap-8">
+                  <div className="flex-[1.3] w-full flex-col items-start">
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] truncate">
+                      Digital audit & consultancy
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      Social media design
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] truncate">
+                      Digital visual systems
+                    </li>
+                  </div>
+                  <div className="flex-1 w-full flex-col items-start">
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Web design
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      App design
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+              {/* Print */}
+              <div>
+                <p className="mb-6 border-b border-black/10 text-p text-[.9em] max-lg:text-[.93em] font-bold tracking-[-0.03em]">
+                  Print
+                </p>
+                <ul className="mb-6 flex items-start justify-between gap-8">
+                  <div className="flex-[1.3] w-full flex-col items-start">
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Packaging design
+                    </li>{" "}
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      Editorial design
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Poster design
+                    </li>
+                  </div>{" "}
+                  <div className="flex-1 w-full flex-col items-start">
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em] ">
+                      Corporate stationery
+                    </li>
+                    <li className="mb-1 text-p text-[.9em] font-medium tracking-[-0.03em]">
+                      Print production
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          
           {/* DESKTOP */}
           {Object.entries(services).map(([category, items]) => (
             <div key={category} className="max-md:hidden block">

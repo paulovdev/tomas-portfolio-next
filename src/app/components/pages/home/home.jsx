@@ -73,7 +73,7 @@ export default function HomePage({ media }) {
             <motion.video
               key={current.asset._id}
               src={current.asset.url}
-              className="absolute inset-0 w-full h-screen object-cover"
+              className="absolute inset-0 w-full h-screen object-cover will-change-clip"
               autoPlay
               muted
               loop
@@ -101,7 +101,7 @@ export default function HomePage({ media }) {
               key={current.asset._id}
               src={imageUrl}
               alt={current.alt || ""}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover will-change-clip"
               initial={{ clipPath: "inset(0% 100% 0% 0% )" }}
               animate={{
                 clipPath: "inset(0% 0% 0% 0% )",

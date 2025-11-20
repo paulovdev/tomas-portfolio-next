@@ -80,7 +80,13 @@ const WorkNav = ({ work }) => {
               </span>
               <button
                 onClick={() => setWorkModal(true)}
-                className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  text-s font-medium tracking-[-0.03em] cursor-pointer"
+                className="hidden max-md:block text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  text-s font-medium tracking-[-0.03em] cursor-pointer"
+              >
+                Info
+              </button>
+              <button
+                onClick={() => setWorkModal(true)}
+                className="block max-md:hidden text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  text-s font-medium tracking-[-0.03em] cursor-pointer"
               >
                 Information
               </button>

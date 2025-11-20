@@ -75,7 +75,11 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               exit="exit"
               className="size-full p-4 pt-4"
             >
-              <nav className="mb-20 w-full flex items-end justify-end">
+              <nav className="mb-20 w-full flex items-center justify-between">
+                {" "}
+                <p className="text-p text-[1em] font-semibold tracking-[-0.03em]">
+                  {work.title}
+                </p>
                 <p
                   className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em] cursor-pointer"
                   onClick={() => setWorkModal(false)}
@@ -85,10 +89,6 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               </nav>
 
               <div className="mb-20 flex flex-col items-start">
-                <p className="mb-6 text-p text-[1em] font-semibold tracking-[-0.03em]">
-                  {work.title}
-                </p>
-
                 <p className="text-p/75 text-[1.5em] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
                   {work.description}
                 </p>
@@ -108,6 +108,14 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
                         {work.year}
                       </p>
                     </li>
+                    <li className="flex items-center gap-1">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
+                        Client:
+                      </p>
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
+                        {work.client}
+                      </p>
+                    </li>
                     {work.website ? (
                       <li className="flex items-center gap-1">
                         <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
@@ -122,14 +130,6 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
                         </a>
                       </li>
                     ) : null}
-                    <li className="flex items-center gap-1">
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
-                        Client:
-                      </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
-                        {work.client}
-                      </p>
-                    </li>
                     <li className="flex items-center gap-1">
                       <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
                         Services:

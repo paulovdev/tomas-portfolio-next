@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { urlFor } from "@/app/lib/sanityImage";
 
-const WorkMedia = ({ media, title, index }) => {
+const WorkMedia = ({ media, title }) => {
   const getUrl = (asset) =>
     urlFor(asset).width(1600).quality(80).auto("format").url();
 
@@ -26,7 +26,7 @@ const WorkMedia = ({ media, title, index }) => {
               autoPlay
               loop
               playsInline
-              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
+              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
           ) : (
             <Image
@@ -35,7 +35,7 @@ const WorkMedia = ({ media, title, index }) => {
               width={1600}
               height={1200}
               alt={item.alt || title}
-              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
+              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
           );
         }
@@ -51,7 +51,7 @@ const WorkMedia = ({ media, title, index }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (
                 <Image
@@ -59,7 +59,7 @@ const WorkMedia = ({ media, title, index }) => {
                   width={1600}
                   height={1200}
                   alt={item.alt || title}
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               )}
 
@@ -70,7 +70,7 @@ const WorkMedia = ({ media, title, index }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (
                 <Image
@@ -78,7 +78,7 @@ const WorkMedia = ({ media, title, index }) => {
                   width={1600}
                   height={1200}
                   alt={next.alt || title}
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[50vh]"
+                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               )}
             </div>
