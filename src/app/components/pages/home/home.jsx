@@ -67,7 +67,6 @@ export default function HomePage({ media }) {
     <>
       <HomeNav />
 
-      {/* BACKGROUND FIXO — Sempre mostra a mídia imediatamente */}
       <div className="fixed inset-0 w-full h-full -z-10">
         {isVideo ? (
           <video
@@ -87,11 +86,9 @@ export default function HomePage({ media }) {
         )}
       </div>
 
-      {/* CONTAINER PRINCIPAL */}
       <div className="relative h-svh max-md:h-[calc(var(--vh)*100)] w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <AnimatePresence mode="popLayout">
-            {/* SÓ CLIP-PATH — SEM OPACITY, SEM BLUR */}
             <motion.div
               key={current.asset._id + "-enter"}
               className="absolute inset-0 w-full h-full z-[3]"
@@ -133,7 +130,6 @@ export default function HomePage({ media }) {
           </AnimatePresence>
         </div>
 
-        {/* LOADING SCREEN */}
         {!loadingDone && (
           <motion.div
             className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-200"

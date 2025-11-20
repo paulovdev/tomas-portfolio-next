@@ -25,15 +25,13 @@ const Clock = () => {
 
       let formatted = date
         .toLocaleTimeString(userLocale, options)
-        .replace(/\./g, ""); // remove pontos se o locale usar
+        .replace(/\./g, "");
 
-      // Separar partes
       const match = formatted.match(/(\d{1,2}):(\d{2}):(\d{2})\s?(AM|PM)/i);
 
       if (match) {
         let [, hour, minute, second, suffix] = match;
 
-        // Garantir que tenha 2 dígitos na hora
         hour = hour.padStart(2, "0");
 
         formatted = `${hour}:${minute}:${second} ${suffix.toUpperCase()}`;
