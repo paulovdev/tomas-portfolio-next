@@ -4,46 +4,48 @@ import { useEffect, useState } from "react";
 const Clock = () => {
   const [time, setTime] = useState("");
 
-  const userLocale =
-    typeof navigator !== "undefined" ? navigator.language : "en-US";
-  const userTimeZone =
-    typeof Intl !== "undefined"
-      ? Intl.DateTimeFormat().resolvedOptions().timeZone
-      : "UTC";
+  // Troque para o fuso desejado, exemplo: "America/Sao_Paulo"
+  const timeZone = "Atlantic/Canary";
 
   useEffect(() => {
-    const updateClock = () => {
-      const date = new Date();
+    let interval;
 
-      const options = {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true,
-        timeZone: userTimeZone,
-      };
+    const fetchTime = async () => {
+      try {
+        const res = await fetch(
+          `http://worldtimeapi.org/api/timezone/${timeZone}`
+        );
+        const data = await res.json();
 
-      let formatted = date
-        .toLocaleTimeString(userLocale, options)
-        .replace(/\./g, "");
+        // data.datetime vem no formato: 2025-11-20T22:15:30.123456+00:00
+        const date = new Date(data.datetime);
 
-      const match = formatted.match(/(\d{1,2}):(\d{2}):(\d{2})\s?(AM|PM)/i);
+        let hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
 
-      if (match) {
-        let [, hour, minute, second, suffix] = match;
+        const ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        hours = hours ? hours : 12; // hora 0 vira 12
 
-        hour = hour.padStart(2, "0");
+        const formatted =
+          [
+            hours.toString().padStart(2, "0"),
+            minutes.toString().padStart(2, "0"),
+            seconds.toString().padStart(2, "0"),
+          ].join(":") + ` ${ampm}`;
 
-        formatted = `${hour}:${minute}:${second} ${suffix.toUpperCase()}`;
+        setTime(formatted);
+      } catch (err) {
+        console.error("Erro ao buscar horário:", err);
       }
-
-      setTime(formatted);
     };
 
-    updateClock();
-    const interval = setInterval(updateClock, 1000);
+    fetchTime(); // busca inicial
+    interval = setInterval(fetchTime, 1000); // atualiza a cada 1s
+
     return () => clearInterval(interval);
-  }, [userLocale, userTimeZone]);
+  }, [timeZone]);
 
   return <div>{time}</div>;
 };

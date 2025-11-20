@@ -111,9 +111,9 @@ const GlobalNav = () => {
 
         {/* CLOCK */}
         <div className="w-full flex justify-end col-span-2 ">
-          <span className="text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]    text-s font-medium tracking-[-0.03em] uppercase flex items-center gap-1">
+         {/*  <span className="text-[.9em]  max-lg:text-[.93em] max-md:text-[1em] text-s font-medium tracking-[-0.03em] uppercase flex items-center gap-1">
             <Clock />
-          </span>
+          </span> */}    <Clock />
         </div>
       </nav>
     </>
