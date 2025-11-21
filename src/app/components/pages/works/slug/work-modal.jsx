@@ -75,13 +75,13 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               exit="exit"
               className="size-full p-4 pt-4"
             >
-              <nav className="mb-20 w-full flex items-center justify-between">
+              <nav className="mb-20 w-full flex items-center justify-between max-ssm:mb-10">
                 {" "}
-                <p className="text-p text-[1em] font-semibold tracking-[-0.03em]">
+                <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-semibold tracking-[-0.03em]">
                   {work.title}
                 </p>
                 <p
-                  className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em] cursor-pointer"
+                  className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-bold tracking-[-0.03em] cursor-pointer"
                   onClick={() => setWorkModal(false)}
                 >
                   Close
@@ -89,52 +89,52 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               </nav>
 
               <div className="mb-20 flex flex-col items-start">
-                <p className="text-p/75 text-[1.5em] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
+                <p className="text-p/75 text-[1.5em] max-ssm:text-[1.2rem] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
                   {work.description}
                 </p>
               </div>
 
               <div className="pb-10 flex items-end justify-end">
                 <div className="w-full flex flex-col items-start justify-between">
-                  <p className="mb-4 text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
+                  <p className="mb-4 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-bold tracking-[-0.03em]">
                     Information
                   </p>
                   <ul>
                     <li className="flex items-center gap-1">
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-bold tracking-[-0.03em]">
                         Year:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-medium tracking-[-0.03em]">
                         {work.year}
                       </p>
                     </li>
                     <li className="flex items-center gap-1">
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-bold tracking-[-0.03em]">
                         Client:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-medium tracking-[-0.03em]">
                         {work.client}
                       </p>
                     </li>
                     {work.website ? (
                       <li className="flex items-center gap-1">
-                        <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
+                        <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-bold tracking-[-0.03em]">
                           Website:
                         </p>
                         <a
                           href={work.website}
                           target="_blank"
-                          className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em] hover:underline"
+                          className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-medium tracking-[-0.03em] hover:underline"
                         >
                           {work.website}
                         </a>
                       </li>
                     ) : null}
                     <li className="flex items-center gap-1">
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-bold tracking-[-0.03em]">
                         Services:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]   font-medium tracking-[-0.03em]">
+                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem]  font-medium tracking-[-0.03em]">
                         {work.services}
                       </p>
                     </li>

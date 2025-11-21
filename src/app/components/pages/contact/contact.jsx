@@ -47,16 +47,16 @@ const ContactPage = () => {
         flex flex-col items-start justify-between pt-35 max-md:pt-24 bg-s text-p"
       >
         <div className="px-4 mb-20 flex-1 max-md:mb-15">
-          <h2 className="text-[1.75em] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
+          <h2 className="text-[1.75em] max-ssm:text-[1.2rem] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
             If you’d like to discuss a project or learn more about our process,
           </h2>
-          <h2 className="text-[1.75em] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
+          <h2 className="text-[1.75em] max-ssm:text-[1.2rem] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
             please don’t hesitate to get in touch.
           </h2>
         </div>
 
         <div className="px-4 mb-15 flex-3 w-full grid grid-cols-4 gap-8 border-t border-black/10 pt-8">
-          <p className="text-p text-[.9em] max-lg:text-[.93em] font-bold tracking-[-0.03em]">
+          <p className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-bold tracking-[-0.03em]">
             Contact
           </p>
 
@@ -66,7 +66,7 @@ const ContactPage = () => {
                 return (
                   <p
                     key={i}
-                    className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em]"
+                    className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-medium tracking-[-0.03em]"
                   >
                     {info.value.map((item, idx) => (
                       <a
@@ -88,7 +88,7 @@ const ContactPage = () => {
                 return (
                   <p
                     key={i}
-                    className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em]"
+                    className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-medium tracking-[-0.03em]"
                   >
                     <a
                       href={info.href}
@@ -105,7 +105,7 @@ const ContactPage = () => {
               return (
                 <p
                   key={i}
-                  className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em]"
+                  className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-medium tracking-[-0.03em]"
                 >
                   {info.value}
                 </p>
@@ -114,7 +114,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="w-full flex-[2] flex items-end">
+        <div className="w-full flex-2 flex items-end">
           <p className="relative bottom-4 w-full px-4 text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.05em] max-md:absolute max-md:bottom-4">
             ©T—ML 2025
           </p>

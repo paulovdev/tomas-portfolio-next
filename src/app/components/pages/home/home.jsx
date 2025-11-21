@@ -47,12 +47,34 @@ export default function HomePage({ media }) {
   const [loadingDone, setLoadingDone] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % media.length);
-    }, 3500);
+    let interval;
 
-    return () => clearInterval(interval);
-  }, [media]);
+    const start = () => {
+      interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % media.length);
+      }, 3500);
+    };
+
+    const stop = () => clearInterval(interval);
+
+    start();
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        stop();
+      } else {
+        setIndex((prev) => prev);
+        start();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      stop();
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [media.length]);
 
   if (!media.length) return null;
 
@@ -91,7 +113,7 @@ export default function HomePage({ media }) {
           <AnimatePresence mode="popLayout">
             <motion.div
               key={current.asset._id + "-enter"}
-              className="absolute inset-0 w-full h-full z-[3]"
+              className="absolute inset-0 w-full h-full z-3 will-change-clip"
               initial={{
                 clipPath: "inset(0% 101% 0% 0%)",
               }}
@@ -142,7 +164,7 @@ export default function HomePage({ media }) {
             }}
             onAnimationComplete={() => setLoadingDone(true)}
           >
-            <h1 className="text-[1em] font-medium text-p tracking-[-0.05em] select-none flex flex-wrap">
+            <h1 className="text-[1em] max-ssm:text-[.88em] font-medium text-p tracking-[-0.05em] select-none flex flex-wrap">
               <AnimatedLetters text="Tomás — Branding & Visual Identity Designer" />
             </h1>
           </motion.div>

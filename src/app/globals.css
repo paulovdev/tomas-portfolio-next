@@ -10,11 +10,15 @@
 
   --font-sans: var(--font-dm);
 
-  --breakpoint-full-ds: 1900px;
+  /* HIGH QUERY */
   --breakpoint-ds: 1262px;
   --breakpoint-lg: 992px;
   --breakpoint-md: 768px;
-  --breakpoint-sm: 400px;
+  /* LOW QUERY */
+  --breakpoint-mmd: 400px;
+  --breakpoint-sm: 360px;
+  --breakpoint-ssm: 321px;
+
   --safe-top: env(safe-area-inset-top);
   --safe-bottom: env(safe-area-inset-bottom);
 }

@@ -5,10 +5,10 @@ const Footer = () => {
   const locationLink = useDeviceMapLink("Las Palmas de Gran Canaria");
 
   return (
-    <footer className="relative p-4 w-full border-t border-p/10 grid grid-cols-4 max-md:flex max-md:justify-between max-lg:items-end max-lg:gap-8">
+    <footer className="relative p-3 w-full border-t border-p/10 grid grid-cols-4 max-md:flex max-md:justify-between max-lg:items-end max-lg:gap-4">
       {/* DESKTOP */}
       <div className="w-full max-lg:w-1/2 max-md:hidden">
-        <p className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.05em] truncate">
+        <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.05em] truncate">
           © T—ML {new Date().getFullYear()}
         </p>
       </div>
@@ -18,7 +18,7 @@ const Footer = () => {
           href={locationLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+          className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 truncate hover:underline"
         >
           Las Palmas de Gran Canaria, Spain
         </a>
@@ -27,21 +27,21 @@ const Footer = () => {
           <a
             href="https://www.instagram.com/im_tomasml/"
             target="_blank"
-            className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+            className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
           >
             Instagram,
           </a>
           <a
             href="https://www.linkedin.com/in/tomasmedinaleon/"
             target="_blank"
-            className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+            className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
           >
             Linkedin,
           </a>
           <a
             href="https://www.behance.net/tomasml"
             target="_blank"
-            className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+            className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
           >
             Behance
           </a>
@@ -51,13 +51,13 @@ const Footer = () => {
       <div className="flex flex-col col-start-4 max-md:hidden">
         <a
           href="mailto:hey@tomasml.com"
-          className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+          className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
         >
           hey@tomasml.com
         </a>
         <a
           href="tel:+34625551094"
-          className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+          className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
         >
           +(34) 625 551 094
         </a>
@@ -70,7 +70,7 @@ const Footer = () => {
             href={locationLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+            className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 truncate hover:underline"
           >
             Las Palmas de Gran Canaria, Spain
           </a>
@@ -79,21 +79,21 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/im_tomasml/"
               target="_blank"
-              className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+              className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
             >
               Instagram,
             </a>
             <a
               href="https://www.linkedin.com/in/tomasmedinaleon/"
               target="_blank"
-              className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+              className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
             >
               Linkedin,
             </a>
             <a
               href="https://www.behance.net/tomasml"
               target="_blank"
-              className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+              className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
             >
               Behance
             </a>
@@ -103,13 +103,13 @@ const Footer = () => {
         <div className="flex flex-col">
           <a
             href="mailto:hey@tomasml.com"
-            className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+            className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
           >
             hey@tomasml.com
           </a>
           <a
             href="tel:+34625551094"
-            className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.03em] ml-1 hover:underline"
+            className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em] ml-1 hover:underline"
           >
             +(34) 625 551 094
           </a>
@@ -117,7 +117,7 @@ const Footer = () => {
       </div>
 
       <div className="w-1/3 max-md:flex items-end justify-end hidden">
-        <p className="text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.05em] truncate">
+        <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.05em] truncate">
           © T—ML {new Date().getFullYear()}
         </p>
       </div>
