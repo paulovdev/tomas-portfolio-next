@@ -81,8 +81,8 @@ export default async function WorkPage({ params }) {
     <>
       <WorkNav work={work} />
 
-      <main>
-        <section className="relative pt-30 p-4 h-full bg-s">
+      <main >
+        <section className="relative pt-30 p-4 h-fit bg-s">
           {work.media?.length > 0 ? (
             <MotionFigure
               className="overflow-hidden size-full mb-4"

@@ -38,8 +38,8 @@ export default function AboutPage() {
         <h2 className="max-w-[90%] mb-25 text-[1.75em] max-ssm:text-[1.2rem] font-medium tracking-[-0.03em] leading-[1.1] max-md:mb-10 max-md:text-[1.5em] max-md:max-w-full">
           Visual creation grounded in strategy, focused on developing functional
           and contemporary identities built with intent.
-          <br /> The approach brings together strategy, creative direction, and
-          design to shape systems that endure over time and <br /> adapt to the
+          The approach brings together strategy, creative direction, and
+          design to shape systems that endure over time and adapt to the
           digital and physical environments they inhabit.
         </h2>
 
