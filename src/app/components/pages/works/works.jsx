@@ -51,7 +51,7 @@ const WorksCard = ({ work }) => {
         />
       ) : null}
 
-      <h2 className="mt-2 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] max-cl:text-[.7rem] font-medium tracking-[-0.03em]">
+      <h2 className="mt-2 text-p texts-global font-medium tracking-[-0.03em]">
         {work.title}
       </h2>
     </div>

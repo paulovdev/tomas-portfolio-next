@@ -151,14 +151,14 @@ export default function AboutPage() {
           {/* DESKTOP */}
           {Object.entries(services).map(([category, items]) => (
             <div key={category} className="max-md:hidden block">
-              <p className="mb-6 border-b border-black/10 text-p  text-[.9em]  max-lg:text-[.93em]   font-bold tracking-[-0.03em]">
+              <p className="mb-6 border-b border-black/10 text-p texts-global   font-bold tracking-[-0.03em]">
                 {category}
               </p>
               <ul className="mr-6 ">
                 {items.map((item, i) => (
                   <li
                     key={i}
-                    className="text-p  text-[.9em]  max-lg:text-[.93em]  font-medium tracking-[-0.03em]"
+                    className="text-p texts-global  font-medium tracking-[-0.03em]"
                   >
                     {item}
                   </li>
