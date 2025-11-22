@@ -9,7 +9,7 @@ const HomeNav = () => {
       <nav
         className={`
     fixed top-0 left-0 p-4 py-2 pt-4 gap-4  w-full
-    grid grid-cols-4 items-center  max-md:flex max-md:justify-between max-md:items-center
+    grid grid-cols-4 items-center max-md:p-3 max-sm:p-2 max-md:flex max-md:justify-between max-md:items-center
     z-100
      
   `}

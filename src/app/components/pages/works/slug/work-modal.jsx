@@ -73,7 +73,7 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="size-full p-4 pt-4"
+              className="size-full p-4 pt-4 max-md:p-3 max-sm:p-2"
             >
               <nav className="mb-20 w-full flex items-center justify-between max-ssm:mb-10">
                 {" "}

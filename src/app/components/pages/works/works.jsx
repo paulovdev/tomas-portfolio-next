@@ -67,7 +67,7 @@ const WorksPage = ({ works }) => {
     <>
       <GlobalNav />
 
-      <section className="relative py-30 px-4 min-h-screen bg-s  max-md:pb-20 max-cl:py-15 max-cl:p-1">
+      <section className="relative py-30 px-4 min-h-screen bg-s  max-md:pb-20 max-cl:py-15 max-md:px-3 max-sm:px-2 max-cl:p-1">
         <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-lg:grid-cols-3">
           {works.map((work, i) => (
             <motion.figure

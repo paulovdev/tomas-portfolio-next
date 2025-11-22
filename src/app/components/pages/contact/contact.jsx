@@ -46,7 +46,7 @@ const ContactPage = () => {
         className="relative w-full h-svh max-md:h-[calc(var(--vh)*100)]
         flex flex-col items-start justify-between pt-35 max-md:pt-24 bg-s text-p"
       >
-        <div className="px-4 mb-20 flex-1 max-md:mb-15">
+        <div className="px-4 mb-20 flex-1 max-md:mb-15 max-md:px-3 max-sm:px-2">
           <h2 className="text-[1.75em] max-ssm:text-[1.2rem] font-medium tracking-[-0.03em] leading-[1.1] max-md:text-[1.5em]">
             If you’d like to discuss a project or learn more about our process,
           </h2>
@@ -55,7 +55,7 @@ const ContactPage = () => {
           </h2>
         </div>
 
-        <div className="px-4 mb-15 flex-3 w-full grid grid-cols-4 gap-8 border-t border-black/10 pt-8">
+        <div className="px-4 mb-15 flex-3 w-full grid grid-cols-4 gap-8 border-t border-black/10 pt-8 max-md:px-3 max-sm:px-2">
           <p className="text-p texts-global font-bold tracking-[-0.03em]">
             Contact
           </p>

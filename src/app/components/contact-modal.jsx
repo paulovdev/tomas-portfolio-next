@@ -85,7 +85,7 @@ const ContactModal = ({ setContactModal }) => {
       {...modalAnim}
     >
       <motion.div
-        className="relative p-4 max-w-[700px] w-full bg-[#F0EEE6] z-50 max-md:max-w-full"
+        className="relative p-4 max-w-[700px] w-full bg-[#F0EEE6] z-50 max-md:max-w-full max-md:px-3 max-sm:px-2"
         {...opacityAnim}
       >
         <div className="mb-12 w-full flex items-center justify-between">

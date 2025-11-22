@@ -34,7 +34,7 @@ export default function AboutPage() {
     <>
       <Nav />
 
-      <section className="relative h-full px-4 py-35 bg-s text-p max-md:py-24">
+      <section className="relative h-full px-4 py-35 bg-s text-p max-md:py-24 max-md:px-3 max-sm:px-2">
         <h2 className="max-w-[90%] mb-25 text-[1.75em] max-ssm:text-[1.2rem] font-medium tracking-[-0.03em] leading-[1.1] max-md:mb-10 max-md:text-[1.5em] max-md:max-w-full">
           Visual creation grounded in strategy, focused on developing functional
           and contemporary identities built with intent. The approach brings

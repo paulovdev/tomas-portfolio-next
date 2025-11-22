@@ -7,7 +7,7 @@ const NotFound = () => {
       <GlobalNav />
       <div
         className="relative h-svh 
-    max-md:h-[calc(var(--vh)*100)] px-4 flex items-center justify-center bg-s"
+    max-md:h-[calc(var(--vh)*100)] px-4 flex items-center justify-center bg-s max-md:px-3 max-sm:px-2"
       >
         <div className="w-full grid grid-cols-4">
           <p className="text-p text-[4em] max-md:text-[3em] font-medium tracking-[-0.03em]">

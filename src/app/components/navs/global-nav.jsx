@@ -25,7 +25,7 @@ const GlobalNav = () => {
           fixed top-0 left-0 p-4 py-2 pt-4 gap-4  w-full
           grid grid-cols-4 items-center mix-blend-difference
           max-md:flex max-md:justify-between max-md:items-center max-cl:p-1 max-cl:pt-5
-          z-100
+          z-100 max-md:p-3 max-sm:p-2
         `}
       >
         {/* LEFT – DESKTOP */}

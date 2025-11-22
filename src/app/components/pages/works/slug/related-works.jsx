@@ -8,7 +8,7 @@ export default function RelatedWorks({ relatedWorks }) {
   const router = useRouter();
 
   return (
-    <section className="py-30 px-4 w-full grid grid-cols-4 gap-4 max-md:flex max-md:flex-col max-md:py-20">
+    <section className="py-30 px-4 w-full grid grid-cols-4 gap-4 max-md:flex max-md:flex-col max-md:py-20 max-md:px-3 max-sm:px-2">
       <h2 className="text-p texts-global font-semibold tracking-[-0.03em]">
         Related Works
       </h2>
