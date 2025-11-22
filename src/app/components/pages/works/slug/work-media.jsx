@@ -5,7 +5,7 @@ import { urlFor } from "@/app/lib/sanityImage";
 
 const WorkMedia = ({ media, title }) => {
   const getUrl = (asset) =>
-    urlFor(asset).width(1600).quality(80).auto("format").url();
+    urlFor(asset).width(2000).quality(90).auto("format").url();
 
   return (
     <div className="flex flex-col gap-4">
