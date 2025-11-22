@@ -13,6 +13,9 @@ const WorksCard = ({ work }) => {
   const getUrl = (asset) =>
     urlFor(asset).width(1800).quality(85).auto("format").url();
 
+  const getBlur = (asset) =>
+    urlFor(asset).width(20).quality(20).blur(50).auto("format").url();
+
   const first = work.media?.[0];
   const asset = first?.asset;
 
@@ -47,6 +50,8 @@ const WorksCard = ({ work }) => {
           width={2000}
           height={1200}
           alt={first.alt || work.title}
+          placeholder="blur"
+          blurDataURL={getBlur(asset)}
           className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px] max-cl:h-[100px]"
         />
       ) : null}
@@ -67,7 +72,7 @@ const WorksPage = ({ works }) => {
     <>
       <GlobalNav />
 
-      <section className="relative py-30 px-4 min-h-screen bg-s  max-md:pb-20 max-cl:py-15 max-md:px-3 max-sm:px-2 max-cl:p-1">
+      <section className="relative py-30 px-4 min-h-screen bg-s max-md:pb-20 max-cl:py-15 max-md:px-3 max-sm:px-2 max-cl:p-1">
         <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-lg:grid-cols-3">
           {works.map((work, i) => (
             <motion.figure
