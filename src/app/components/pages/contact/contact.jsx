@@ -56,7 +56,7 @@ const ContactPage = () => {
         </div>
 
         <div className="px-4 mb-15 flex-3 w-full grid grid-cols-4 gap-8 border-t border-black/10 pt-8">
-          <p className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-bold tracking-[-0.03em]">
+          <p className="text-p texts-global font-bold tracking-[-0.03em]">
             Contact
           </p>
 
@@ -66,7 +66,7 @@ const ContactPage = () => {
                 return (
                   <p
                     key={i}
-                    className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-medium tracking-[-0.03em]"
+                    className="text-p texts-global font-medium tracking-[-0.03em]"
                   >
                     {info.value.map((item, idx) => (
                       <a
@@ -88,7 +88,7 @@ const ContactPage = () => {
                 return (
                   <p
                     key={i}
-                    className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-medium tracking-[-0.03em]"
+                    className="text-p texts-global font-medium tracking-[-0.03em]"
                   >
                     <a
                       href={info.href}
@@ -105,7 +105,7 @@ const ContactPage = () => {
               return (
                 <p
                   key={i}
-                  className="text-p text-[.9em] max-lg:text-[.93em] max-ssm:text-[.88em] font-medium tracking-[-0.03em]"
+                  className="text-p texts-global font-medium tracking-[-0.03em]"
                 >
                   {info.value}
                 </p>

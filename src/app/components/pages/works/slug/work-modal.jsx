@@ -77,11 +77,11 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
             >
               <nav className="mb-20 w-full flex items-center justify-between max-ssm:mb-10">
                 {" "}
-                <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-semibold tracking-[-0.03em]">
+                <p className="text-p texts-global font-semibold tracking-[-0.03em]">
                   {work.title}
                 </p>
                 <p
-                  className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-bold tracking-[-0.03em] cursor-pointer"
+                  className="text-p texts-global font-bold tracking-[-0.03em] cursor-pointer"
                   onClick={() => setWorkModal(false)}
                 >
                   Close
@@ -96,45 +96,45 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
 
               <div className="pb-10 flex items-end justify-end">
                 <div className="w-full flex flex-col items-start justify-between">
-                  <p className="mb-4 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-bold tracking-[-0.03em]">
+                  <p className="mb-4 text-p texts-global  font-bold tracking-[-0.03em]">
                     Information
                   </p>
                   <ul>
                     <li className="flex items-center gap-1">
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-bold tracking-[-0.03em]">
+                      <p className="text-p texts-global  font-bold tracking-[-0.03em]">
                         Year:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-medium tracking-[-0.03em]">
+                      <p className="text-p texts-global  font-medium tracking-[-0.03em]">
                         {work.year}
                       </p>
                     </li>
                     <li className="flex items-center gap-1">
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-bold tracking-[-0.03em]">
+                      <p className="text-p texts-global  font-bold tracking-[-0.03em]">
                         Client:
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-medium tracking-[-0.03em]">
+                      <p className="text-p texts-global  font-medium tracking-[-0.03em]">
                         {work.client}
                       </p>
                     </li>
                     {work.website ? (
                       <li className="flex items-center gap-1">
-                        <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-bold tracking-[-0.03em]">
+                        <p className="text-p texts-global  font-bold tracking-[-0.03em]">
                           Website:
                         </p>
                         <a
                           href={work.website}
                           target="_blank"
-                          className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-medium tracking-[-0.03em] hover:underline"
+                          className="text-p texts-global  font-medium tracking-[-0.03em] hover:underline"
                         >
                           {work.website}
                         </a>
                       </li>
                     ) : null}
-                    <li className="flex flex-col items-start gap-0">
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-bold tracking-[-0.03em]">
-                        Services:
+                    <li className="flex max-ssm:flex-col items-center max-ssm:items-start max-ssm:gap-0 gap-1">
+                      <p className="text-p texts-global  font-bold tracking-[-0.03em]">
+                        Services: 
                       </p>
-                      <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem]  font-medium tracking-[-0.03em]">
+                      <p className="text-p texts-global  font-medium tracking-[-0.03em]">
                         {work.services}
                       </p>
                     </li>

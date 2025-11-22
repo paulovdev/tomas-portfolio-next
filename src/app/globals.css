@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* =========================================
+   THEME VARIABLES (Tailwind Custom Theme)
+========================================= */
 @theme {
   --color-p: #000000;
   --color-s: #ffffff;
@@ -16,7 +19,7 @@
   --breakpoint-md: 768px;
   /* LOW QUERY */
   --breakpoint-mmd: 400px;
-  --breakpoint-sm: 360px;
+  --breakpoint-sm: 361px;
   --breakpoint-ssm: 321px;
   /* CLOCK QUERY */
   --breakpoint-cl: 200px;
@@ -40,12 +43,15 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
 .will-change-clip {
   will-change: clip-path;
 }
 
+/* Correção do viewport real para mobile */
 :root {
   --real-vh: 100vh;
+  --font-scale: 1.1; /* ESCALA PADRÃO - Desktop */
 }
 
 @media (max-width: 768px) {
@@ -54,8 +60,62 @@ body {
   }
 }
 
+/* iOS Safari fix */
 @supports (-webkit-touch-callout: none) {
   :root {
     --real-vh: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+.texts-global {
+  /* tamanho padrão para desktop (com leve fluidez) */
+  font-size: clamp(0.95em, 0.8em + 0.6vw, 1rem);
+  line-height: 1; /* ajuste se quiser */
+}
+
+/* LG <= 992px */
+@media (max-width: 992px) {
+  .texts-global {
+    font-size: clamp(0.9em, 0.78em + 1vw, 0.95em);
+  }
+}
+
+/* MD <= 768px */
+@media (max-width: 768px) {
+  .texts-global {
+    font-size: clamp(0.85em, 0.72em + 1.2vw, 0.9em);
+    line-height: 1.32;
+  }
+}
+
+/* MMD <= 400px */
+@media (max-width: 440px) {
+  .texts-global {
+    font-size: clamp(0.8em, 0.68em + 1.5vw, 0.85em);
+    line-height: 1.32;
+  }
+}
+
+/* SM <= 361px */
+@media (max-width: 380px) {
+  .texts-global {
+    font-size: clamp(0.7em, 0.62em + 1.8vw, 0.75em);
+    line-height: 1.32;
+  }
+}
+
+/* SM <= 361px */
+@media (max-width: 321px) {
+  .texts-global {
+    font-size: clamp(0.6em, 0.62em + 1.8vw, 0.65em);
+    line-height: 1.32;
+  }
+}
+
+/* CL <= 200px */
+@media (max-width: 200px) {
+  .texts-global {
+    font-size: clamp(0.65em, 0.55em + 2.5vw, 0.75em);
+    line-height: 1.32;
   }
 }

@@ -9,7 +9,7 @@ export default function RelatedWorks({ relatedWorks }) {
 
   return (
     <section className="py-30 px-4 w-full grid grid-cols-4 gap-4 max-md:flex max-md:flex-col max-md:py-20">
-      <h2 className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-semibold tracking-[-0.03em]">
+      <h2 className="text-p texts-global font-semibold tracking-[-0.03em]">
         Related Works
       </h2>
 
@@ -46,7 +46,7 @@ export default function RelatedWorks({ relatedWorks }) {
                 />
               )}
 
-              <h3 className="mt-2 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em]">
+              <h3 className="mt-2 text-p texts-global font-medium tracking-[-0.03em]">
                 {work.title}
               </h3>
             </div>

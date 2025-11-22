@@ -89,12 +89,12 @@ const ContactModal = ({ setContactModal }) => {
         {...opacityAnim}
       >
         <div className="mb-12 w-full flex items-center justify-between">
-          <p className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em]">
+          <p className="text-p  texts-global  font-medium tracking-[-0.03em]">
             Let's talk
           </p>
           <button
             onClick={() => setContactModal(false)}
-            className="text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em]"
+            className="text-p  texts-global  font-medium tracking-[-0.03em]"
           >
             Close
           </button>
@@ -111,7 +111,7 @@ const ContactModal = ({ setContactModal }) => {
               placeholder="Name"
               value={form.name}
               onChange={handleChange}
-              className="mb-4 w-full border-b border-p/25 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
+              className="mb-4 w-full border-b border-p/25 text-p  texts-global  font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
             />
 
             <input
@@ -120,7 +120,7 @@ const ContactModal = ({ setContactModal }) => {
               placeholder="E-mail"
               value={form.email}
               onChange={handleChange}
-              className="mb-4 w-full border-b border-p/25 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
+              className="mb-4 w-full border-b border-p/25 text-p  texts-global  font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
             />
 
             <textarea
@@ -128,14 +128,14 @@ const ContactModal = ({ setContactModal }) => {
               placeholder="Message"
               value={form.message}
               onChange={handleChange}
-              className="w-full h-[50px] border-b border-p/25 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
+              className="w-full h-[50px] border-b border-p/25 text-p  texts-global  font-medium tracking-[-0.03em] bg-transparent outline-none placeholder:text-p"
             />
           </div>
 
           <div className="mb-8 relative flex flex-col items-end justify-end">
             <button
               type="submit"
-              className="mb-2 w-full text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em] bg-transparent outline-none text-start"
+              className="mb-2 w-full text-p  texts-global  font-medium tracking-[-0.03em] bg-transparent outline-none text-start"
             >
               Send
             </button>
@@ -143,7 +143,7 @@ const ContactModal = ({ setContactModal }) => {
             {status && (
               <motion.p
                 key={statusMessage}
-                className={`text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] font-medium tracking-[-0.03em] ${
+                className={` texts-global  font-medium tracking-[-0.03em] ${
                   status === "error" ? "text-red-500" : "text-p"
                 }`}
                 initial={{ opacity: 0 }}
