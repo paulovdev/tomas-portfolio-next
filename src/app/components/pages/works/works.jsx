@@ -11,7 +11,7 @@ const WorksCard = ({ work }) => {
   const router = useRouter();
 
   const getUrl = (asset) =>
-    urlFor(asset).width(1600).quality(80).auto("format").url();
+    urlFor(asset).width(1800).quality(100).auto("format").url();
 
   const first = work.media?.[0];
   const asset = first?.asset;

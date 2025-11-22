@@ -5,7 +5,7 @@ import { urlFor } from "@/app/lib/sanityImage";
 
 const WorkMedia = ({ media, title }) => {
   const getUrl = (asset) =>
-    urlFor(asset).width(2000).quality(90).auto("format").url();
+    urlFor(asset).width(2400).quality(100).auto("format").url();
 
   return (
     <div className="flex flex-col gap-4">
@@ -32,8 +32,8 @@ const WorkMedia = ({ media, title }) => {
             <Image
               key={index}
               src={getUrl(asset)}
-              width={1600}
-              height={1200}
+              width={2400}
+              height={1900}
               alt={item.alt || title}
               className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
@@ -56,8 +56,8 @@ const WorkMedia = ({ media, title }) => {
               ) : (
                 <Image
                   src={getUrl(asset)}
-                  width={1600}
-                  height={1200}
+                  width={2400}
+                  height={1900}
                   alt={item.alt || title}
                   className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
@@ -75,8 +75,8 @@ const WorkMedia = ({ media, title }) => {
               ) : (
                 <Image
                   src={getUrl(next.asset)}
-                  width={1600}
-                  height={1200}
+                  width={2400}
+                  height={1900}
                   alt={next.alt || title}
                   className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />

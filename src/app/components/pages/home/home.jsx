@@ -82,7 +82,7 @@ export default function HomePage({ media }) {
   const isVideo = current.asset.mimeType?.startsWith("video/");
 
   const imageUrl = !isVideo
-    ? urlFor(current.asset).width(2000).quality(90).auto("format").url()
+    ? urlFor(current.asset).width(2400).quality(100).auto("format").url()
     : null;
 
   return (

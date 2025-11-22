@@ -19,7 +19,7 @@ export default function RelatedWorks({ relatedWorks }) {
           if (!asset) return null;
 
           const isVideo = asset.mimeType.startsWith("video/");
-          const thumb = !isVideo ? urlFor(asset).width(800).url() : null;
+          const thumb = !isVideo ? urlFor(asset).width(1200).url() : null;
 
           return (
             <div
