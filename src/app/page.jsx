@@ -1,27 +1,15 @@
 import HomePage from "./components/pages/home/home";
-import client from "./sanity/client";
+import { getHomeMedia } from "./(utils)/sanity-queries";
 
 export const metadata = {
   title: "Tomás — Branding & Visual Identity Designer",
   description:
-    "Hi, I’m Tomás, a graphic designer based in the Canary Islands. I specialize in brand strategy, art direction, and digital design.",
+    "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
 };
 
 export const revalidate = 360;
 
 export default async function Page() {
-  const data = await client.fetch(`
-    *[_type == "home"][0]{ 
-      media[]{
-        alt,
-        asset->{
-          _id,
-          url,
-          mimeType
-        }
-      }
-    }
-  `);
-
+  const data = await getHomeMedia();
   return <HomePage media={data.media || []} />;
 }

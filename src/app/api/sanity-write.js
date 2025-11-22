@@ -1,5 +1,3 @@
-// app/api/sanity-write/route.js
-
 import { NextResponse } from "next/server";
 import { createClient } from "@sanity/client";
 
@@ -26,7 +24,7 @@ export async function POST(request) {
     const client = createClient({
       projectId: process.env.SANITY_PROJECT_ID,
       dataset: process.env.SANITY_DATASET,
-      apiVersion: "2024-01-01",
+      apiVersion: "2025-02-19",
       token: process.env.SANITY_WRITE_TOKEN,
       useCdn: false,
     });

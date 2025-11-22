@@ -1,28 +1,15 @@
 import WorksPage from "../components/pages/works/works";
-import client from "../sanity/client";
+import { getAllWorks } from "../(utils)/sanity-queries";
 
 export const metadata = {
   title: "Tomás — Works",
   description:
-    "Explore Tomás’ design works. Visual creation grounded in strategy, developing functional and contemporary brand identities built with intent.",
+    "Explore Tomás’ design works. Visual creation grounded in strategy.",
 };
-export const revalidate = 60;
-export default async function Page() {
-  const data = await client.fetch(`
-    *[_type == "works"]{
-      _id,
-      title,
-      "slug": slug.current,
-      media[] {
-        alt,
-        asset->{
-          _id,
-          url,
-          mimeType
-        }
-      }
-    }
-  `);
 
+export const revalidate = 86400;
+
+export default async function Page() {
+  const data = await getAllWorks();
   return <WorksPage works={data} />;
 }
