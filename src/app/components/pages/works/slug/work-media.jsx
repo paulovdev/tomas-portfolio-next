@@ -32,8 +32,10 @@ const WorkMedia = ({ media, title }) => {
             <Image
               key={index}
               src={getUrl(asset)}
-              width={2400}
-              height={1900}
+              width={2500}
+              height={2500}
+              priority
+              unoptimized
               alt={item.alt || title}
               className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
@@ -56,8 +58,9 @@ const WorkMedia = ({ media, title }) => {
               ) : (
                 <Image
                   src={getUrl(asset)}
-                  width={2400}
-                  height={1900}
+                  width={2500}
+                  height={2500}
+                  unoptimized
                   alt={item.alt || title}
                   className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
@@ -75,8 +78,9 @@ const WorkMedia = ({ media, title }) => {
               ) : (
                 <Image
                   src={getUrl(next.asset)}
-                  width={2400}
-                  height={1900}
+                  width={2500}
+                  height={2500}
+                  unoptimized
                   alt={next.alt || title}
                   className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />

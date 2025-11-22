@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import HomeNav from "../../navs/home-nav";
 import { urlFor } from "@/app/lib/sanityImage";
+import Image from "next/image";
 
 const textSlideAnim = {
   initial: { y: "19px" },
@@ -100,8 +101,11 @@ export default function HomePage({ media }) {
             playsInline
           />
         ) : (
-          <img
+          <Image
             src={imageUrl}
+            width={2500}
+            height={2500}
+            unoptimized
             className="absolute inset-0 w-full h-full object-cover"
             alt=""
           />
@@ -142,8 +146,11 @@ export default function HomePage({ media }) {
                   playsInline
                 />
               ) : (
-                <img
+                <Image
                   src={imageUrl}
+                  width={2500}
+                  height={2500}
+                  unoptimized
                   className="absolute inset-0 w-full h-full object-cover will-change-clip"
                   alt=""
                 />
