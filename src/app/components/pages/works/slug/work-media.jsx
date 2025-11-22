@@ -26,18 +26,18 @@ const WorkMedia = ({ media, title }) => {
               autoPlay
               loop
               playsInline
-              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
+              className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
           ) : (
             <Image
               key={index}
               src={getUrl(asset)}
-              width={2500}
-              height={2500}
+              width={3000}
+              height={3000}
               priority
               unoptimized
               alt={item.alt || title}
-              className="w-full h-[110vh] object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
+              className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
           );
         }
@@ -53,16 +53,16 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
+                  className="w-full h-screen object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (
                 <Image
                   src={getUrl(asset)}
-                  width={2500}
-                  height={2500}
+                  width={3000}
+                  height={3000}
                   unoptimized
                   alt={item.alt || title}
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
+                  className="w-full h-screen object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               )}
 
@@ -73,16 +73,16 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
+                  className="w-full h-screen object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (
                 <Image
                   src={getUrl(next.asset)}
-                  width={2500}
-                  height={2500}
+                  width={3000}
+                  height={3000}
                   unoptimized
                   alt={next.alt || title}
-                  className="w-full h-[110vh] object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
+                  className="w-full h-screen object-cover  max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               )}
             </div>
