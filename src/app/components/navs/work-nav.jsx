@@ -11,8 +11,8 @@ const WorkNav = ({ work }) => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 p-4 py-2 pt-4 w-full grid grid-cols-4 gap-4 items-center mix-blend-exclusion max-md:flex max-md:justify-between max-md:items-center z-200">
-        <div className="flex justify-start max-md:hidden max-md:p-3 max-sm:p-2">
+      <nav className="fixed top-0 left-0 p-4 py-2 pt-4 w-full grid grid-cols-4 gap-4 items-center mix-blend-exclusion max-md:flex max-md:justify-between max-md:items-center z-200  max-md:px-3 max-sm:px-2">
+        <div className="flex justify-start max-md:hidden">
           <Link
             href="/"
             className="texts-global   text-s font-medium tracking-[-0.03em] truncate"

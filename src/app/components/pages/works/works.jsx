@@ -11,7 +11,7 @@ const WorksCard = ({ work }) => {
   const router = useRouter();
 
   const getUrl = (asset) =>
-    urlFor(asset).width(1800).quality(100).auto("format").url();
+    urlFor(asset).width(1800).quality(85).auto("format").url();
 
   const first = work.media?.[0];
   const asset = first?.asset;
@@ -44,8 +44,8 @@ const WorksCard = ({ work }) => {
       ) : imageUrl ? (
         <Image
           src={imageUrl}
-          width={1600}
-          height={900}
+          width={2000}
+          height={1200}
           alt={first.alt || work.title}
           className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px] max-cl:h-[100px]"
         />

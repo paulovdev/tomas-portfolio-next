@@ -24,7 +24,12 @@ export default function RelatedWorks({ relatedWorks }) {
           return (
             <div
               key={work.slug}
-              className="relative cursor-pointer overflow-hidden group"
+              className={`
+          relative cursor-pointer overflow-hidden group
+          last:max-lg:col-span-full
+    last:max-lg:[&>img]:h-[250px]
+    last:max-lg:[&>video]:h-[250px]
+        `}
               onClick={() => router.push(`/works/${work.slug}`)}
             >
               {isVideo ? (

@@ -73,7 +73,7 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="size-full p-4 pt-4 max-md:p-3 max-sm:p-2"
+              className="size-full p-4 pt-4 max-md:px-3 max-sm:px-2"
             >
               <nav className="mb-20 w-full flex items-center justify-between max-ssm:mb-10">
                 {" "}
@@ -132,7 +132,7 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
                     ) : null}
                     <li className="flex max-ssm:flex-col items-center max-ssm:items-start max-ssm:gap-0 gap-1">
                       <p className="text-p texts-global  font-bold tracking-[-0.03em]">
-                        Services: 
+                        Services:
                       </p>
                       <p className="text-p texts-global  font-medium tracking-[-0.03em]">
                         {work.services}
