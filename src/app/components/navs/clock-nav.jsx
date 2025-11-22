@@ -13,7 +13,6 @@ const Clock = () => {
     const updateClock = () => {
       const date = new Date();
 
-      // Pegamos hora, minuto e segundo manualmente
       let hours = date.toLocaleString("en-US", {
         hour: "2-digit",
         hour12: true,

@@ -81,7 +81,7 @@ const ContactModal = ({ setContactModal }) => {
 
   return (
     <motion.div
-      className="w-full right-0 bottom-0 flex items-end justify-end"
+      className="w-full right-0 bottom-0 flex items-end justify-end "
       {...modalAnim}
     >
       <motion.div

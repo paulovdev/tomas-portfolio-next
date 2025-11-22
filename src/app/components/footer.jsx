@@ -5,7 +5,7 @@ const Footer = () => {
   const locationLink = useDeviceMapLink("Las Palmas de Gran Canaria");
 
   return (
-    <footer className="relative p-3 w-full border-t border-p/10 grid grid-cols-4 max-md:flex max-md:justify-between max-lg:items-end max-lg:gap-4">
+    <footer className="relative  p-3 w-full border-t border-p/10 grid grid-cols-4 max-md:flex max-md:justify-between max-lg:items-end max-lg:gap-4">
       {/* DESKTOP */}
       <div className="w-full max-lg:w-1/2 max-md:hidden">
         <p className="text-p  texts-global  font-medium tracking-[-0.05em] truncate">

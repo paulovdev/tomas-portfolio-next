@@ -60,7 +60,7 @@ const ContactPage = () => {
             Contact
           </p>
 
-          <div className="col-span-3 space-y-0.5">
+          <div className="col-span-3 space-y-0.5 bg-s">
             {contactInfo.map((info, i) => {
               if (Array.isArray(info.value)) {
                 return (
@@ -115,7 +115,7 @@ const ContactPage = () => {
         </div>
 
         <div className="w-full flex-2 flex items-end">
-          <p className="relative bottom-4 w-full px-4 text-p text-[.9em] max-lg:text-[.93em] font-medium tracking-[-0.05em] max-md:absolute max-md:bottom-4">
+          <p className="relative bottom-4 w-full px-4 text-p texts-global font-medium tracking-[-0.05em] max-md:absolute max-md:bottom-4">
             ©T—ML 2025
           </p>
           <AnimatePresence>
