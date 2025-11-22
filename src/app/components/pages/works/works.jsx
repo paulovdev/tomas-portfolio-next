@@ -35,7 +35,7 @@ const WorksCard = ({ work }) => {
       {isVideo ? (
         <video
           src={asset.url}
-          className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px]"
+          className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px] max-cl:h-[100px]"
           muted
           loop
           autoPlay
@@ -47,11 +47,11 @@ const WorksCard = ({ work }) => {
           width={1600}
           height={900}
           alt={first.alt || work.title}
-          className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px]"
+          className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px] max-cl:h-[100px]"
         />
       ) : null}
 
-      <h2 className="mt-2 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.88rem] font-medium tracking-[-0.03em]">
+      <h2 className="mt-2 text-p text-[.9em]  max-lg:text-[.93em]  max-ssm:text-[.85rem] max-cl:text-[.7rem] font-medium tracking-[-0.03em]">
         {work.title}
       </h2>
     </div>
@@ -67,7 +67,7 @@ const WorksPage = ({ works }) => {
     <>
       <GlobalNav />
 
-      <section className="relative py-30 px-4 min-h-screen bg-s  max-md:pb-20">
+      <section className="relative py-30 px-4 min-h-screen bg-s  max-md:pb-20 max-cl:py-15 max-cl:p-1">
         <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-lg:grid-cols-3">
           {works.map((work, i) => (
             <motion.figure

@@ -15,7 +15,7 @@ const WorkNav = ({ work }) => {
         <div className="flex justify-start max-md:hidden">
           <Link
             href="/"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]   text-s font-medium tracking-[-0.03em] truncate"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]   text-s font-medium tracking-[-0.03em] truncate"
           >
             T—ML
           </Link>
@@ -24,19 +24,19 @@ const WorkNav = ({ work }) => {
         <div className="flex justify-start gap-1 max-md:hidden">
           <Link
             href="/works"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]    text-s font-medium tracking-[-0.03em]"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]    text-s font-medium tracking-[-0.03em]"
           >
             Work,
           </Link>
           <Link
             href="/about"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]  text-s font-medium tracking-[-0.03em]"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]  text-s font-medium tracking-[-0.03em]"
           >
             About,
           </Link>
           <Link
             href="/contact"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]    text-s font-medium tracking-[-0.03em]"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]    text-s font-medium tracking-[-0.03em]"
           >
             Contact
           </Link>
@@ -45,25 +45,25 @@ const WorkNav = ({ work }) => {
         <div className="max-md:flex justify-center gap-1 hidden">
           <Link
             href="/"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]   text-s font-medium tracking-[-0.03em]"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]   text-s font-medium tracking-[-0.03em]"
           >
             T—ML,
           </Link>
           <Link
             href="/works"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]    text-s font-medium tracking-[-0.03em]"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]    text-s font-medium tracking-[-0.03em]"
           >
             Work,
           </Link>
           <Link
             href="/about"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]   text-s font-medium tracking-[-0.03em]"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]   text-s font-medium tracking-[-0.03em]"
           >
             About,
           </Link>
           <Link
             href="/contact"
-            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]   text-s font-medium tracking-[-0.03em]"
+            className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]   text-s font-medium tracking-[-0.03em]"
           >
             Contact
           </Link>
@@ -75,16 +75,16 @@ const WorkNav = ({ work }) => {
               className="w-full flex items-center gap-1 cursor-pointer"
               onClick={() => setWorkModal(true)}
             >
-              <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]   text-s font-medium tracking-[-0.03em]">
+              <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]   text-s font-medium tracking-[-0.03em]">
                 {work.title}
               </span>
-              <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]   text-s font-medium tracking-[-0.15em]">
+              <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]   text-s font-medium tracking-[-0.15em]">
                 —
               </span>
-              <button className="hidden max-md:block text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]  text-s font-medium tracking-[-0.03em] cursor-pointer">
+              <button className="hidden max-md:block text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]  text-s font-medium tracking-[-0.03em] cursor-pointer">
                 Info
               </button>
-              <button className="block max-md:hidden text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]  text-s font-medium tracking-[-0.03em] cursor-pointer">
+              <button className="block max-md:hidden text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]  text-s font-medium tracking-[-0.03em] cursor-pointer">
                 Information
               </button>
             </div>
@@ -92,7 +92,7 @@ const WorkNav = ({ work }) => {
         </div>
 
         <div className="w-full flex justify-end max-md:hidden">
-          <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.88rem]   text-s font-medium tracking-[-0.03em] uppercase flex items-center gap-1">
+          <span className=" text-[.9em]  max-lg:text-[.93em] max-md:text-[1em]  max-ssm:text-[.85rem]   text-s font-medium tracking-[-0.03em] uppercase flex items-center gap-1">
             <Clock />
           </span>
         </div>

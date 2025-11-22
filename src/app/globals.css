@@ -18,6 +18,8 @@
   --breakpoint-mmd: 400px;
   --breakpoint-sm: 360px;
   --breakpoint-ssm: 321px;
+  /* CLOCK QUERY */
+  --breakpoint-cl: 200px;
 
   --safe-top: env(safe-area-inset-top);
   --safe-bottom: env(safe-area-inset-bottom);
