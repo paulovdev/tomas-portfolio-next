@@ -33,15 +33,15 @@ const WorkMedia = ({ media, title }) => {
               className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
           ) : (
-            <img
+            <Image
               key={index}
               src={getUrl(asset)}
               width={3000}
               height={3000}
-              priority
               alt={item.alt || title}
               placeholder="blur"
               blurDataURL={getBlur(asset)}
+              unoptimized
               className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
           );
@@ -62,13 +62,14 @@ const WorkMedia = ({ media, title }) => {
                   className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (
-                <img
+                <Image
                   src={getUrl(asset)}
                   width={3000}
                   height={3000}
                   alt={item.alt || title}
                   placeholder="blur"
                   blurDataURL={getBlur(asset)}
+                  unoptimized
                   className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               )}
@@ -84,13 +85,14 @@ const WorkMedia = ({ media, title }) => {
                   className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (
-                <img
+                <Image
                   src={getUrl(next.asset)}
                   width={3000}
                   height={3000}
                   alt={next.alt || title}
                   placeholder="blur"
                   blurDataURL={getBlur(next.asset)}
+                  unoptimized
                   className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               )}
