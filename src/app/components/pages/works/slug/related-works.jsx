@@ -14,7 +14,7 @@ export default function RelatedWorks({ relatedWorks }) {
       </h2>
 
       <div className="w-full grid grid-cols-3 gap-4 col-span-3 max-lg:grid-cols-2">
-        {relatedWorks.map((work) => {
+        {relatedWorks.map((work, index) => {
           const asset = work.media?.[0]?.asset;
           if (!asset) return null;
 
@@ -25,11 +25,11 @@ export default function RelatedWorks({ relatedWorks }) {
             <div
               key={work.slug}
               className={`
-          relative cursor-pointer overflow-hidden group
-          last:max-lg:col-span-full
-    last:max-lg:[&>img]:h-[250px]
-    last:max-lg:[&>video]:h-[250px]
-        `}
+        relative cursor-pointer overflow-hidden group
+
+        ${index === 2 ? "max-lg:hidden" : ""} 
+        /* ↑ esconde o 3º projeto no max-lg */
+      `}
               onClick={() => router.push(`/works/${work.slug}`)}
             >
               {isVideo ? (
@@ -47,7 +47,7 @@ export default function RelatedWorks({ relatedWorks }) {
                   width={800}
                   height={600}
                   alt={work.media?.[0]?.alt || work.title}
-                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[300px] max-lg:h-[225px] max-md:h-[175px]"
+                  className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[300px] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               )}
 

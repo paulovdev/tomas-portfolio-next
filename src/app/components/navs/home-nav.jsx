@@ -32,7 +32,7 @@ const HomeNav = () => {
        
       `}
           >
-            Work,
+            Works,
           </Link>
 
           <Link
@@ -67,7 +67,7 @@ const HomeNav = () => {
             href="/works"
             className={`  texts-global  text-s font-medium tracking-[-0.03em]`}
           >
-            Work,
+            Works,
           </Link>
 
           <Link

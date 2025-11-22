@@ -48,7 +48,7 @@ const GlobalNav = () => {
               "/works"
             )}`}
           >
-            Work,
+            Works,
           </Link>
 
           <Link
@@ -87,7 +87,7 @@ const GlobalNav = () => {
               "/works"
             )}`}
           >
-            Work,
+            Works,
           </Link>
 
           <Link

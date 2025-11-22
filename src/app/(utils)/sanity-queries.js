@@ -1,8 +1,5 @@
 import client from "@/app/sanity/client";
 
-/* -----------------------------------------
-   BUSCA 1 — Work específico (/works/[slug])
------------------------------------------- */
 export async function getWork(slug) {
   return client.fetch(
     `*[_type == "works" && slug.current == $slug][0]{
@@ -30,9 +27,6 @@ export async function getWork(slug) {
   );
 }
 
-/* -----------------------------------------
-   BUSCA 2 — Related Works
------------------------------------------- */
 export async function getRelatedWorks(slug) {
   return client.fetch(
     `*[_type == "works" && slug.current != $slug]
@@ -56,9 +50,6 @@ export async function getRelatedWorks(slug) {
   );
 }
 
-/* -----------------------------------------
-   BUSCA 3 — Work list (/works)
------------------------------------------- */
 export async function getAllWorks() {
   return client.fetch(
     `*[_type == "works"]{
@@ -82,9 +73,6 @@ export async function getAllWorks() {
   );
 }
 
-/* -----------------------------------------
-   BUSCA 4 — Home media (/)
------------------------------------------- */
 export async function getHomeMedia() {
   return client.fetch(
     `*[_type == "home"][0]{ 

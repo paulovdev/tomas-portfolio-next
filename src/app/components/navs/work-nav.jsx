@@ -26,7 +26,7 @@ const WorkNav = ({ work }) => {
             href="/works"
             className="texts-global    text-s font-medium tracking-[-0.03em]"
           >
-            Work,
+            Works,
           </Link>
           <Link
             href="/about"
@@ -53,7 +53,7 @@ const WorkNav = ({ work }) => {
             href="/works"
             className="texts-global    text-s font-medium tracking-[-0.03em]"
           >
-            Work,
+            Works,
           </Link>
           <Link
             href="/about"
