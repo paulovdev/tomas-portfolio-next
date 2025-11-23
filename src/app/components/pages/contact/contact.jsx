@@ -8,7 +8,6 @@ import useDeviceMapLink from "@/app/hooks/useDeviceMapLink";
 const ContactPage = () => {
   const [contactModal, setContactModal] = useState(true);
 
-  // hook detectando iOS / Android / Desktop
   const locationLink = useDeviceMapLink("Las Palmas de Gran Canaria");
 
   const contactInfo = [

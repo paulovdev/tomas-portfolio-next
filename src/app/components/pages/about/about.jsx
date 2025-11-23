@@ -43,8 +43,8 @@ export default function AboutPage() {
           environments they inhabit.
         </h2>
 
-        <div className="grid grid-cols-4 mb-25 pt-8 max-md:grid-cols-1 max-md:mb-10">
-          <p className="mb-6 text-p  texts-global    font-bold tracking-[-0.03em]">
+        <div className="grid grid-cols-4 gap-4 mb-25 pt-8 max-md:grid-cols-1 max-md:mb-10">
+          <p className="mb-6 text-p  texts-global font-bold tracking-[-0.03em]">
             Services
           </p>
           {/* MOBILE */}
