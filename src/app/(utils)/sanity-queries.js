@@ -57,15 +57,7 @@ export async function getAllWorks() {
         _id,
         title,
         "slug": slug.current,
-        mediaPrincipal{
-          alt,
-          asset->{
-            _id,
-            url,
-            mimeType
-          }
-        },
-        media[] {
+       media2[] {
           alt,
           asset->{
             _id,

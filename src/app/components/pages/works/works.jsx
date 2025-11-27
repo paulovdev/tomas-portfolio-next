@@ -16,22 +16,25 @@ const WorksCard = ({ work }) => {
   const getBlur = (asset) =>
     urlFor(asset).width(20).quality(20).blur(50).auto("format").url();
 
-  const first = work.mediaPrincipal;
+  const first = work.media2?.[0];
+  console.log(first);
+  const asset = first?.asset;
 
-  if (!first?.asset) return null;
+  if (!asset) return null;
 
-  const asset = first.asset;
   const isVideo = asset.mimeType?.startsWith("video/");
   const isImage = asset.mimeType?.startsWith("image/");
   const imageUrl = isImage ? getUrl(asset) : null;
 
-  const handleOpen = () => router.push(`/works/${work.slug}`);
+  const handleOpen = (slug) => {
+    router.push(`/works/${slug}`);
+  };
 
   return (
     <div
       key={work._id}
       className="relative mb-10 group overflow-hidden cursor-pointer max-md:mb-0"
-      onClick={handleOpen}
+      onClick={() => handleOpen(work.slug)}
     >
       {isVideo ? (
         <video
@@ -42,7 +45,7 @@ const WorksCard = ({ work }) => {
           autoPlay
           playsInline
         />
-      ) : (
+      ) : imageUrl ? (
         <Image
           src={imageUrl}
           width={2000}
@@ -52,7 +55,7 @@ const WorksCard = ({ work }) => {
           blurDataURL={getBlur(asset)}
           className="w-full h-[500px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px] max-cl:h-[100px]"
         />
-      )}
+      ) : null}
 
       <h2 className="mt-2 text-p texts-global font-medium tracking-[-0.03em]">
         {work.title}

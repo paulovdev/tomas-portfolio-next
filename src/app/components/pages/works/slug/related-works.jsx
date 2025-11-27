@@ -28,7 +28,7 @@ export default function RelatedWorks({ relatedWorks }) {
         relative cursor-pointer overflow-hidden group
 
         ${index === 2 ? "max-lg:hidden" : ""} 
-        /* ↑ esconde o 3º projeto no max-lg */
+        
       `}
               onClick={() => router.push(`/works/${work.slug}`)}
             >
