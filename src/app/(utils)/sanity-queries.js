@@ -52,7 +52,8 @@ export async function getRelatedWorks(slug) {
 
 export async function getAllWorks() {
   return client.fetch(
-    `*[_type == "works"]{
+    `*[_type == "works"]
+      | order(order asc){
         _id,
         title,
         "slug": slug.current,
@@ -64,7 +65,7 @@ export async function getAllWorks() {
             mimeType
           }
         }
-    }`,
+      }`,
     {},
     {
       cache: "force-cache",
