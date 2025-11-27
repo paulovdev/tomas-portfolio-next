@@ -7,7 +7,7 @@ export const metadata = {
     "Explore Tomás’ design works. Visual creation grounded in strategy.",
 };
 
-export const revalidate = 100;
+export const revalidate = 86400;
 
 export default async function Page() {
   const data = await getAllWorks();

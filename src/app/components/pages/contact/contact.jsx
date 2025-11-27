@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ContactModal from "../../contact-modal";
+import ContactModal from "../works/contact-modal";
 import { AnimatePresence } from "framer-motion";
 import GlobalNav from "../../navs/global-nav";
 import useDeviceMapLink from "@/app/hooks/useDeviceMapLink";
