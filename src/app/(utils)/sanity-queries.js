@@ -77,7 +77,7 @@ export async function getAllWorks() {
 export async function getHomeMedia() {
   return client.fetch(
     `*[_type == "home"][0]{ 
-      media[] {
+      "media": media | order(order asc)[]{
         alt,
         asset->{
           _id,
