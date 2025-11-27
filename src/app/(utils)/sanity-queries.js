@@ -10,9 +10,8 @@ export async function getWork(slug) {
       client,
       services,
       "slug": slug.current,
-      media[] | order(order asc) {
+      media[] {
         alt,
-        order,
         asset->{
           _id,
           url,
@@ -58,6 +57,14 @@ export async function getAllWorks() {
         _id,
         title,
         "slug": slug.current,
+        mediaPrincipal{
+          alt,
+          asset->{
+            _id,
+            url,
+            mimeType
+          }
+        },
         media[] {
           alt,
           asset->{
