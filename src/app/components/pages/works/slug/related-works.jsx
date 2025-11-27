@@ -15,7 +15,7 @@ export default function RelatedWorks({ relatedWorks }) {
 
       <div className="w-full grid grid-cols-3 gap-4 col-span-3 max-lg:grid-cols-2">
         {relatedWorks.map((work, index) => {
-          const asset = work.media?.[0]?.asset;
+          const asset = work.media2?.[0]?.asset;
           if (!asset) return null;
 
           const isVideo = asset.mimeType.startsWith("video/");

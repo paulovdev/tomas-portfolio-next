@@ -33,7 +33,7 @@ export async function getRelatedWorks(slug) {
       | order(year desc)[0...3]{
         title,
         "slug": slug.current,
-        media[] {
+        media2[] {
           alt,
           asset->{
             _id,
