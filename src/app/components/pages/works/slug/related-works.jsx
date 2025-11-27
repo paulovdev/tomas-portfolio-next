@@ -46,7 +46,7 @@ export default function RelatedWorks({ relatedWorks }) {
                   src={thumb}
                   width={800}
                   height={600}
-                  alt={work.media?.[0]?.alt || work.title}
+                  alt={work.media2?.[0]?.alt || work.title}
                   className="w-full h-[350px] object-cover brightness-100 group-hover:brightness-75 transition-all max-ds:h-[300px] max-lg:h-[50vh] max-md:h-[225px] max-mmd:h-[200px] max-sm:h-[150px]"
                 />
               )}
