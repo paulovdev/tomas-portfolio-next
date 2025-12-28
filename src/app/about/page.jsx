@@ -7,5 +7,29 @@ export const metadata = {
 };
 
 export default async function Page() {
-  return <AboutPage />;
+  const jsonLdPerson = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Tomás",
+    url: "https://tomasml.com/about",
+    sameAs: [
+      "https://www.linkedin.com/in/tomasmedinaleon/",
+      "https://www.behance.net/tomasml",
+      "https://www.instagram.com/im_tomasml/",
+    ],
+    jobTitle: "Branding & Visual Identity Designer",
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdPerson),
+        }}
+      />
+
+      <AboutPage />
+    </>
+  );
 }

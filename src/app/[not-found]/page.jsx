@@ -1,5 +1,5 @@
 import Link from "next/link";
-import GlobalNav from "./components/navs/global-nav";
+import GlobalNav from "../components/navs/global-nav";
 
 const NotFound = () => {
   return (

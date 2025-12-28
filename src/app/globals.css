@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* =========================================
-   THEME VARIABLES (Tailwind Custom Theme)
-========================================= */
 @theme {
   --color-p: #000000;
   --color-s: #ffffff;
@@ -48,10 +45,9 @@ body {
   will-change: clip-path;
 }
 
-/* Correção do viewport real para mobile */
 :root {
   --real-vh: 100vh;
-  --font-scale: 1.1; /* ESCALA PADRÃO - Desktop */
+  --font-scale: 1.1;
 }
 
 @media (max-width: 768px) {
@@ -68,7 +64,6 @@ body {
 }
 
 .texts-global {
-  /* tamanho padrão para desktop (com leve fluidez) */
   font-size: clamp(0.95em, 0.8em + 0.6vw, 1rem);
   line-height: 1.32;
 }

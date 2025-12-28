@@ -50,10 +50,7 @@ export const metadata = {
 
   icons: {
     icon: [
-      {
-        url: "/favicon.ico",
-        type: "image/x-icon",
-      },
+      { url: "/favicon.png", type: "image/x-icon" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
@@ -77,22 +74,6 @@ export const metadata = {
   alternates: {
     canonical: "https://tomasml.com",
   },
-  other: {
-    "application/ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Tomás — Branding & Visual Identity Designer",
-      alternateName: "Tomás",
-      url: "https://tomasml.com",
-    }),
-    "organization-logo": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Tomás",
-      url: "https://tomasml.com",
-      logo: "https://tomasml.com/logo.jpg",
-    }),
-  },
 };
 
 export const viewport = {
@@ -100,8 +81,39 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLdWebsite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Tomás — Branding & Visual Identity Designer",
+    alternateName: "Tomás",
+    url: "https://tomasml.com",
+  };
+
+  const jsonLdOrganization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Tomás",
+    url: "https://tomasml.com",
+    logo: "https://tomasml.com/logo.jpg",
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdWebsite),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdOrganization),
+          }}
+        />
+      </head>
+
       <body className={`${dmSans.variable} antialiased`}>
         <VHFix />
         {children}

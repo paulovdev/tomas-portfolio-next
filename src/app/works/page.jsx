@@ -10,6 +10,36 @@ export const metadata = {
 export const revalidate = 86400;
 
 export default async function Page() {
-  const data = await getAllWorks();
-  return <WorksPage works={data} />;
+  const works = await getAllWorks();
+
+  const jsonLdCollection = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Tomás — Works",
+    description:
+      "A curated selection of branding and visual identity projects by Tomás.",
+    url: "https://tomasml.com/works",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: works?.map((work, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `https://tomasml.com/work/${work.slug?.current}`,
+        name: work.title,
+      })),
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdCollection),
+        }}
+      />
+
+      <WorksPage works={works} />
+    </>
+  );
 }

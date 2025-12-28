@@ -11,12 +11,21 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
 
   const work = await getWork(slug);
+  if (!work) {
+    return {
+      title: "Tomás — Work",
+    };
+  }
 
   return {
-    title: work?.title ? `Tomás — ${work.title}` : "Tomás — Work",
-    description: work?.description,
+    title: `Tomás — ${work.title}`,
+    description: work.description,
     openGraph: {
-      images: work?.media?.[0]?.asset?.url ? [work.media[0].asset.url] : [],
+      title: `Tomás — ${work.title}`,
+      description: work.description,
+      images: work?.media?.[0]?.asset?.url
+        ? [{ url: work.media[0].asset.url }]
+        : [],
     },
   };
 }
@@ -35,8 +44,29 @@ export default async function WorkPage({ params }) {
     );
   }
 
+  const jsonLdProject = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: work.title,
+    description: work.description,
+    url: `https://tomasml.com/work/${slug}`,
+    creator: {
+      "@type": "Person",
+      name: "Tomás",
+      url: "https://tomasml.com",
+    },
+    image: work?.media?.[0]?.asset?.url ? [work.media[0].asset.url] : undefined,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdProject),
+        }}
+      />
+
       <WorkNav work={work} />
 
       <main>
