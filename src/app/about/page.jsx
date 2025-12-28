@@ -4,14 +4,22 @@ export const metadata = {
   title: "Tomás — About",
   description:
     "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice. Experienced in brand strategy, art direction, and digital design creation.",
-  keywords: ["design", "branding", "cartoon"],
-  
+  keywords: [
+    "graphic design",
+    "brand strategy",
+    "art direction",
+    "visual identity",
+    "branding",
+    "digital design",
+    "creative direction",
+  ],
   openGraph: {
     title: "Tomás",
     description:
       "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     siteName: "tomasml.com",
     locale: "en_US",
+    images: ["https://tomasml.com/logo.png"],
   },
   twitter: {
     card: "summary_large_image",

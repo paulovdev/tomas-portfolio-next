@@ -4,13 +4,21 @@ export const metadata = {
   title: "Tomás — Contact",
   description:
     "Get in touch with Tomás, a graphic designer based in the Canary Islands. Collaborate, discuss projects, or inquire about brand strategy, art direction, and digital design services.",
-
-  keywords: ["branding", "design"],
+  keywords: [
+    "graphic design",
+    "brand strategy",
+    "art direction",
+    "visual identity",
+    "branding",
+    "digital design",
+    "creative direction",
+  ],
   openGraph: {
     title: "Contact Tomás",
     description: "Get in touch with Tomás",
     siteName: "tomasml.com",
     locale: "en_US",
+    images: ["https://tomasml.com/logo.png"],
   },
   twitter: {
     card: "summary_large_image",

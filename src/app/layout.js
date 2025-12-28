@@ -38,6 +38,15 @@ export const metadata = {
     locale: "en_US",
     images: ["https://tomasml.com/logo.jpg"],
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@tomasdesign",
+    title: "Tomás — Branding & Visual Identity Designer",
+    description:
+      "Visual creation grounded in strategy. I specialize in developing functional and contemporary brand identities with intent.",
+    images: ["https://tomasml.com/logo.jpg"],
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -49,14 +58,6 @@ export const metadata = {
       "max-image-preview": "large",
       "max-video-preview": -1,
     },
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@tomasdesign",
-    title: "Tomás — Branding & Visual Identity Designer",
-    description:
-      "Visual creation grounded in strategy. I specialize in developing functional and contemporary brand identities with intent.",
-    images: ["https://tomasml.com/logo.jpg"],
   },
 
   icons: {

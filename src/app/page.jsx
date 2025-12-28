@@ -6,14 +6,22 @@ export const revalidate = 360;
 export const metadata = {
   title: "Tomás — Branding & Visual Identity Designer",
   description: "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
-  keywords: ["design", "branding", "visual"],
-
+  keywords: [
+    "graphic design",
+    "brand strategy",
+    "art direction",
+    "visual identity",
+    "branding",
+    "digital design",
+    "creative direction",
+  ],
   openGraph: {
     url: "https://tomasml.com",
     title: "Tomás — Branding & Visual Identity Designer",
     description:
       "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
     siteName: "tomasml.com",
+    images: ["https://tomasml.com/logo.png"],
   },
 
   twitter: {
