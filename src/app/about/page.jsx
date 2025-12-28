@@ -5,11 +5,12 @@ export const metadata = {
   description:
     "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice. Experienced in brand strategy, art direction, and digital design creation.",
   keywords: ["design", "branding", "cartoon"],
+  
   openGraph: {
     title: "Tomás",
     description:
       "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
-    siteName: "Recipes.com",
+    siteName: "tomasml.com",
     locale: "en_US",
   },
   twitter: {
