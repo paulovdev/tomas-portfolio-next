@@ -7,17 +7,18 @@ import { urlFor } from "@/app/lib/sanityImage";
 import Image from "next/image";
 
 const textSlideAnim = {
-  initial: { y: "19px" },
+  initial: { y: 10, opacity: 0 },
   animate: (i = 0) => ({
     y: 0,
+    opacity: 1,
     transition: {
       duration: 0.5,
       ease: [0.33, 1, 0.68, 1],
-      delay: 0.1 + 0.025 * i,
+      delay: 0.15 + 0.025 * i,
     },
   }),
   exit: {
-    y: "-100%",
+    y: 10,
     transition: {
       duration: 0.5,
       ease: [0.33, 1, 0.68, 1],
@@ -53,7 +54,7 @@ export default function HomePage({ media }) {
     const start = () => {
       interval = setInterval(() => {
         setIndex((prev) => (prev + 1) % media.length);
-      }, 3500);
+      }, 4000);
     };
 
     const stop = () => clearInterval(interval);
@@ -105,78 +106,78 @@ export default function HomePage({ media }) {
             src={imageUrl}
             width={2500}
             height={2500}
-            unoptimized
             className="absolute inset-0 w-full h-full object-cover"
             alt=""
           />
         )}
       </div>
 
-      <div className="relative h-svh max-md:h-[calc(var(--vh)*100)] w-full overflow-hidden">
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <AnimatePresence mode="popLayout">
-            <motion.div
-              key={current.asset._id + "-enter"}
-              className="absolute inset-0 w-full h-full z-3 will-change-clip"
-              initial={{
-                clipPath: "inset(0% 101% 0% 0%)",
-              }}
-              animate={{
-                clipPath: "inset(0% 0% 0% 0%)",
-                transition: {
-                  duration: 1.1,
-                  ease: [0.87, 0, 0.13, 1],
-                },
-              }}
-              exit={{
-                clipPath: "inset(0% 0% 0% 101%)",
-                transition: {
-                  duration: 1.1,
-                  ease: [0.87, 0, 0.13, 1],
-                },
-              }}
-            >
-              {isVideo ? (
-                <video
-                  src={current.asset.url}
-                  className="absolute inset-0 w-full h-full object-cover will-change-clip"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-              ) : (
-                <Image
-                  src={imageUrl}
-                  width={2500}
-                  height={2500}
-                  unoptimized
-                  className="absolute inset-0 w-full h-full object-cover will-change-clip"
-                  alt=""
-                />
-              )}
-            </motion.div>
-          </AnimatePresence>
+      {loadingDone && (
+        <div className="relative h-svh max-md:h-[calc(var(--vh)*100)] w-full overflow-hidden">
+          <div className="absolute inset-0 w-full h-full overflow-hidden">
+            <AnimatePresence mode="popLayout">
+              <motion.div
+                key={current.asset._id + "-enter"}
+                className="absolute inset-0 w-full h-full z-3 will-change-clip"
+                initial={{
+                  clipPath: "inset(0% 102% 0% 0%)",
+                }}
+                animate={{
+                  clipPath: "inset(0% 0% 0% 0%)",
+                  transition: {
+                    duration: 1.1,
+                    ease: [0.87, 0, 0.13, 1],
+                  },
+                }}
+                exit={{
+                  clipPath: "inset(0% 0% 0% 102%)",
+                  transition: {
+                    duration: 1.1,
+                    ease: [0.87, 0, 0.13, 1],
+                  },
+                }}
+              >
+                {isVideo ? (
+                  <video
+                    src={current.asset.url}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                ) : (
+                  <Image
+                    src={imageUrl}
+                    width={2500}
+                    height={2500}
+                    unoptimized
+                    className="absolute inset-0 w-full h-full object-cover"
+                    alt=""
+                  />
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
-
-        {!loadingDone && (
-          <motion.div
-            className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-200"
-            initial={{ y: 0 }}
-            animate={{ y: "-100%" }}
-            transition={{
-              delay: 2,
-              duration: 1,
-              ease: [0.87, 0, 0.13, 1],
-            }}
-            onAnimationComplete={() => setLoadingDone(true)}
-          >
-            <h1 className="texts-global font-medium text-p tracking-[-0.05em] select-none flex flex-wrap">
-              <AnimatedLetters text="Tomás — Branding & Visual Identity Designer" />
-            </h1>
-          </motion.div>
-        )}
-      </div>
+      )}
+      {!loadingDone && (
+        <motion.div
+          className="absolute inset-0 flex flex-col justify-center items-center bg-[#F0EEE6] z-200"
+          initial={{ y: 0 }}
+          animate={{ y: "-100%" }}
+          transition={{
+            delay: 2,
+            duration: 1,
+            ease: [0.82, 0, 0.22, 1],
+          }}
+          onAnimationComplete={() => setLoadingDone(true)}
+        >
+          <h1 className="texts-global font-medium text-p tracking-[-0.05em] select-none flex flex-wrap">
+            <AnimatedLetters text="Tomás — Branding & Visual Identity Designer" />
+          </h1>
+        </motion.div>
+      )}
     </>
   );
 }
