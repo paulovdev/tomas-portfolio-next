@@ -18,14 +18,14 @@ export const metadata = {
     description: "Get in touch with Tomás",
     siteName: "tomasml.com",
     locale: "en_US",
-    images: ["https://tomasml.com/logo.png"],
+    images: ["https://tomasml.com/logo.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact Tomás",
     description: "Get in touch with Tomás",
     creator: "@tomasml",
-    images: ["https://tomasml.com/logo.png"],
+    images: ["https://tomasml.com/logo.jpg"],
   },
 
   robots: {

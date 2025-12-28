@@ -21,7 +21,7 @@ export const metadata = {
     description:
       "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
     siteName: "tomasml.com",
-    images: ["https://tomasml.com/logo.png"],
+    images: ["https://tomasml.com/logo.jpg"],
   },
 
   twitter: {

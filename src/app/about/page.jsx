@@ -19,7 +19,7 @@ export const metadata = {
       "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     siteName: "tomasml.com",
     locale: "en_US",
-    images: ["https://tomasml.com/logo.png"],
+    images: ["https://tomasml.com/logo.jpg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -27,7 +27,7 @@ export const metadata = {
     description:
       "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     creator: "@tomasml",
-    images: ["https://tomasml.com/logo.png"],
+    images: ["https://tomasml.com/logo.jpg"],
   },
   robots: {
     index: true,
