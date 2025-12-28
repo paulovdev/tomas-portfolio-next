@@ -4,6 +4,37 @@ export const metadata = {
   title: "Tomás — About",
   description:
     "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice. Experienced in brand strategy, art direction, and digital design creation.",
+  keywords: ["design", "branding", "cartoon"],
+  openGraph: {
+    title: "Tomás",
+    description:
+      "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
+    siteName: "Recipes.com",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tomás",
+    description:
+      "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
+    creator: "@tomasml",
+    images: ["https://tomasml.com/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://tomasml.com/about",
+  },
 };
 
 export default async function Page() {
