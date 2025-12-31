@@ -11,10 +11,11 @@ export const metadata = {
     "visual identity",
     "branding",
     "digital design",
+    "designer",
     "creative direction",
   ],
   openGraph: {
-    title: "Tomás",
+    title: "About Tomás ",
     description:
       "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     siteName: "tomasml.com",
@@ -23,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tomás",
+    title: "About Tomás",
     description:
       "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     creator: "@tomasml",
@@ -69,7 +70,6 @@ export default function Page() {
         }}
       />
       <main>
-        
         <AboutPage />
       </main>
     </>
