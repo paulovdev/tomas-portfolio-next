@@ -26,7 +26,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://www.tomasml.com/works.jpg",
+        images: ["https://www.tomasml.com/logo.jpg"],
         width: 1200,
         height: 630,
         alt: "Tomás — Design Works",
