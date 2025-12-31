@@ -7,7 +7,7 @@ export const metadata = {
   keywords: [
     "graphic design",
     "brand strategy",
-    "art direction",
+    "about",
     "visual identity",
     "branding",
     "digital design",

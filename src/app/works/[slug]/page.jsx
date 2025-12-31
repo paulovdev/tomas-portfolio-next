@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const work = await getWork(slug);
   if (!work) {
     return {
-      title: "Tomás — Work",
+      title: "Tomás — Works",
     };
   }
 
