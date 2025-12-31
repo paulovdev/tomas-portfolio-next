@@ -5,7 +5,7 @@ export const revalidate = 360;
 
 export const metadata = {
   title: "Tomás — Branding & Visual Identity Designer",
-  description: "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
+  description: "Hi, I’m Tomás, a Graphic Designer based in the Canary Islands.",
   keywords: [
     "graphic design",
     "brand strategy",
@@ -18,7 +18,7 @@ export const metadata = {
     url: "https://tomasml.com",
     title: "Tomás — Branding & Visual Identity Designer",
     description:
-      "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
+      "Hi, I’m Tomás, a Graphic Designer based in the Canary Islands.",
     siteName: "tomasml.com",
     images: ["https://www.tomasml.com/logo.jpg"],
   },
@@ -28,7 +28,7 @@ export const metadata = {
     site: "@tomasdesign",
     title: "Tomás — Branding & Visual Identity Designer",
     description:
-      "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
+      "Hi, I’m Tomás, a Graphic Designer based in the Canary Islands.",
     images: ["https://www.tomasml.com/logo.jpg"],
   },
 

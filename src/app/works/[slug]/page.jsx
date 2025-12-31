@@ -70,6 +70,9 @@ export default async function WorkPage({ params }) {
       <WorkNav work={work} />
 
       <main className="">
+        <h1 className="sr-only">{work.title}</h1>
+        <h2 className="sr-only">{work.year}</h2>
+
         <section className="relative pt-30 p-4 h-fit bg-s max-md:px-3 max-sm:px-2">
           <MotionFigure
             className="overflow-hidden size-full mb-4"

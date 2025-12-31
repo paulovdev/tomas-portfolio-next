@@ -3,7 +3,7 @@ import AboutPage from "../components/pages/about/about";
 export const metadata = {
   title: "Tomás — About",
   description:
-    "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice. Experienced in brand strategy, art direction, and digital design creation.",
+    "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice. Experienced in brand strategy, art direction, and digital design creation.",
   keywords: [
     "graphic design",
     "brand strategy",
@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: "Tomás",
     description:
-      "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
+      "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     siteName: "tomasml.com",
     locale: "en_US",
     images: ["https://www.tomasml.com/logo.jpg"],
@@ -25,7 +25,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tomás",
     description:
-      "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
+      "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     creator: "@tomasml",
     images: ["https://www.tomasml.com/logo.jpg"],
   },
@@ -69,6 +69,7 @@ export default function Page() {
         }}
       />
       <main>
+        
         <AboutPage />
       </main>
     </>

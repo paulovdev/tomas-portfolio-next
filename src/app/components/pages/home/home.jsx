@@ -176,6 +176,7 @@ export default function HomePage({ media }) {
           <h1 className="texts-global font-medium text-p tracking-[-0.05em] select-none flex flex-wrap">
             <AnimatedLetters text="Tomás — Branding & Visual Identity Designer" />
           </h1>
+          <h2 className="sr-only">Branding & Visual Identity Designer</h2>
         </motion.div>
       )}
     </>

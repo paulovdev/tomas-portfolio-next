@@ -4,7 +4,7 @@ import { getAllWorks } from "../(utils)/sanity-queries";
 export const metadata = {
   title: "Tomás — Works",
   description:
-    "Explore Tomás’ design works. Visual creation grounded in strategy.",
+    "Explore Tomás’ Design Works. Visual creation grounded in strategy.",
 
   robots: {
     index: true,
@@ -56,7 +56,6 @@ export default async function Page() {
       />
       <main>
         <h1 className="sr-only">Tomás — Design Works & Visual Projects</h1>
-
         <h2 className="sr-only">
           Selected Branding and Visual Identity Projects
         </h2>
