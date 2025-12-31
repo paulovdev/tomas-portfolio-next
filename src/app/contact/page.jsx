@@ -16,8 +16,10 @@ export const metadata = {
   openGraph: {
     title: "Tomás Contact",
     description: "Contact Tomás",
-    siteName: "tomasml.com",
+    siteName: "www.tomasml.com",
     locale: "en_US",
+    url: "https://www.tomasml.com/contact",
+    type: "website",
     images: ["https://www.tomasml.com/logo.jpg"],
   },
   twitter: {

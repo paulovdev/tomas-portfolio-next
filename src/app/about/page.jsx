@@ -18,7 +18,9 @@ export const metadata = {
     title: "About Tomás",
     description:
       "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
-    siteName: "tomasml.com",
+    siteName: "www.tomasml.com",
+    url: "https://www.tomasml.com/about",
+    type: "website",
     locale: "en_US",
     images: ["https://www.tomasml.com/logo.jpg"],
   },

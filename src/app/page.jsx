@@ -19,7 +19,7 @@ export const metadata = {
     title: "Tomás — Branding & Visual Identity Designer",
     description:
       "Hi, I’m Tomás, a Graphic Designer based in the Canary Islands.",
-    siteName: "tomasml.com",
+    siteName: "www.tomasml.com",
     images: ["https://www.tomasml.com/logo.jpg"],
   },
 
