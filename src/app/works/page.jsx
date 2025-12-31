@@ -24,14 +24,7 @@ export const metadata = {
     url: "https://www.tomasml.com/works",
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        images: ["https://www.tomasml.com/logo.jpg"],
-        width: 1200,
-        height: 630,
-        alt: "Tomás — Design Works",
-      },
-    ],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
 
   twitter: {
