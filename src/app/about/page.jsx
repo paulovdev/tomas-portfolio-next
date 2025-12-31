@@ -15,7 +15,7 @@ export const metadata = {
     "creative direction",
   ],
   openGraph: {
-    title: "About Tomás ",
+    title: "About Tomás",
     description:
       "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     siteName: "tomasml.com",
