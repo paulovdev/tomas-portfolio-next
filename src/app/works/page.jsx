@@ -19,7 +19,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://tomasml.com/works",
+    canonical: "https://www.tomasml.com/works",
   },
 };
 
@@ -33,14 +33,14 @@ export default async function Page() {
     "@type": "CollectionPage",
     name: "Tomás — Works",
     description:
-      "A curated selection of branding and visual identity projects by Tomás.",
-    url: "https://tomasml.com/works",
+      "A curated selection of branding and visual identity works by Tomás.",
+    url: "https://www.tomasml.com/works",
     mainEntity: {
       "@type": "ItemList",
       itemListElement: works?.map((work, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://tomasml.com/work/${work.slug?.current}`,
+        url: `https://www.tomasml.com/work/${work.slug?.current}`,
         name: work.title,
       })),
     },
@@ -54,8 +54,14 @@ export default async function Page() {
           __html: JSON.stringify(jsonLdCollection),
         }}
       />
+      <main>
+        <h1 className="sr-only">Tomás — Design Works & Visual Projects</h1>
 
-      <WorksPage works={works} />
+        <h2 className="sr-only">
+          Selected Branding and Visual Identity Projects
+        </h2>
+        <WorksPage works={works} />
+      </main>
     </>
   );
 }

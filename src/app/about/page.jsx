@@ -19,7 +19,7 @@ export const metadata = {
       "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     siteName: "tomasml.com",
     locale: "en_US",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -27,7 +27,7 @@ export const metadata = {
     description:
       "Learn more about Tomás, a designer focused on building brands with intention, purpose, and a clear voice.",
     creator: "@tomasml",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
   robots: {
     index: true,
@@ -42,16 +42,16 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://tomasml.com/about",
+    canonical: "https://www.tomasml.com/about",
   },
 };
 
-export default async function Page() {
+export default function Page() {
   const jsonLdPerson = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Tomás",
-    url: "https://tomasml.com/about",
+    url: "https://www.tomasml.com/about",
     sameAs: [
       "https://www.linkedin.com/in/tomasmedinaleon/",
       "https://www.behance.net/tomasml",
@@ -68,8 +68,9 @@ export default async function Page() {
           __html: JSON.stringify(jsonLdPerson),
         }}
       />
-
-      <AboutPage />
+      <main>
+        <AboutPage />
+      </main>
     </>
   );
 }

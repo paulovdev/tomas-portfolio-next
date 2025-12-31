@@ -7,19 +7,19 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
-      url: "https://tomasml.com/about",
+      url: "https://www.tomasml.com/about",
       lastModified: "2025-11-15",
       changeFrequency: "yearly",
       priority: 0.9,
     },
     {
-      url: "https://tomasml.com/works",
+      url: "https://www.tomasml.com/works",
       lastModified: "2025-11-15",
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://tomasml.com/contact",
+      url: "https://www.tomasml.com/contact",
       lastModified: "2025-11-15",
       changeFrequency: "yearly",
       priority: 0.7,

@@ -3,7 +3,7 @@ import ContactPage from "../components/pages/contact/contact";
 export const metadata = {
   title: "Tomás — Contact",
   description:
-    "Get in touch with Tomás, a graphic designer based in the Canary Islands. Collaborate, discuss projects, or inquire about brand strategy, art direction, and digital design services.",
+    "Contact Tomás, a graphic designer based in the Canary Islands. Collaborate, discuss projects, or inquire about brand strategy, art direction, and digital design services.",
   keywords: [
     "graphic design",
     "brand strategy",
@@ -14,20 +14,19 @@ export const metadata = {
     "creative direction",
   ],
   openGraph: {
-    title: "Contact Tomás",
-    description: "Get in touch with Tomás",
+    title: "Tomás Contact",
+    description: "Contact Tomás",
     siteName: "tomasml.com",
     locale: "en_US",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Tomás",
-    description: "Get in touch with Tomás",
+    title: "Tomás Contact",
+    description: "Contact Tomás",
     creator: "@tomasml",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -41,30 +40,41 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://tomasml.com/contact",
+    canonical: "https://www.tomasml.com/contact",
   },
 };
 
-export default async function Page() {
+export default function Page() {
   const jsonLdContact = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Contact Tomás",
     description:
       "Get in touch with Tomás, a graphic designer based in the Canary Islands. Collaborate, discuss projects, or inquire about brand strategy, art direction, and digital design services.",
-    url: "https://tomasml.com/contact",
+    url: "https://www.tomasml.com/contact",
   };
 
   return (
     <>
       <script
         type="application/ld+json"
+        suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLdContact),
         }}
       />
 
-      <ContactPage />
+      <main>
+        <h1 className="sr-only">
+          Contact Tomás — Graphic Designer & Creative Director
+        </h1>
+
+        <h2 className="sr-only">
+          Brand Strategy, Art Direction and Digital Design Inquiries
+        </h2>
+
+        <ContactPage />
+      </main>
     </>
   );
 }

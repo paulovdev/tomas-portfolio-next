@@ -107,7 +107,7 @@ export default function HomePage({ media }) {
             width={2500}
             height={2500}
             className="absolute inset-0 w-full h-full object-cover"
-            alt=""
+            alt={current.asset._id}
           />
         )}
       </div>
@@ -153,7 +153,7 @@ export default function HomePage({ media }) {
                     height={2500}
                     unoptimized
                     className="absolute inset-0 w-full h-full object-cover"
-                    alt=""
+                    alt={current.asset._id}
                   />
                 )}
               </motion.div>

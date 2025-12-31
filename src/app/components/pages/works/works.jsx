@@ -57,9 +57,9 @@ const WorksCard = ({ work }) => {
         />
       ) : null}
 
-      <h2 className="mt-2 text-p texts-global font-medium tracking-[-0.03em]">
+      <p className="mt-2 text-p texts-global font-medium tracking-[-0.03em]">
         {work.title}
-      </h2>
+      </p>
     </div>
   );
 };

@@ -36,7 +36,7 @@ export const metadata = {
       "Visual creation grounded in strategy. I specialize in developing functional and contemporary brand identities with intent.",
     siteName: "Tomás — Branding & Visual Identity Designer",
     locale: "en_US",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -44,7 +44,7 @@ export const metadata = {
     title: "Tomás — Branding & Visual Identity Designer",
     description:
       "Visual creation grounded in strategy. I specialize in developing functional and contemporary brand identities with intent.",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
 
   robots: {
@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
     "@type": "Organization",
     name: "Tomás",
     url: "https://tomasml.com",
-    logo: "https://tomasml.com/logo.jpg",
+    logo: "https://www.tomasml.com/logo.jpg",
   };
 
   return (

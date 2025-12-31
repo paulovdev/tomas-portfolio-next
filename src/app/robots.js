@@ -12,6 +12,6 @@ export default function robots() {
         disallow: ["/terms-and-conditions/"],
       },
     ],
-    sitemap: "https://tomasml.com/sitemap.xml",
+    sitemap: "https://www.tomasml.com/sitemap.xml",
   };
 }

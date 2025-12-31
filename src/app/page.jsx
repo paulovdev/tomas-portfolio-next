@@ -13,7 +13,6 @@ export const metadata = {
     "visual identity",
     "branding",
     "digital design",
-    "creative direction",
   ],
   openGraph: {
     url: "https://tomasml.com",
@@ -21,7 +20,7 @@ export const metadata = {
     description:
       "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
     siteName: "tomasml.com",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
 
   twitter: {
@@ -30,7 +29,7 @@ export const metadata = {
     title: "Tomás — Branding & Visual Identity Designer",
     description:
       "Hi, I’m Tomás, a graphic designer based in the Canary Islands.",
-    images: ["https://tomasml.com/logo.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
 
   robots: {
@@ -46,7 +45,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://tomasml.com/",
+    canonical: "https://www.tomasml.com/",
   },
 };
 
@@ -65,7 +64,7 @@ export default async function Page() {
     "@type": "Organization",
     name: "Tomás",
     url: "https://tomasml.com",
-    logo: "https://tomasml.com/logo.jpg",
+    logo: "https://www.tomasml.com/logo.jpg",
   };
 
   return (
@@ -82,8 +81,9 @@ export default async function Page() {
           __html: JSON.stringify(jsonLdOrganization),
         }}
       />
-
-      <HomePage media={data.media || []} />
+      <main>
+        <HomePage media={data.media || []} />
+      </main>
     </>
   );
 }

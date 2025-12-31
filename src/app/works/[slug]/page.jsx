@@ -49,7 +49,7 @@ export default async function WorkPage({ params }) {
     "@type": "CreativeWork",
     name: work.title,
     description: work.description,
-    url: `https://tomasml.com/work/${slug}`,
+    url: `https://www.tomasml.com/work/${slug}`,
     creator: {
       "@type": "Person",
       name: "Tomás",
@@ -69,7 +69,7 @@ export default async function WorkPage({ params }) {
 
       <WorkNav work={work} />
 
-      <main>
+      <main className="">
         <section className="relative pt-30 p-4 h-fit bg-s max-md:px-3 max-sm:px-2">
           <MotionFigure
             className="overflow-hidden size-full mb-4"
