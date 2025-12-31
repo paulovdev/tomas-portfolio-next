@@ -56,8 +56,8 @@ export default function AboutPage() {
               <p className="mb-6 border-b border-black/10 text-p texts-global font-bold tracking-[-0.03em]">
                 Branding
               </p>
-              <ul className="mb-6 flex items-start justify-between gap-8">
-                <div className="flex-[1.3] w-full flex-col items-start">
+              <div className="mb-6 flex items-start justify-between gap-8">
+                <ul className="flex-[1.3] w-full flex-col items-start">
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Brand audit & consultancy
                   </li>
@@ -66,30 +66,29 @@ export default function AboutPage() {
                   </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Brand identity
-                  </li>{" "}
+                  </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Visual identity
                   </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] ">
                     Verbal identity
                   </li>
-                </div>
-                <div className="flex-1 w-full flex-col items-start">
-                  {" "}
+                </ul>
+                <ul className="flex-1 w-full flex-col items-start">
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] ">
                     Brand strategy
-                  </li>{" "}
+                  </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Art direction
                   </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Logo design
-                  </li>{" "}
+                  </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] ">
                     Naming
                   </li>
-                </div>
-              </ul>
+                </ul>
+              </div>
             </div>
 
             {/* Digital */}
@@ -97,8 +96,8 @@ export default function AboutPage() {
               <p className="mb-6 border-b border-black/10 text-p texts-global font-bold tracking-[-0.03em]">
                 Digital
               </p>
-              <ul className="mb-6 flex items-start justify-between gap-8">
-                <div className="flex-[1.3] w-full flex-col items-start">
+              <div className="mb-6 flex items-start justify-between gap-8">
+                <ul className="flex-[1.3] w-full flex-col items-start">
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] truncate">
                     Digital audit & consultancy
                   </li>
@@ -108,16 +107,16 @@ export default function AboutPage() {
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] truncate">
                     Digital visual systems
                   </li>
-                </div>
-                <div className="flex-1 w-full flex-col items-start">
+                </ul>
+                <ul className="flex-1 w-full flex-col items-start">
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Web design
                   </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] ">
                     App design
                   </li>
-                </div>
-              </ul>
+                </ul>
+              </div>
             </div>
 
             {/* Print */}
@@ -125,27 +124,27 @@ export default function AboutPage() {
               <p className="mb-6 border-b border-black/10 text-p texts-global font-bold tracking-[-0.03em]">
                 Print
               </p>
-              <ul className="mb-6 flex items-start justify-between gap-8">
-                <div className="flex-[1.3] w-full flex-col items-start">
+              <div className="mb-6 flex items-start justify-between gap-8">
+                <ul className="flex-[1.3] w-full flex-col items-start">
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Packaging design
-                  </li>{" "}
+                  </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] ">
                     Editorial design
                   </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Poster design
                   </li>
-                </div>{" "}
-                <div className="flex-1 w-full flex-col items-start">
+                </ul>
+                <ul className="flex-1 w-full flex-col items-start">
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em] ">
                     Corporate stationery
                   </li>
                   <li className="mb-1 text-p texts-global font-medium tracking-[-0.03em]">
                     Print production
                   </li>
-                </div>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div>
 

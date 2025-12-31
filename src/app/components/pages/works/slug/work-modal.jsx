@@ -144,7 +144,6 @@ const WorkModal = ({ work, workModal, setWorkModal }) => {
             </motion.div>
           </motion.div>
 
-          {/* Backdrop */}
           <motion.div
             className="
               fixed top-0 left-0 

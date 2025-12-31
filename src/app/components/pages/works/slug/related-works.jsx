@@ -40,6 +40,7 @@ export default function RelatedWorks({ relatedWorks }) {
                   loop
                   autoPlay
                   playsInline
+                  preload="metadata"
                 />
               ) : (
                 <Image

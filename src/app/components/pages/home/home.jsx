@@ -100,6 +100,7 @@ export default function HomePage({ media }) {
             muted
             loop
             playsInline
+            preload="metadata"
           />
         ) : (
           <Image
@@ -144,7 +145,7 @@ export default function HomePage({ media }) {
                     autoPlay
                     muted
                     loop
-                    playsInline
+                    preload="metadata"
                   />
                 ) : (
                   <Image

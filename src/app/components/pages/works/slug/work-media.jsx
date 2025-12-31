@@ -30,6 +30,7 @@ const WorkMedia = ({ media, title }) => {
               autoPlay
               loop
               playsInline
+              preload="metadata"
               className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[60vh] max-md:h-[250px]"
             />
           ) : (
@@ -59,6 +60,7 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
+                  preload="metadata"
                   className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (
@@ -82,6 +84,7 @@ const WorkMedia = ({ media, title }) => {
                   autoPlay
                   loop
                   playsInline
+                  preload="metadata"
                   className="w-full h-screen object-cover max-ds:h-[75vh] max-lg:h-[50vh] max-md:h-[225px]"
                 />
               ) : (

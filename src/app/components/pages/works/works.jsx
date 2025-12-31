@@ -44,6 +44,7 @@ const WorksCard = ({ work }) => {
           loop
           autoPlay
           playsInline
+          preload="metadata"
         />
       ) : imageUrl ? (
         <Image
