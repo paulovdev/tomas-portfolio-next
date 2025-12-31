@@ -33,7 +33,7 @@ export const metadata = {
     description:
       "Explore selected branding, visual identity, and digital projects by Tomás.",
     creator: "@tomasml",
-    images: ["https://www.tomasml.com/works.jpg"],
+    images: ["https://www.tomasml.com/logo.jpg"],
   },
 
   robots: {
