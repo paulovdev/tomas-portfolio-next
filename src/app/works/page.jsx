@@ -70,7 +70,7 @@ export default async function Page() {
       itemListElement: works?.map((work, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://www.tomasml.com/work/${work.slug?.current}`,
+        url: `https://www.tomasml.com/works/${work.slug?.current}`,
         name: work.title,
       })),
     },

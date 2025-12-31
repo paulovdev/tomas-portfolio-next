@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `Tomás — ${work.title}`,
       description: work.description,
-      url: `https://www.tomasml.com/work/${work.slug}`,
+      url: `https://www.tomasml.com/works/${work.slug}`,
       type: "website",
       images: work?.media?.[0]?.asset?.url
         ? [{ url: work.media[0].asset.url }]
@@ -51,7 +51,7 @@ export default async function WorkPage({ params }) {
     "@type": "CreativeWork",
     name: work.title,
     description: work.description,
-    url: `https://www.tomasml.com/work/${slug}`,
+    url: `https://www.tomasml.com/works/${slug}`,
     creator: {
       "@type": "Person",
       name: "Tomás",
