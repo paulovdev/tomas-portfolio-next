@@ -43,7 +43,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.tomasml.com/about",
+    canonical: "https://www.tomasml.com/about/",
   },
 };
 

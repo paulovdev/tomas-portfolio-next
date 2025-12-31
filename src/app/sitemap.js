@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: "https://tomasml.com",
+      url: "https://www.tomasml.com",
       lastModified: "2025-12-28",
       changeFrequency: "yearly",
       priority: 1.0,

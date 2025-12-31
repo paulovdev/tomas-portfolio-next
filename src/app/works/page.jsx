@@ -19,7 +19,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.tomasml.com/works",
+    canonical: "https://www.tomasml.com/works/",
   },
 };
 

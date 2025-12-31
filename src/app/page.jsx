@@ -15,7 +15,7 @@ export const metadata = {
     "digital design",
   ],
   openGraph: {
-    url: "https://tomasml.com",
+    url: "https://www.tomasml.com",
     title: "Tomás — Branding & Visual Identity Designer",
     description:
       "Hi, I’m Tomás, a Graphic Designer based in the Canary Islands.",
@@ -44,9 +44,6 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
-  alternates: {
-    canonical: "https://www.tomasml.com/",
-  },
 };
 
 export default async function Page() {
@@ -56,14 +53,14 @@ export default async function Page() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Tomás — Branding & Visual Identity Designer",
-    url: "https://tomasml.com",
+    url: "https://www.tomasml.com",
   };
 
   const jsonLdOrganization = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Tomás",
-    url: "https://tomasml.com",
+    url: "https://www.tomasml.com",
     logo: "https://www.tomasml.com/logo.jpg",
   };
 

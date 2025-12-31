@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://tomasml.com"),
+  metadataBase: new URL("https://www.tomasml.com"),
 
   title: "Tomás — Branding & Visual Identity Designer",
   description:
@@ -84,7 +84,7 @@ export const metadata = {
   manifest: "/site.webmanifest",
 
   alternates: {
-    canonical: "https://tomasml.com",
+    canonical: "https://www.tomasml.com",
   },
 };
 
@@ -98,14 +98,14 @@ export default function RootLayout({ children }) {
     "@type": "WebSite",
     name: "Tomás — Branding & Visual Identity Designer",
     alternateName: "Tomás",
-    url: "https://tomasml.com",
+    url: "https://www.tomasml.com",
   };
 
   const jsonLdOrganization = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Tomás",
-    url: "https://tomasml.com",
+    url: "https://www.tomasml.com",
     logo: "https://www.tomasml.com/logo.jpg",
   };
 

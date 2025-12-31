@@ -53,7 +53,7 @@ export default async function WorkPage({ params }) {
     creator: {
       "@type": "Person",
       name: "Tomás",
-      url: "https://tomasml.com",
+      url: "https://www.tomasml.com",
     },
     image: work?.media?.[0]?.asset?.url ? [work.media[0].asset.url] : undefined,
   };
