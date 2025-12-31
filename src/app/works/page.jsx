@@ -4,12 +4,48 @@ import { getAllWorks } from "../(utils)/sanity-queries";
 export const metadata = {
   title: "Tomás — Works",
   description:
-    "Explore Tomás’ Design Works. Visual creation grounded in strategy.",
+    "Explore Tomás’ Design Works. A curated selection of branding, visual identity, and digital projects.",
+  keywords: [
+    "graphic design portfolio",
+    "branding projects",
+    "visual identity",
+    "art direction",
+    "brand strategy",
+    "digital design",
+    "creative direction",
+    "design works",
+  ],
+
+  openGraph: {
+    title: "Tomás — Works",
+    description:
+      "A curated selection of branding, visual identity, and digital design projects by Tomás.",
+    siteName: "Tomás",
+    url: "https://www.tomasml.com/works",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://www.tomasml.com/works.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tomás — Design Works",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Tomás — Works",
+    description:
+      "Explore selected branding, visual identity, and digital projects by Tomás.",
+    creator: "@tomasml",
+    images: ["https://www.tomasml.com/works.jpg"],
+  },
 
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -18,8 +54,9 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
+
   alternates: {
-    canonical: "https://www.tomasml.com/works/",
+    canonical: "https://www.tomasml.com/works",
   },
 };
 
@@ -55,9 +92,9 @@ export default async function Page() {
         }}
       />
       <main>
-        <h1 className="sr-only">Tomás — Design Works & Visual Projects</h1>
+        <h1 className="sr-only">Tomás — Design Works</h1>
         <h2 className="sr-only">
-          Selected Branding and Visual Identity Projects
+          Branding, Visual Identity & Digital Projects
         </h2>
         <WorksPage works={works} />
       </main>
