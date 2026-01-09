@@ -4,7 +4,6 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
       },
     ],
     sitemap: "https://www.tomasml.com/sitemap.xml",
