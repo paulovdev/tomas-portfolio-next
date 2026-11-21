@@ -45,7 +45,7 @@ export const Nav = () => {
             isHome ? "text-white" : "text-white"
           }`}
         >
-          T—ML
+          Tomás
         </Link>
       </div>
 
@@ -87,7 +87,7 @@ export const Nav = () => {
             isHome ? "text-white" : "text-white"
           }`}
         >
-          T—ML,
+          Tomás,
         </Link>
 
         <Link
@@ -149,7 +149,7 @@ export const WorkNav = ({ work }) => {
             href="/"
             className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] truncate"
           >
-            T—ML
+            Tomás
           </Link>
         </div>
 
@@ -179,7 +179,7 @@ export const WorkNav = ({ work }) => {
             href="/"
             className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
           >
-            T—ML,
+            Tomás,
           </Link>
           <Link
             href="/works"

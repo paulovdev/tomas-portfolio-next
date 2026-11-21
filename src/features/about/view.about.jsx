@@ -47,7 +47,7 @@ const aboutData = {
   },
   footer: {
     updated: "Updated — March 2026",
-    archive: "T—ML ARCHIVE",
+    archive: "Tomás ARCHIVE",
   },
 };
 

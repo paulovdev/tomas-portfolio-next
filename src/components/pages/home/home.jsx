@@ -113,7 +113,7 @@ export default function HomePage({ media = [] }) {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Tomás Medina León",
-      alternateName: "T—ML",
+      alternateName: "Tomás",
       jobTitle: [
         "Graphic & Visual Identity Designer",
         "Brand Designer",
