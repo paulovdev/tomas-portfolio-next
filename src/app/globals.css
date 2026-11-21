@@ -57,6 +57,29 @@ body {
   font-family: "Marcel", Arial, sans-serif;
   background: #ffffff;
 }
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+.safari-top-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top);
+  background-color: #ffffff;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.safari-bottom-mask {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-bottom);
+  background-color: #ffffff;
+  z-index: 9999;
+  pointer-events: none;
 }
