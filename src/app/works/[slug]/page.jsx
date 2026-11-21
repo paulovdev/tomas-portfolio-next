@@ -14,11 +14,11 @@ export async function generateMetadata({ params }) {
   const work = await getWork(slug);
   if (!work) {
     return {
-      title: "Tomás — Graphic & Visual Identity Designer en Canarias",
+      title: "Tomás — Work & Portfolio | Designer Gráfico en Canarias",
     };
   }
 
-  const metaTitle = `${work.title} — Tomás | Branding & Diseño Gráfico en Canarias`;
+  const metaTitle = `${work.title} — Tomás | Designer Gráfico en Canarias`;
   const metaDescription = work.description
     ? `${work.description} — Project by Tomás, graphic designer & branding specialist in Canarias.`
     : `Branding and visual identity project ${work.title} by Tomás, graphic designer based in Canarias.`;
@@ -147,7 +147,7 @@ export default async function WorkPage({ params }) {
       <main className="">
         {/* Headings invisíveis (sr-only) para contexto SEO local */}
         <h1 className="sr-only">
-          {work.title} — Branding & Diseño Gráfico en Canarias
+          {work.title} — Branding & Designer Gráfico en Canarias
         </h1>
         <h2 className="sr-only">
           {work.year ? `${work.year} Project` : "Project Details"} — Graphic

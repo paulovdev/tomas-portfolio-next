@@ -1,7 +1,7 @@
 import ContactPage from "@/components/pages/contact/contact";
 
 export const metadata = {
-  title: "Tomás — Contact",
+  title: "Tomás — Contact | Designer Gráfico en Canarias",
   description:
     "Contact Tomás, a graphic designer based in the Canary Islands. Collaborate, discuss projects, or inquire about brand strategy, art direction, and digital design services.",
   keywords: [

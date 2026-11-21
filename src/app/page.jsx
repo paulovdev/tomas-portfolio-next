@@ -8,8 +8,8 @@ const OG_IMAGE = "https://www.tomasml.com/logo.jpg";
 
 export const metadata = {
   title: {
-    default: "Tomás — Branding & Visual Identity Designer",
-    template: "%s | Tomás — Branding & Visual Identity Designer",
+    default: "Tomás — Designer Gráfico en Canarias",
+    template: "%s | Tomás — Designer Gráfico en Canarias",
   },
   description:
     "Hi, I’m Tomás, a Graphic Designer based in the Canary Islands specializing in branding, visual identity & art direction. Diseñador gráfico en Canarias especializado en marca, identidad visual y dirección de arte.",

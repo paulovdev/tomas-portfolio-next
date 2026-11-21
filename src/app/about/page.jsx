@@ -1,7 +1,7 @@
 import AboutPage from "@/components/pages/about/about";
 
 export const metadata = {
-  title: "Tomás — About",
+  title: "Tomás — About | Designer Gráfico en Canarias",
   description:
     "Learn More About Tomás, a designer focused on building brands with intention, purpose, and a clear voice. Experienced in brand strategy, art direction, and digital design creation.",
   keywords: [

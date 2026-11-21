@@ -14,7 +14,7 @@ export const metadata = {
   metadataBase: new URL("https://www.tomasml.com"),
 
   // Título em inglês com a palavra-chave local estratégica em espanhol integrada
-  title: "Tomás — Graphic & Visual Identity Designer en Canarias",
+  title: "Tomás — Designer Gráfico en Canarias",
 
   // Descrição em inglês mencionando explicitamente os termos chave de busca local
   description:
@@ -28,7 +28,7 @@ export const metadata = {
     "estudio de diseño canarias",
     "diseño de marca canarias",
     "identidad visual canarias",
-    
+
     "designer grafico en canaria",
     "diseñador gráfico canaria",
     "diseño gráfico canaria",
