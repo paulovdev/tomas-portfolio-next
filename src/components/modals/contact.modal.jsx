@@ -6,20 +6,22 @@ import { z } from "zod";
 import emailjs from "@emailjs/browser";
 import { RevealText } from "@/components/ui/reveal-text";
 
+const EASE = [0.76, 0, 0.24, 1];
+
 const menuAnim = {
   initial: { clipPath: "inset(0% 0% 0% 100%)" },
   animate: {
     clipPath: "inset(0% 0% 0% 0%)",
     transition: {
       duration: 0.8,
-      ease: [0.76, 0, 0.24, 1],
+      ease: EASE,
     },
   },
   exit: {
     clipPath: "inset(0% 0% 0% 100%)",
     transition: {
       duration: 0.8,
-      ease: [0.76, 0, 0.24, 1],
+      ease: EASE,
     },
   },
 };
@@ -31,7 +33,7 @@ const overlayAnim = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.76, 0, 0.24, 1],
+      ease: EASE,
       delay: 0.75,
     },
   },
@@ -99,15 +101,15 @@ const ContactModal = ({ setContactModal }) => {
 
   return (
     <div
-      className="fixed w-full right-0 bottom-0 flex items-end justify-end z-50 pointer-events-none"
+      className="fixed inset-x-0 bottom-0 flex items-end justify-end z-50 pointer-events-none overscroll-contain"
       style={{
-        WebkitOverflowScrolling: "touch",
-        touchAction: "pan-y",
+        paddingBottom: "env(safe-area-inset-bottom, 0px)",
       }}
     >
       <motion.div
-        className="relative p-5 max-w-150 w-full bg-bege pointer-events-auto 
-        max-md:max-w-full max-md:p-2.5 flex flex-col justify-between h-fit will-change-auto"
+        className="relative p-5 max-w-150 w-full bg-bege pointer-events-auto
+        max-md:max-w-full max-md:p-2.5 flex flex-col justify-between h-fit touch-manipulation"
+        style={{ willChange: "clip-path" }}
         variants={menuAnim}
         initial="initial"
         animate="animate"
@@ -142,7 +144,7 @@ const ContactModal = ({ setContactModal }) => {
           variants={overlayAnim}
           initial="initial"
           animate="animate"
-          className="relative flex flex-col items-start justify-between will-change-auto"
+          className="relative flex flex-col items-start justify-between"
         >
           <div className="flex flex-col w-full gap-1">
             <input

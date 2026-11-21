@@ -44,8 +44,8 @@ const ContactView = () => {
 
   return (
     <section
-      className="relative w-full h-svh max-md:h-[calc(var(--vh)*100)]
-        flex flex-col items-start justify-between pt-25 max-md:pt-20 overflow-hidden"
+      className="relative w-full min-h-dvh h-dvh max-md:h-[calc(var(--vh)*100)]
+        flex flex-col items-start justify-between pt-25 max-md:pt-20 overflow-hidden overscroll-none"
     >
       <div className="px-4 mb-20 flex-1 max-md:mb-10 max-md:px-3 max-sm:px-2">
         <RevealText
@@ -130,7 +130,7 @@ const ContactView = () => {
             }
 
             return (
-              <div key={i} className=" ">
+              <div key={i}>
                 <RevealText
                   as="p"
                   text={info.value}
@@ -169,7 +169,7 @@ const ContactView = () => {
 
       <AnimatePresence mode="wait">
         {contactModal && (
-          <div className="absolute inset-0 z-50 pointer-events-none flex items-end justify-end">
+          <div className="fixed inset-x-0 bottom-0 z-50 pointer-events-none flex items-end justify-end pb-[env(safe-area-inset-bottom)]">
             <div className="pointer-events-auto w-full max-w-100">
               <ContactModal setContactModal={setContactModal} />
             </div>
