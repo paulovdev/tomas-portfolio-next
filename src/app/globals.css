@@ -3,24 +3,8 @@
 
 @font-face {
   font-family: "Marcel";
-  font-weight: 500;
-  font-style: normal;
-  src:
-    url("https://freight.cargo.site/m/Z2207512114860673754051365892233/Marcel-Both-Medium.woff2")
-      format("woff2"),
-    url("https://freight.cargo.site/m/H2207512053100974595271787081865/Marcel-Both-Medium.woff")
-      format("woff");
-}
-
-@font-face {
-  font-family: "Marcel";
-  font-weight: 600;
-  font-style: normal;
-  src:
-    url("https://freight.cargo.site/m/H2209662197824126925576426811529/Marcel-Both-Semibold.woff2")
-      format("woff2"),
-    url("https://freight.cargo.site/m/V2209662140657667041150526353545/Marcel-Both-Semibold.woff")
-      format("woff");
+  src: url("/fonts/Marcel.woff2") format("woff2");
+  font-display: swap;
 }
 
 @theme {
@@ -35,9 +19,6 @@
   --breakpoint-lg: 992px;
   --breakpoint-md: 768px;
   --breakpoint-sm: 400px;
-
-  --font-instrument: "Marcel", Arial, sans-serif;
-  /*  --font-instrument: "Instrument Sans", Arial, sans-serif; */
 }
 
 html {
@@ -55,6 +36,7 @@ body {
   width: 100dvw;
   overflow-x: hidden;
   font-family: "Marcel", Arial, sans-serif;
+  font-weight: 500;
   background: #ffffff;
 }
 

@@ -13,7 +13,7 @@ export const Nav = () => {
 
   const isActive = (href) => {
     if (isHome) {
-      return "text-white font-semibold";
+      return "text-white  ";
     }
     if (
       pathname === "/works" ||
@@ -41,7 +41,7 @@ export const Nav = () => {
       <div className="flex content-start justify-start max-md:hidden">
         <Link
           href="/"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] truncate ${
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] truncate ${
             isHome ? "text-white" : "text-white"
           }`}
         >
@@ -53,7 +53,7 @@ export const Nav = () => {
       <div className="flex justify-start gap-1 max-md:hidden">
         <Link
           href="/works"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
             "/works",
           )}`}
         >
@@ -62,7 +62,7 @@ export const Nav = () => {
 
         <Link
           href="/about"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
             "/about",
           )}`}
         >
@@ -71,7 +71,7 @@ export const Nav = () => {
 
         <Link
           href="/contact"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
             "/contact",
           )}`}
         >
@@ -83,7 +83,7 @@ export const Nav = () => {
       <div className="max-md:flex justify-center gap-1 hidden">
         <Link
           href="/"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] truncate ${
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] truncate ${
             isHome ? "text-white" : "text-white"
           }`}
         >
@@ -92,7 +92,7 @@ export const Nav = () => {
 
         <Link
           href="/works"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
             "/works",
           )}`}
         >
@@ -101,7 +101,7 @@ export const Nav = () => {
 
         <Link
           href="/about"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
             "/about",
           )}`}
         >
@@ -110,7 +110,7 @@ export const Nav = () => {
 
         <Link
           href="/contact"
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] ${isActive(
             "/contact",
           )}`}
         >
@@ -121,7 +121,7 @@ export const Nav = () => {
       {/* CLOCK */}
       <div className="w-full flex justify-end col-span-2 max-cl:hidden">
         <span
-          className={`text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] uppercase 
+          className={`text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] uppercase 
         flex items-center gap-1 ${isHome ? "text-white" : "text-white"}`}
         >
           <Clock />
@@ -147,7 +147,7 @@ export const WorkNav = ({ work }) => {
         <div className="flex justify-start max-md:hidden">
           <Link
             href="/"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] truncate"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] truncate"
           >
             Tomás
           </Link>
@@ -156,19 +156,19 @@ export const WorkNav = ({ work }) => {
         <div className="flex justify-start gap-1 max-md:hidden">
           <Link
             href="/works"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]"
           >
             Works,
           </Link>
           <Link
             href="/about"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]"
           >
             About,
           </Link>
           <Link
             href="/contact"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]"
           >
             Contact
           </Link>
@@ -177,25 +177,25 @@ export const WorkNav = ({ work }) => {
         <div className="max-md:flex justify-center gap-1 hidden">
           <Link
             href="/"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]"
           >
             Tomás,
           </Link>
           <Link
             href="/works"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]"
           >
             Works,
           </Link>
           <Link
             href="/about"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]"
           >
             About,
           </Link>
           <Link
             href="/contact"
-            className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]"
           >
             Contact
           </Link>
@@ -207,21 +207,21 @@ export const WorkNav = ({ work }) => {
               className="w-full flex items-center gap-1 cursor-pointer"
               onClick={() => setWorkModal(true)}
             >
-              <span className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]">
+              <span className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]">
                 {work.title}
               </span>
-              <span className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]">
+              <span className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px]">
                 —
               </span>
               <button
                 className="hidden max-md:block 
-              text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] cursor-pointer"
+              text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] cursor-pointer"
               >
                 Info
               </button>
               <button
                 className="block max-md:hidden 
-              text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] cursor-pointer"
+              text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] cursor-pointer"
               >
                 Information
               </button>
@@ -230,7 +230,7 @@ export const WorkNav = ({ work }) => {
         </div>
 
         <div className="w-full flex justify-end max-md:hidden">
-          <span className="text-[16px] font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] uppercase flex items-center gap-1">
+          <span className="text-[16px]      tracking-[-5%] leading-none max-md:text-[14px] uppercase flex items-center gap-1">
             <Clock />
           </span>
         </div>

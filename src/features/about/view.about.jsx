@@ -61,7 +61,7 @@ export default function AboutView() {
             <RevealText
               as="h1"
               text={aboutData.intro}
-              className="text-[32px] text-black font-medium font-instrument tracking-[-5%] leading-[80%] max-md:text-[18px]"
+              className="text-[32px] text-black      tracking-[-5%] leading-[80%] max-md:text-[18px]"
               exit={false}
             />
           </div>
@@ -74,7 +74,7 @@ export default function AboutView() {
               <RevealText
                 as="h2"
                 text="Services"
-                className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none"
+                className="text-[16px] text-black      tracking-[-5%] leading-none"
                 exit={false}
               />
             </div>
@@ -85,7 +85,7 @@ export default function AboutView() {
                   <RevealText
                     as="h3"
                     text={category.title}
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-[100%] max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-[100%] max-md:text-[14px]"
                     delay={0.25 + i * 0.1}
                     exit={false}
                   />
@@ -97,7 +97,7 @@ export default function AboutView() {
                       <RevealText
                         as="span"
                         text={item}
-                        className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-[110%] max-md:text-[14px]"
+                        className="text-[16px] text-black      tracking-[-5%] leading-[110%] max-md:text-[14px]"
                         delay={0.3 + j * 0.05}
                         exit={false}
                       />
@@ -116,7 +116,7 @@ export default function AboutView() {
               <RevealText
                 as="h2"
                 text={aboutData.bio.label}
-                className="text-[20px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[16px]"
+                className="text-[20px] text-black      tracking-[-5%] leading-none max-md:text-[16px]"
                 delay={0.5}
                 exit={false}
               />
@@ -125,7 +125,7 @@ export default function AboutView() {
               <RevealText
                 as="p"
                 text={aboutData.bio.text}
-                className="text-[32px] text-black font-medium font-instrument tracking-[-5%] leading-[80%] max-md:text-[18px]"
+                className="text-[32px] text-black      tracking-[-5%] leading-[80%] max-md:text-[18px]"
                 delay={0.55}
                 exit={false}
               />

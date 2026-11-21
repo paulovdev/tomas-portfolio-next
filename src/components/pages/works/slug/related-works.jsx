@@ -9,7 +9,7 @@ const mediaClass =
   "w-full h-[350px] object-cover brightness-100 group-hover:brightness-90 transition-[filter] duration-300 max-ds:h-[300px] max-lg:h-[225px] max-md:h-[225px] max-mmd:h-[200px] max-sm:h-[150px]";
 
 const titleClass =
-  "mt-2 text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]";
+  "mt-2 text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]";
 
 function resolveHighQualityUrl(asset, isVideo) {
   if (!asset) return null;
@@ -148,7 +148,7 @@ export default function RelatedWorks({ relatedWorks = [] }) {
       data-nosnippet
       className="bg-s py-30 px-4 w-full grid grid-cols-4 gap-4 max-md:flex max-md:flex-col max-md:py-20 max-md:px-3 max-sm:px-2"
     >
-      <h2 className="text-[16px] text-black font-semibold font-instrument tracking-[-5%] leading-none max-md:text-[14px]">
+      <h2 className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]">
         Related Works
       </h2>
 

@@ -10,7 +10,7 @@ import Footer from "@/components/layout/footer";
 import { RevealText } from "@/components/ui/reveal-text";
 
 const cardTitleStyle =
-  "text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]";
+  "text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]";
 
 const mediaSizeStyle =
   "w-full h-[500px] object-cover brightness-100 group-hover:brightness-90 transition-[filter] duration-300 max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px] max-cl:h-[100px]";

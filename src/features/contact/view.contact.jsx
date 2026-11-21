@@ -51,7 +51,7 @@ const ContactView = () => {
         <RevealText
           as="h1"
           text="If you’d like to discuss a project or learn more about our process, please don’t hesitate to get in touch."
-          className="text-[32px] text-black font-medium font-instrument tracking-[-5%] leading-[80%] max-md:text-[18px]"
+          className="text-[32px] text-black      tracking-[-5%] leading-[80%] max-md:text-[18px]"
         />
       </div>
 
@@ -60,7 +60,7 @@ const ContactView = () => {
           <RevealText
             as="h2"
             text="Contact"
-            className="text-[20px] text-black font-medium font-instrument tracking-[-5%] leading-none
+            className="text-[20px] text-black      tracking-[-5%] leading-none
             max-md:text-[14px]"
             delay={0.25}
           />
@@ -74,7 +74,7 @@ const ContactView = () => {
               return (
                 <div
                   key={i}
-                  className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none 
+                  className="text-[16px] text-black      tracking-[-5%] leading-none 
                   max-md:text-[14px] flex flex-wrap items-center "
                 >
                   {info.value.map((item, idx) => (
@@ -88,7 +88,7 @@ const ContactView = () => {
                         <RevealText
                           as="span"
                           text={item}
-                          className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                          className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                           delay={itemDelay + idx * 0.05}
                         />
                       </a>
@@ -96,7 +96,7 @@ const ContactView = () => {
                         <RevealText
                           as="span"
                           text=","
-                          className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                          className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                           delay={itemDelay + idx * 0.05}
                         />
                       )}
@@ -110,7 +110,7 @@ const ContactView = () => {
               return (
                 <div
                   key={i}
-                  className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                  className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                 >
                   <a
                     href={info.href}
@@ -121,7 +121,7 @@ const ContactView = () => {
                     <RevealText
                       as="span"
                       text={info.value}
-                      className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                      className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                       delay={itemDelay}
                     />
                   </a>
@@ -134,7 +134,7 @@ const ContactView = () => {
                 <RevealText
                   as="p"
                   text={info.value}
-                  className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                  className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                   delay={itemDelay}
                 />
               </div>
@@ -148,7 +148,7 @@ const ContactView = () => {
           <RevealText
             as="p"
             text="tomasml ©2026"
-            className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
             delay={0.55}
           />
 
@@ -160,7 +160,7 @@ const ContactView = () => {
             <RevealText
               as="span"
               text="Send message +"
-              className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
               delay={0.6}
             />
           </button>

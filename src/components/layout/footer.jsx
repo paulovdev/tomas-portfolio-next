@@ -28,7 +28,7 @@ const Footer = () => {
         <RevealText
           as="p"
           text={copyrightText}
-          className={`text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] truncate`}
+          className={`text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] truncate`}
           delay={0.1}
           exit={false}
         />
@@ -43,7 +43,7 @@ const Footer = () => {
         >
           <RevealText
             text={locationText}
-            className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
             delay={0.15}
             exit={false}
           />
@@ -60,7 +60,7 @@ const Footer = () => {
               >
                 <RevealText
                   text={item.label}
-                  className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                  className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                   delay={0.2 + idx * 0.05}
                   exit={false}
                 />
@@ -68,7 +68,7 @@ const Footer = () => {
               {idx < socials.length - 1 && (
                 <RevealText
                   text=","
-                  className={`text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] mr-[0.2em]`}
+                  className={`text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] mr-[0.2em]`}
                   delay={0.2 + idx * 0.05}
                   exit={false}
                 />
@@ -82,7 +82,7 @@ const Footer = () => {
         <a href="mailto:hey@tomasml.com" className={`${animatedUnderline}`}>
           <RevealText
             text="hey@tomasml.com"
-            className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
             delay={0.35}
             exit={false}
           />
@@ -90,7 +90,7 @@ const Footer = () => {
         <a href="tel:+34625551094" className={`${animatedUnderline}`}>
           <RevealText
             text="+(34) 625 551 094"
-            className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
             delay={0.4}
             exit={false}
           />
@@ -108,7 +108,7 @@ const Footer = () => {
           >
             <RevealText
               text={locationText}
-              className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
               delay={0.15}
               exit={false}
             />
@@ -125,7 +125,7 @@ const Footer = () => {
                 >
                   <RevealText
                     text={item.label}
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                     delay={0.2 + idx * 0.05}
                     exit={false}
                   />
@@ -133,7 +133,7 @@ const Footer = () => {
                 {idx < socials.length - 1 && (
                   <RevealText
                     text=","
-                    className={`text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] mr-[0.2em]`}
+                    className={`text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] mr-[0.2em]`}
                     delay={0.2 + idx * 0.05}
                     exit={false}
                   />
@@ -147,7 +147,7 @@ const Footer = () => {
           <a href="mailto:hey@tomasml.com" className={`${animatedUnderline}`}>
             <RevealText
               text="hey@tomasml.com"
-              className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
               delay={0.35}
               exit={false}
             />
@@ -155,7 +155,7 @@ const Footer = () => {
           <a href="tel:+34625551094" className={`${animatedUnderline}`}>
             <RevealText
               text="+(34) 625 551 094"
-              className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
               delay={0.4}
               exit={false}
             />
@@ -167,7 +167,7 @@ const Footer = () => {
         <RevealText
           as="p"
           text={copyrightText}
-          className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] truncate"
+          className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] truncate"
           delay={0.1}
           exit={false}
         />

@@ -81,19 +81,19 @@ export default async function WorkPage({ params }) {
         <main className="">
           <div className="relative h-svh max-md:h-[calc(var(--vh)*100)] px-4 flex items-center justify-center bg-s max-md:px-3 max-sm:px-2">
             <div className="w-full grid grid-cols-4">
-              <p className="text-p text-[4em] max-md:text-[3em] font-medium tracking-[-0.03em]">
+              <p className="text-p text-[4em] max-md:text-[3em]   tracking-[-0.03em]">
                 404
               </p>
               <div className="flex flex-col items-start col-span-3">
-                <p className="text-p  texts-global font-medium tracking-[-0.03em]">
+                <p className="text-p  texts-global   tracking-[-0.03em]">
                   Work not found :&#40;
                 </p>
 
-                <p className="text-p  texts-global  font-medium tracking-[-0.03em]">
+                <p className="text-p  texts-global    tracking-[-0.03em]">
                   Please check the URL or return to the{" "}
                   <Link
                     href={"/works"}
-                    className="text-p  texts-global font-medium tracking-[-0.03em] underline"
+                    className="text-p  texts-global   tracking-[-0.03em] underline"
                   >
                     works
                   </Link>

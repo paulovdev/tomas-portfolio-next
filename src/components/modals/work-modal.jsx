@@ -81,13 +81,13 @@ const WorkModal = ({ work, setWorkModal }) => {
             <RevealText
               as="h2"
               text={work.title}
-              className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
               exit={false}
             />
 
             <button
               type="button"
-              className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px] cursor-pointer bg-transparent border-none p-0"
+              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] cursor-pointer bg-transparent border-none p-0"
               onClick={() => setWorkModal(false)}
             >
               Close
@@ -98,7 +98,7 @@ const WorkModal = ({ work, setWorkModal }) => {
             <RevealText
               as="p"
               text={work.description}
-              className="text-[24px] text-black font-medium font-instrument tracking-[-5%] leading-[80%]"
+              className="text-[24px] text-black      tracking-[-5%] leading-[80%]"
               exit={false}
             />
           </div>
@@ -108,7 +108,7 @@ const WorkModal = ({ work, setWorkModal }) => {
               <RevealText
                 as="h3"
                 text="Information"
-                className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                 exit={false}
               />
               <ul className="flex flex-col mt-2">
@@ -116,13 +116,13 @@ const WorkModal = ({ work, setWorkModal }) => {
                   <RevealText
                     as="span"
                     text="Year:"
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                     exit={false}
                   />
                   <RevealText
                     as="span"
                     text={work.year}
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                     exit={false}
                   />
                 </li>
@@ -131,13 +131,13 @@ const WorkModal = ({ work, setWorkModal }) => {
                   <RevealText
                     as="span"
                     text="Client:"
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                     exit={false}
                   />
                   <RevealText
                     as="span"
                     text={work.client}
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                     exit={false}
                   />
                 </li>
@@ -147,7 +147,7 @@ const WorkModal = ({ work, setWorkModal }) => {
                     <RevealText
                       as="span"
                       text="Website:"
-                      className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                      className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                       exit={false}
                     />
                     <a
@@ -159,7 +159,7 @@ const WorkModal = ({ work, setWorkModal }) => {
                       <RevealText
                         as="span"
                         text={work.website}
-                        className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                        className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                         exit={false}
                       />
                     </a>
@@ -170,13 +170,13 @@ const WorkModal = ({ work, setWorkModal }) => {
                   <RevealText
                     as="span"
                     text="Services:"
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                     exit={false}
                   />
                   <RevealText
                     as="span"
                     text={work.services}
-                    className="text-[16px] text-black font-medium font-instrument tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                     exit={false}
                   />
                 </li>
