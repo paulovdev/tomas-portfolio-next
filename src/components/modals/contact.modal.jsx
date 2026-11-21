@@ -100,12 +100,7 @@ const ContactModal = ({ setContactModal }) => {
   const submitLabel = status === "sending" ? "Sending..." : "Send";
 
   return (
-    <div
-      className="fixed inset-x-0 bottom-0 flex items-end justify-end z-50 pointer-events-none overscroll-contain"
-      style={{
-        paddingBottom: "env(safe-area-inset-bottom, 0px)",
-      }}
-    >
+    <div className="fixed inset-x-0 bottom-0 flex items-end justify-end z-50 pointer-events-none bg-transparent">
       <motion.div
         className="relative p-5 max-w-150 w-full bg-bege pointer-events-auto
         max-md:max-w-full max-md:p-2.5 flex flex-col justify-between h-fit touch-manipulation"
