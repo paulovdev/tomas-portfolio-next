@@ -169,7 +169,7 @@ const ContactView = () => {
 
       <AnimatePresence mode="wait">
         {contactModal && (
-          <div className="fixed inset-x-0 bottom-0 z-50 pointer-events-none flex items-end justify-end pb-[env(safe-area-inset-bottom)]">
+          <div className="fixed inset-x-0 bottom-0 z-50 pointer-events-none flex items-end justify-end ">
             <div className="pointer-events-auto w-full max-w-100">
               <ContactModal setContactModal={setContactModal} />
             </div>
