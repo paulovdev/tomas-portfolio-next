@@ -1,9 +1,10 @@
+import { getWork, getRelatedWorks } from "@/(utils)/sanity-queries";
+
 import Footer from "@/components/layout/footer";
 import { WorkNav } from "@/components/layout/nav";
 import WorkMedia from "@/components/pages/works/slug/work-media";
 import RelatedWorks from "@/components/pages/works/slug/related-works";
-import { MotionFigure } from "@/components/motion";
-import { getWork, getRelatedWorks } from "@/(utils)/sanity-queries";
+import Link from "next/link";
 
 export const revalidate = 86400;
 
@@ -71,9 +72,33 @@ export default async function WorkPage({ params }) {
 
   if (!work) {
     return (
-      <main className="p-10 text-center text-p">
-        <p>Work not found.</p>
-      </main>
+      <>
+        <WorkNav work={work} />
+        <main className="">
+          <div className="relative h-svh max-md:h-[calc(var(--vh)*100)] px-4 flex items-center justify-center bg-s max-md:px-3 max-sm:px-2">
+            <div className="w-full grid grid-cols-4">
+              <p className="text-p text-[4em] max-md:text-[3em] font-medium tracking-[-0.03em]">
+                404
+              </p>
+              <div className="flex flex-col items-start col-span-3">
+                <p className="text-p  texts-global font-medium tracking-[-0.03em]">
+                  Work not found :&#40;
+                </p>
+
+                <p className="text-p  texts-global  font-medium tracking-[-0.03em]">
+                  Please check the URL or return to the{" "}
+                  <Link
+                    href={"/works"}
+                    className="text-p  texts-global font-medium tracking-[-0.03em] underline"
+                  >
+                    works
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </>
     );
   }
 

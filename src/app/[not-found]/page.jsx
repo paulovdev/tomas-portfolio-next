@@ -1,10 +1,11 @@
 import Link from "next/link";
-import GlobalNav from "../components/navs/global-nav";
+
+import { Nav } from "@/components/layout/nav";
 
 const NotFound = () => {
   return (
     <>
-      <GlobalNav />
+      <Nav />
       <div className="relative h-svh max-md:h-[calc(var(--vh)*100)] px-4 flex items-center justify-center bg-s max-md:px-3 max-sm:px-2">
         <div className="w-full grid grid-cols-4">
           <p className="text-p text-[4em] max-md:text-[3em] font-medium tracking-[-0.03em]">
@@ -23,7 +24,7 @@ const NotFound = () => {
                 href={"/"}
                 className="text-p  texts-global    font-medium tracking-[-0.03em] underline"
               >
-                homepage
+                home
               </Link>
             </p>
           </div>
