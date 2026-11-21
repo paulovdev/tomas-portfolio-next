@@ -87,19 +87,11 @@ const ContactView = () => {
                       >
                         <RevealText
                           as="span"
-                          text={item}
+                          text={`${item}${idx < info.value.length - 1 ? "," : ""}`}
                           className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                           delay={itemDelay + idx * 0.05}
                         />
                       </a>
-                      {idx < info.value.length - 1 && (
-                        <RevealText
-                          as="span"
-                          text=","
-                          className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
-                          delay={itemDelay + idx * 0.05}
-                        />
-                      )}
                     </span>
                   ))}
                 </div>

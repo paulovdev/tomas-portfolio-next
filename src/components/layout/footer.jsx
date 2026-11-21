@@ -59,20 +59,12 @@ const Footer = () => {
                 className={animatedUnderline}
               >
                 <RevealText
-                  text={item.label}
+                  text={`${item.label}${idx < socials.length - 1 ? "," : ""}`}
                   className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
                   delay={0.2 + idx * 0.05}
                   exit={false}
                 />
               </a>
-              {idx < socials.length - 1 && (
-                <RevealText
-                  text=","
-                  className={`text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] mr-[0.2em]`}
-                  delay={0.2 + idx * 0.05}
-                  exit={false}
-                />
-              )}
             </span>
           ))}
         </div>
