@@ -24,6 +24,15 @@ export const metadata = {
     "diseñador gráfico las palmas",
     "branding canarias",
 
+    "designer grafico en canaria",
+    "diseñador gráfico canaria",
+    "diseño gráfico canaria",
+    "estudio de diseño canaria",
+    "diseño de marca canaria",
+    "identidad visual canaria",
+    "diseñador gráfico la palma",
+    "branding canaria",
+
     // Termos em Inglês (Atuação Global/Geral)
     "graphic design",
     "brand strategy",

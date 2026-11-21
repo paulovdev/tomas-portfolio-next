@@ -28,6 +28,13 @@ export const metadata = {
     "estudio de diseño canarias",
     "diseño de marca canarias",
     "identidad visual canarias",
+    
+    "designer grafico en canaria",
+    "diseñador gráfico canaria",
+    "diseño gráfico canaria",
+    "estudio de diseño canaria",
+    "diseño de marca canaria",
+    "identidad visual canaria",
 
     // Termos em Inglês (Atuação Global/Geral)
     "graphic design",

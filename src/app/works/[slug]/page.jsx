@@ -34,6 +34,10 @@ export async function generateMetadata({ params }) {
       "visual identity",
       "diseñador gráfico canarias",
       "portafolio de diseño",
+
+      "designer grafico en canaria",
+      "diseño gráfico canaria",
+      "diseñador gráfico canaria",
     ],
     openGraph: {
       title: metaTitle,

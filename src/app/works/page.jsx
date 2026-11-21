@@ -16,6 +16,15 @@ export const metadata = {
     "diseñador gráfico canarias",
     "estudio de diseño canarias",
 
+    "designer grafico en canaria",
+    "diseño gráfico canaria",
+    "portafolio diseño gráfico",
+    "proyectos de branding canaria",
+    "diseñador gráfico canaria",
+    "estudio de diseño canaria",
+
+    "trabajos",
+
     // Termos globais em Inglês
     "graphic design portfolio",
     "branding projects",
@@ -25,6 +34,8 @@ export const metadata = {
     "digital design",
     "creative direction",
     "design works",
+
+    "works",
   ],
 
   openGraph: {
