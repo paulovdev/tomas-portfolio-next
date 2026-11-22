@@ -1,14 +1,6 @@
-import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import VHFix from "../providers/VHFixer";
 import { Analytics } from "@vercel/analytics/next";
-
-const dmSans = DM_Sans({
-  variable: "--font-dm",
-  subsets: ["latin"],
-  weight: "variable",
-  style: ["normal", "italic"],
-});
 
 export const metadata = {
   metadataBase: new URL("https://www.tomasml.com"),
@@ -165,8 +157,8 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className={`${dmSans.variable} antialiased`}>
-        <VHFix />
+      <body className={`antialiased bg-white`}>
+       {/*  <VHFix /> */}
         {children}
         <Analytics />
       </body>
