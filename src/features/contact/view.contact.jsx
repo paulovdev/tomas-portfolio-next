@@ -38,20 +38,20 @@ const ContactView = () => {
   ];
 
   const animatedUnderline =
-    "relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-1px] max-md:after:bottom-[1px] after:w-full after:h-[2px] after:bg-black after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.76,0,0.24,1)]";
+    "relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[3px] max-md:after:bottom-[3px] after:w-full after:h-[2px] after:bg-black after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.76,0,0.24,1)]";
   const animatedUnderline2 =
-    "relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[2px] max-md:after:bottom-[4px] after:w-full after:h-[2px] after:bg-black after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.76,0,0.24,1)]";
+    "relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[3px] max-md:after:bottom-[3px] after:w-full after:h-[2px] after:bg-black after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.76,0,0.24,1)]";
 
   return (
     <section
       className="relative w-full h-svh
         flex flex-col items-start justify-between pt-25 max-md:pt-20 overflow-hidden overscroll-none"
     >
-      <div className="px-4 mb-20 flex-1 max-md:mb-10 max-md:px-3 max-sm:px-2">
+      <div className="px-5 mb-20 flex-1 max-md:mb-10 max-md:px-2.5">
         <RevealText
           as="h1"
           text="If you’d like to discuss a project or learn more about our process, please don’t hesitate to get in touch."
-          className="text-[32px] text-black tracking-[-5%] leading-[80%] max-md:text-[18px]"
+          className="text-[32px] text-black font-semibold tracking-[-5%] leading-[80%] max-md:text-[18px]"
         />
       </div>
 
@@ -60,23 +60,19 @@ const ContactView = () => {
           <RevealText
             as="h2"
             text="Contact"
-            className="text-[20px] text-black tracking-[-5%] leading-none
+            className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
             max-md:text-[14px]"
             delay={0.25}
           />
         </div>
 
-        <div className="col-span-3 max-md:col-span-1 flex flex-col gap-1">
+        <div className="col-span-3 max-md:col-span-1 flex flex-col ">
           {contactInfo.map((info, i) => {
             const itemDelay = 0.3 + i * 0.08;
 
             if (Array.isArray(info.value)) {
               return (
-                <div
-                  key={i}
-                  className="text-[16px] text-black      tracking-[-5%] leading-none 
-                  max-md:text-[14px] flex flex-wrap items-center "
-                >
+                <div key={i} className="flex flex-wrap items-center">
                   {info.value.map((item, idx) => (
                     <span key={idx} className="inline-flex items-center">
                       <a
@@ -88,7 +84,8 @@ const ContactView = () => {
                         <RevealText
                           as="span"
                           text={`${item}${idx < info.value.length - 1 ? "," : ""}`}
-                          className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                          className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                           delay={itemDelay + idx * 0.05}
                         />
                       </a>
@@ -100,10 +97,7 @@ const ContactView = () => {
 
             if (info.href) {
               return (
-                <div
-                  key={i}
-                  className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
-                >
+                <div key={i} className="">
                   <a
                     href={info.href}
                     target="_blank"
@@ -113,7 +107,8 @@ const ContactView = () => {
                     <RevealText
                       as="span"
                       text={info.value}
-                      className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                      className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                       delay={itemDelay}
                     />
                   </a>
@@ -126,7 +121,8 @@ const ContactView = () => {
                 <RevealText
                   as="p"
                   text={info.value}
-                  className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                  className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                   delay={itemDelay}
                 />
               </div>
@@ -140,7 +136,8 @@ const ContactView = () => {
           <RevealText
             as="p"
             text="tomasml ©2026"
-            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
             delay={0.55}
           />
 
@@ -152,7 +149,8 @@ const ContactView = () => {
             <RevealText
               as="span"
               text="Send message +"
-              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
               delay={0.6}
             />
           </button>

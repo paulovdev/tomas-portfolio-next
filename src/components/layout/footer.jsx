@@ -10,7 +10,7 @@ const socials = [
 ];
 
 const animatedUnderline =
-  "relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[2px] max-md:after:bottom-[1px] after:w-full after:h-[2px] after:bg-black after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.76,0,0.24,1)]";
+  "relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[3px] max-md:after:bottom-[3px] after:w-full after:h-[2px] after:bg-black after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.76,0,0.24,1)]";
 
 const Footer = () => {
   const locationLink = useDeviceMapLink("Las Palmas de Gran Canaria");
@@ -20,15 +20,16 @@ const Footer = () => {
   return (
     <footer
       data-nosnippet
-      className="relative p-2.5 w-full border-t border-black/10 grid grid-cols-4 
-    max-md:flex max-md:justify-between max-lg:items-end max-lg:gap-5"
+      className="relative p-5 w-full border-t border-black/10 grid grid-cols-4 
+    max-md:flex max-md:justify-between max-lg:items-end max-md:px-2.5"
     >
       {/* DESKTOP */}
       <div className="w-full max-lg:w-1/2 max-md:hidden">
         <RevealText
           as="p"
           text={copyrightText}
-          className={`text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] truncate`}
+          className={`text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px] truncate`}
           delay={0.1}
           exit={false}
         />
@@ -43,7 +44,8 @@ const Footer = () => {
         >
           <RevealText
             text={locationText}
-            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
             delay={0.15}
             exit={false}
           />
@@ -60,7 +62,8 @@ const Footer = () => {
               >
                 <RevealText
                   text={`${item.label}${idx < socials.length - 1 ? "," : ""}`}
-                  className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                  className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                   delay={0.2 + idx * 0.05}
                   exit={false}
                 />
@@ -74,7 +77,8 @@ const Footer = () => {
         <a href="mailto:hey@tomasml.com" className={`${animatedUnderline}`}>
           <RevealText
             text="hey@tomasml.com"
-            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
             delay={0.35}
             exit={false}
           />
@@ -82,7 +86,8 @@ const Footer = () => {
         <a href="tel:+34625551094" className={`${animatedUnderline}`}>
           <RevealText
             text="+(34) 625 551 094"
-            className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+            className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
             delay={0.4}
             exit={false}
           />
@@ -100,7 +105,8 @@ const Footer = () => {
           >
             <RevealText
               text={locationText}
-              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
               delay={0.15}
               exit={false}
             />
@@ -117,7 +123,8 @@ const Footer = () => {
                 >
                   <RevealText
                     text={item.label}
-                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                     delay={0.2 + idx * 0.05}
                     exit={false}
                   />
@@ -125,7 +132,8 @@ const Footer = () => {
                 {idx < socials.length - 1 && (
                   <RevealText
                     text=","
-                    className={`text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] mr-[0.2em]`}
+                    className={`text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]`}
                     delay={0.2 + idx * 0.05}
                     exit={false}
                   />
@@ -139,7 +147,8 @@ const Footer = () => {
           <a href="mailto:hey@tomasml.com" className={`${animatedUnderline}`}>
             <RevealText
               text="hey@tomasml.com"
-              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
               delay={0.35}
               exit={false}
             />
@@ -147,7 +156,8 @@ const Footer = () => {
           <a href="tel:+34625551094" className={`${animatedUnderline}`}>
             <RevealText
               text="+(34) 625 551 094"
-              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
               delay={0.4}
               exit={false}
             />
@@ -159,7 +169,8 @@ const Footer = () => {
         <RevealText
           as="p"
           text={copyrightText}
-          className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] truncate"
+          className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px] truncate"
           delay={0.1}
           exit={false}
         />

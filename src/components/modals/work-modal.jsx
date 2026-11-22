@@ -66,7 +66,7 @@ const WorkModal = ({ work, setWorkModal }) => {
       <motion.div
         data-lenis-prevent
         className="fixed right-0 top-0 p-5 w-full max-w-175 h-full bg-bege backdrop-blur-2xl z-9999 
-        overflow-y-auto overflow-x-hidden overscroll-contain max-lg:w-screen will-change-auto max-lg:p-2.5 max-lg:top-0 max-lg:right-0"
+        overflow-y-auto overflow-x-hidden overscroll-contain max-lg:w-screen will-change-auto max-lg:px-2.5 max-lg:top-0 max-lg:right-0"
         variants={menuAnim}
         initial="initial"
         animate="animate"
@@ -77,17 +77,19 @@ const WorkModal = ({ work, setWorkModal }) => {
         }}
       >
         <div className="size-full">
-          <nav className="mb-20 w-full flex items-center justify-between max-ssm:mb-10">
+          <nav className="mb-20 w-full flex items-center justify-between max-md:mb-15">
             <RevealText
               as="h2"
               text={work.title}
-              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+              className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
               exit={false}
             />
 
             <button
               type="button"
-              className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px] cursor-pointer bg-transparent border-none p-0"
+              className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px] cursor-pointer bg-transparent border-none"
               onClick={() => setWorkModal(false)}
             >
               Close
@@ -98,7 +100,7 @@ const WorkModal = ({ work, setWorkModal }) => {
             <RevealText
               as="p"
               text={work.description}
-              className="text-[24px] text-black      tracking-[-5%] leading-[80%]"
+              className="text-[32px] text-black font-semibold tracking-[-5%] leading-[80%] max-md:text-[18px]"
               exit={false}
             />
           </div>
@@ -108,7 +110,8 @@ const WorkModal = ({ work, setWorkModal }) => {
               <RevealText
                 as="h3"
                 text="Information"
-                className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                 exit={false}
               />
               <ul className="flex flex-col mt-2">
@@ -116,13 +119,15 @@ const WorkModal = ({ work, setWorkModal }) => {
                   <RevealText
                     as="span"
                     text="Year:"
-                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black font-medium tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                     exit={false}
                   />
                   <RevealText
                     as="span"
                     text={work.year}
-                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                     exit={false}
                   />
                 </li>
@@ -131,13 +136,15 @@ const WorkModal = ({ work, setWorkModal }) => {
                   <RevealText
                     as="span"
                     text="Client:"
-                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black font-medium tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                     exit={false}
                   />
                   <RevealText
                     as="span"
                     text={work.client}
-                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                     exit={false}
                   />
                 </li>
@@ -147,7 +154,8 @@ const WorkModal = ({ work, setWorkModal }) => {
                     <RevealText
                       as="span"
                       text="Website:"
-                      className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                      className="text-[16px] text-black font-medium tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                       exit={false}
                     />
                     <a
@@ -159,24 +167,27 @@ const WorkModal = ({ work, setWorkModal }) => {
                       <RevealText
                         as="span"
                         text={work.website}
-                        className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                        className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                         exit={false}
                       />
                     </a>
                   </li>
                 ) : null}
 
-                <li className="flex max-ssm:flex-col items-center max-ssm:items-start max-ssm:gap-0 gap-2">
+                <li className="flex max-ssm:flex-col items-center max-ssm:items-start">
                   <RevealText
                     as="span"
                     text="Services:"
-                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black font-medium tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                     exit={false}
                   />
                   <RevealText
                     as="span"
                     text={work.services}
-                    className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                    className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                     exit={false}
                   />
                 </li>

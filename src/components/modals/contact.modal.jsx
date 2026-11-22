@@ -49,7 +49,7 @@ const contactSchema = z.object({
 });
 
 const fieldClass =
-  "w-full py-1 border-b border-black/25 text-[16px] text-black      tracking-[-5%] leading-none bg-transparent outline-none placeholder:text-black/50 max-md:text-[14px]";
+  "w-full py-1 border-b border-black/15 text-[16px] text-black font-semibold tracking-[-5%] max-md:text-[14px] leading-none bg-transparent outline-none placeholder:text-black/60";
 
 const ContactModal = ({ setContactModal }) => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -114,8 +114,8 @@ const ContactModal = ({ setContactModal }) => {
           <RevealText
             as="p"
             text="Let's talk"
-            className="text-[16px] text-black      tracking-[-5%] leading-none
-             max-md:text-[14px]"
+            className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
             exit={false}
           />
           <button
@@ -126,8 +126,8 @@ const ContactModal = ({ setContactModal }) => {
             <RevealText
               as="span"
               text="Close"
-              className="text-[16px] text-black      tracking-[-5%] leading-none
-               max-md:text-[14px]"
+              className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
               exit={false}
             />
           </button>
@@ -178,7 +178,8 @@ const ContactModal = ({ setContactModal }) => {
               <RevealText
                 as="span"
                 text={submitLabel}
-                className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]"
+                className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
                 exit={false}
               />
             </button>
@@ -188,9 +189,10 @@ const ContactModal = ({ setContactModal }) => {
                 as="p"
                 key={statusMessage}
                 text={statusMessage}
-                className={`text-[16px]      tracking-[-5%] leading-none ${
-                  status === "error" ? "text-red-500" : "text-black"
-                } max-md:text-[14px]`}
+                className={`text-[16px] font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px] ${
+              status === "error" ? "text-red-500" : "text-black"
+            } `}
                 exit={false}
               />
             )}

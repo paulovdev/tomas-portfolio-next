@@ -9,12 +9,6 @@ import { Nav } from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { RevealText } from "@/components/ui/reveal-text";
 
-const cardTitleStyle =
-  "text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]";
-
-const mediaSizeStyle =
-  "w-full h-[500px] object-cover brightness-100 group-hover:brightness-90 transition-[filter] duration-300 max-ds:h-[350px] max-lg:h-[275px] max-md:h-[250px] max-cl:h-[100px]";
-
 function resolveHighQualityUrl(asset, isVideo) {
   if (!asset) return null;
   if (isVideo) return asset.url;
@@ -42,7 +36,7 @@ const WorksCard = ({ work, index = 0 }) => {
   if (!src) return null;
 
   return (
-    <article className="relative mb-10 group overflow-hidden max-md:mb-0">
+    <figure className="relative mb-10 group overflow-hidden max-md:mb-0">
       <Link href={`/works/${work.slug}`} className="block cursor-pointer">
         {isVideo ? (
           <video
@@ -66,21 +60,23 @@ const WorksCard = ({ work, index = 0 }) => {
             alt={first.alt || `${work.title} — Tomás Medina León`}
             placeholder={asset.metadata?.lqip ? "blur" : "empty"}
             blurDataURL={asset.metadata?.lqip}
-            className={mediaSizeStyle}
+            className="w-full h-125 object-cover brightness-100 group-hover:brightness-90 
+            transition-[filter] duration-500 max-ds:h-100 max-lg:h-90 max-md:h-80"
           />
         )}
 
-        <div className="mt-2 min-h-[16px]">
+        <div className="mt-2 min-h-5">
           <RevealText
             as="h2"
             text={work.title}
-            className={cardTitleStyle}
+            className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
             delay={Math.min(0.08 + index * 0.02, 0.25)}
             exit={false}
           />
         </div>
       </Link>
-    </article>
+    </figure>
   );
 };
 
@@ -93,13 +89,13 @@ const WorksPage = ({ works = [] }) => {
     <>
       <Nav />
 
-      <main className="relative py-30 px-4 min-h-screen bg-s max-md:pb-20 max-cl:py-15 max-md:px-3 max-sm:px-2 max-cl:p-1">
+      <main className="relative pt-25 px-5 min-h-screen max-md:pt-23 max-md:px-2.5">
         <h1 className="sr-only">
           Selected Works — Branding, Visual Identity & Art Direction | Trabajos
           Seleccionados — Identidad Visual y Dirección de Arte
         </h1>
 
-        <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-lg:grid-cols-3">
+        <div className="grid grid-cols-4 gap-4 max-ds:grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1">
           {works.map((work, i) => (
             <WorksCard key={work._id || work.slug || i} work={work} index={i} />
           ))}

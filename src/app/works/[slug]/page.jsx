@@ -154,7 +154,7 @@ export default async function WorkPage({ params }) {
           Design by Tomás
         </h2>
 
-        <section className="relative pt-30 p-4 h-fit bg-s max-md:px-3 max-sm:px-2">
+        <section className="relative pt-25 px-5 h-fit max-md:pt-20 max-md:px-2.5">
           <WorkMedia media={work.media} title={work.title} />
         </section>
 

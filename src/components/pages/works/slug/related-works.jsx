@@ -5,12 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "@/lib/sanityImage";
 
-const mediaClass =
-  "w-full h-[350px] object-cover brightness-100 group-hover:brightness-90 transition-[filter] duration-300 max-ds:h-[300px] max-lg:h-[225px] max-md:h-[225px] max-mmd:h-[200px] max-sm:h-[150px]";
-
-const titleClass =
-  "mt-2 text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]";
-
 function resolveHighQualityUrl(asset, isVideo) {
   if (!asset) return null;
   if (isVideo) return asset.url || null;
@@ -68,7 +62,7 @@ const RelatedCard = ({ work, index, shouldLoad }) => {
   const lqip = asset.metadata?.lqip;
 
   return (
-    <article
+    <figure
       className={`relative overflow-hidden group ${
         index === 2 ? "max-lg:hidden" : ""
       }`}
@@ -79,7 +73,8 @@ const RelatedCard = ({ work, index, shouldLoad }) => {
             src={src}
             poster={lqip}
             alt={altText}
-            className={mediaClass}
+            className="w-full h-100 object-cover brightness-100 group-hover:brightness-90 
+            transition-[filter] duration-500 max-ds:h-90 max-lg:h-85 max-md:h-65"
             active={shouldLoad}
           />
         ) : shouldLoad ? (
@@ -92,7 +87,8 @@ const RelatedCard = ({ work, index, shouldLoad }) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
             placeholder={lqip ? "blur" : "empty"}
             blurDataURL={lqip}
-            className={mediaClass}
+            className="w-full h-100 object-cover brightness-100 group-hover:brightness-90 
+            transition-[filter] duration-500 max-ds:h-90 max-lg:h-85 max-md:h-65"
           />
         ) : (
           <div
@@ -106,13 +102,19 @@ const RelatedCard = ({ work, index, shouldLoad }) => {
                   }
                 : undefined
             }
-            className={`${mediaClass} bg-black/5 scale-105 blur-sm`}
+            className="w-full h-100 object-cover brightness-100 group-hover:brightness-90 
+            transition-[filter] duration-500 max-ds:h-90 max-lg:h-85 max-md:h-65"
           />
         )}
 
-        <h3 className={titleClass}>{work.title}</h3>
+        <h3
+          className="mt-2.5 text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
+        >
+          {work.title}
+        </h3>
       </Link>
-    </article>
+    </figure>
   );
 };
 
@@ -146,9 +148,12 @@ export default function RelatedWorks({ relatedWorks = [] }) {
     <section
       ref={sectionRef}
       data-nosnippet
-      className="bg-s py-30 px-4 w-full grid grid-cols-4 gap-4 max-md:flex max-md:flex-col max-md:py-20 max-md:px-3 max-sm:px-2"
+      className="bg-s py-30 px-5 w-full grid grid-cols-4 gap-4 max-md:flex max-md:flex-col max-md:py-20 max-md:px-2.5"
     >
-      <h2 className="text-[16px] text-black      tracking-[-5%] leading-none max-md:text-[14px]">
+      <h2
+        className="text-[16px] text-black font-semibold tracking-[-5%] leading-[80%]
+            max-md:text-[14px]"
+      >
         Related Works
       </h2>
 
