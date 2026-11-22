@@ -66,7 +66,10 @@ const ContactView = () => {
           />
         </div>
 
-        <div className="col-span-3 max-md:col-span-1 flex flex-col ">
+        <div
+          className="col-span-3 max-md:col-span-1 flex flex-col"
+          data-nosnippet
+        >
           {contactInfo.map((info, i) => {
             const itemDelay = 0.3 + i * 0.08;
 
@@ -131,7 +134,7 @@ const ContactView = () => {
         </div>
       </div>
 
-      <div className="w-full flex-2 flex items-end">
+      <div className="w-full flex-2 flex items-end" data-nosnippet>
         <div className="relative bottom-5 w-full px-5 flex justify-between items-center max-md:absolute max-md:bottom-5 max-md:px-2.5">
           <RevealText
             as="p"
