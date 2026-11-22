@@ -89,7 +89,7 @@ const WorksPage = ({ works = [] }) => {
     <>
       <Nav />
 
-      <main className="relative pt-25 px-5 min-h-screen max-md:pt-23 max-md:px-2.5">
+      <main className="relative pt-25 pb-20 px-5 min-h-screen max-md:pt-23 max-md:px-2.5">
         <h1 className="sr-only">
           Selected Works — Branding, Visual Identity & Art Direction | Trabajos
           Seleccionados — Identidad Visual y Dirección de Arte
